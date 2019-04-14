@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Data.SqlClient;
 
-    public static partial class LiteData
+    public static partial class Database
     {
         public static T ReadValue<T>(this SqlDataReader reader, string columnName)
         {

@@ -6,7 +6,7 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public static partial class LiteData
+    public static partial class Database
     {
         public static async Task<int> CreateTableAsync(this SqlConnection connection, Type T)
         {

@@ -1,107 +1,22 @@
 ﻿namespace Unosquare.PocoData.Sql
 {
+    using Annotations;
     using System;
     using System.Collections.Generic;
-    using System.Data;
-    using System.Data.SqlClient;
     using System.Linq;
-    using System.Reflection;
-    using System.Threading.Tasks;
 
-    public static partial class LiteData
+    public static partial class Database
     {
-        private static readonly IReadOnlyList<Type> PersistableValueTypes = new List<Type>()
-        {
-            typeof(sbyte),
-            typeof(short),
-            typeof(int),
-            typeof(long),
-            typeof(byte),
-            typeof(ushort),
-            typeof(uint),
-            typeof(ulong),
-            typeof(char),
-            typeof(float),
-            typeof(double),
-            typeof(decimal),
-            typeof(bool),
-            typeof(Guid),
-            typeof(DateTime)
-        };
-        private static readonly IReadOnlyDictionary<Type, SqlDbType> SqlTypes = new Dictionary<Type, SqlDbType>()
-        {
-            { typeof(string), SqlDbType.NVarChar },
-            { typeof(sbyte), SqlDbType.SmallInt },
-            { typeof(short), SqlDbType.SmallInt },
-            { typeof(int), SqlDbType.Int },
-            { typeof(long), SqlDbType.BigInt },
-            { typeof(byte), SqlDbType.TinyInt },
-            { typeof(ushort), SqlDbType.Int },
-            { typeof(uint), SqlDbType.BigInt },
-            { typeof(ulong), SqlDbType.Float },
-            { typeof(char), SqlDbType.NChar },
-            { typeof(float), SqlDbType.Float },
-            { typeof(double), SqlDbType.Float },
-            { typeof(decimal), SqlDbType.Money },
-            { typeof(bool), SqlDbType.Bit },
-            { typeof(Guid), SqlDbType.UniqueIdentifier },
-            { typeof(DateTime), SqlDbType.DateTime },
-        };
+        private static readonly object SyncLock = new object();
+
+        private static readonly PropertyTypeCache TypeCache = new PropertyTypeCache();
+        private static readonly Dictionary<Type, IReadOnlyList<ColumnMetadata>> ColumnMaps = new Dictionary<Type, IReadOnlyList<ColumnMetadata>>(32);
+        private static readonly Dictionary<Type, TableAttribute> TableMaps = new Dictionary<Type, TableAttribute>(32);
 
         private static readonly Dictionary<Type, string> CreateCommandText = new Dictionary<Type, string>(32);
         private static readonly Dictionary<Type, string> UpdateCommandText = new Dictionary<Type, string>(32);
         private static readonly Dictionary<Type, string> DeleteCommandText = new Dictionary<Type, string>(32);
         private static readonly Dictionary<Type, string> RetrieveCommandText = new Dictionary<Type, string>(32);
-
-        public static int SqlCommandTimeoutSeconds { get; set; } = 60 * 5;
-
-        public static async Task<SqlConnection> OpenConnectionAsync(string connectionString)
-        {
-            var connection = new SqlConnection(connectionString);
-            await connection.OpenAsync();
-            return connection;
-        }
-
-        public static async Task<SqlConnection> OpenLocalConnectionAsync(string databaseName) =>
-            await OpenConnectionAsync($"Data Source=.; Integrated Security=True; Initial Catalog={databaseName}; MultipleActiveResultSets=True;");
-
-        public static async Task<SqlConnection> OpenConnectionAsync(string host, string username, string password, string databaseName) =>
-            await OpenConnectionAsync($"Data Source={host}; User ID={username}; Password={password}; Initial Catalog={databaseName}; MultipleActiveResultSets=True;");
-
-        public static SqlParameter AddParameter(this SqlCommand command, string parameterName, SqlDbType dbType, object value)
-        {
-            var param = command.CreateParameter();
-            param.ParameterName = parameterName;
-            param.SqlDbType = dbType;
-            param.Value = value ?? DBNull.Value;
-
-            command.Parameters.Add(param);
-            return param;
-        }
-
-        public static SqlParameter AddParameter(this SqlCommand command, string parameterName, object value)
-        {
-            var param = command.CreateParameter();
-            param.ParameterName = parameterName;
-            param.Value = value ?? DBNull.Value;
-            if (value != null && SqlTypes.ContainsKey(value.GetType()))
-                param.SqlDbType = SqlTypes[value.GetType()];
-
-            command.Parameters.Add(param);
-            return param;
-        }
-
-        public static IReadOnlyList<SqlParameter> AddParameters(this SqlCommand command, object values)
-        {
-            var result = new List<SqlParameter>(32);
-            var properties = values.GetType().GetProperties(BindingFlags.Public).ToArray();
-            foreach (var p in properties)
-            {
-                result.Add(command.AddParameter(p.Name, p.GetValue(values)));
-            }
-
-            return result;
-        }
 
         public static string GetRetrieveCommandText(Type T)
         {
@@ -191,5 +106,87 @@
         }
 
         public static string GetDeleteCommandText<T>() => GetDeleteCommandText(typeof(T));
+
+        private static IReadOnlyList<ColumnMetadata> GetColumnMap(Type T)
+        {
+            lock (SyncLock)
+            {
+                if (ColumnMaps.ContainsKey(T))
+                    return ColumnMaps[T];
+
+                var properties = TypeCache.RetrieveAllProperties(T).ToArray();
+                var result = new List<ColumnMetadata>(properties.Length);
+                foreach (var property in properties)
+                {
+                    // We don't want properties that are not read/write
+                    if (!property.CanRead || !property.CanWrite)
+                        continue;
+
+                    // we don't want properties that can't be mapped
+                    var propType = property.PropertyType;
+                    var propTypeNullable = Nullable.GetUnderlyingType(propType);
+                    propType = propTypeNullable ?? propType;
+
+                    if (propType != typeof(string) && !propType.IsEnum && !PersistableValueTypes.Contains(propType))
+                        continue;
+
+                    var columnName = property.Name;
+                    var isKey = false;
+                    var isNullable = propTypeNullable != null || propType == typeof(string);
+                    var ignore = false;
+                    var isGenerated = false;
+                    var length = 255;
+
+                    // extract column properties from attributes
+                    var attribs = property.GetCustomAttributes(true).ToArray();
+                    foreach (var attrib in attribs)
+                    {
+                        if (attrib is ColumnAttribute columnAttrib)
+                            columnName = columnAttrib.Name;
+
+                        if (attrib is KeyAttribute liteKey)
+                        {
+                            isKey = true;
+                            isGenerated = liteKey.IsGenerated;
+                        }
+
+                        if (attrib is StringLengthAttribute liteLen)
+                            length = liteLen.Length;
+
+                        if (attrib is NotMappedAttribute)
+                            ignore = true;
+
+                        if (attrib is RequiredAttribute lineNotNull)
+                        {
+                            if (propType == typeof(string))
+                                isNullable = false;
+                        }
+                    }
+
+                    if (ignore)
+                        continue;
+
+                    result.Add(new ColumnMetadata(property, columnName, length, isNullable, isKey, isGenerated));
+                }
+
+                ColumnMaps[T] = result;
+                return result;
+            }
+        }
+
+        private static TableAttribute GetTableMap(Type T)
+        {
+            lock (SyncLock)
+            {
+                if (TableMaps.ContainsKey(T))
+                    return TableMaps[T];
+
+                var table = T.GetCustomAttributes(typeof(TableAttribute), true).FirstOrDefault() as TableAttribute
+                    ?? new TableAttribute(T.Name);
+
+                TableMaps[T] = table;
+                return table;
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@
     {
         static async Task Main(string[] args)
         {
-            using (var db = await LiteData.OpenLocalConnectionAsync("litedata"))
+            using (var db = await Database.OpenLocalConnectionAsync("litedata"))
             {
                 if (await db.TableExistsAsync<Employee>())
                     await db.DropTableAsync<Employee>();

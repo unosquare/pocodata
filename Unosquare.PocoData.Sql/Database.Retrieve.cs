@@ -7,13 +7,13 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public static partial class LiteData
+    public static partial class Database
     {
         public static async Task<List<T>> RetrieveAsync<T>(this SqlCommand command)
             where T : class, new()
         {
             var result = new List<T>(4096);
-            using (var reader = command.ExecuteReader())
+            using (var reader = await command.ExecuteReaderAsync())
             {
                 while (await reader.ReadAsync())
                 {
@@ -42,8 +42,8 @@
         public static async Task<List<T>> RetrieveAsync<T>(this SqlConnection db)
             where T : class, new()
         {
-            var table = GetTableMap<T>() ?? throw new ArgumentException($"{typeof(T)} does not specify {typeof(TableAttribute)}");
-            var columns = GetColumnMap<T>();
+            var table = GetTableMap(typeof(T)) ?? throw new ArgumentException($"{typeof(T)} does not specify {typeof(TableAttribute)}");
+            var columns = GetColumnMap(typeof(T));
             return await RetrieveAsync<T>(db, table.QualifiedName, columns.Select(c => c.QualifiedName).ToArray());
         }
 
