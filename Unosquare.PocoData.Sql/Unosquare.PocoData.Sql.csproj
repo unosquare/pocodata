@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0-preview3.19128.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Unosquare.PocoData.Annotations\Unosquare.PocoData.Annotations.csproj" />
+    <ProjectReference Include="..\Unosquare.PocoData\Unosquare.PocoData.csproj" />
+  </ItemGroup>
+
+</Project>
