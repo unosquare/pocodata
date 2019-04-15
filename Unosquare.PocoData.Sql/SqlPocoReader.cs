@@ -2,11 +2,18 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Data.SqlClient;
+    using System.Data.Common;
 
-    public static partial class Database
+    public sealed class SqlPocoReader : IPocoReader
     {
-        public static T ReadValue<T>(this SqlDataReader reader, string columnName)
+        internal SqlPocoReader()
+        {
+            // placeholder
+        }
+
+        private PocoSchema Schema => SqlPocoDb.GlobalSchema;
+
+        public T ReadValue<T>(DbDataReader reader, string columnName)
         {
             var ordinal = reader.GetOrdinal(columnName);
             try
@@ -21,10 +28,10 @@
             }
         }
 
-        public static object ReadObject(this SqlDataReader reader, object result)
+        public object ReadObject(DbDataReader reader, object result)
         {
             var T = result.GetType();
-            var map = GetColumnMap(T);
+            var map = Schema.Columns(T);
             var fieldNames = new List<string>(reader.FieldCount);
             for (var i = 0; i < reader.FieldCount; i++)
                 fieldNames.Add(reader.GetName(i));
@@ -64,17 +71,17 @@
             return result;
         }
 
-        public static T ReadObject<T>(this SqlDataReader reader, T result)
+        public T ReadObject<T>(DbDataReader reader, T result)
             where T : class
         {
-            return reader.ReadObject((object)result) as T;
+            return ReadObject(reader, (object)result) as T;
         }
 
-        public static T ReadObject<T>(this SqlDataReader reader)
+        public T ReadObject<T>(DbDataReader reader)
             where T : class, new()
         {
             var result = new T();
-            return reader.ReadObject<T>(result);
+            return ReadObject<T>(reader, result);
         }
     }
 }

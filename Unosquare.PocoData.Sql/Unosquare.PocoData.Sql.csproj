@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Unosquare.PocoData.Annotations\Unosquare.PocoData.Annotations.csproj" />
     <ProjectReference Include="..\Unosquare.PocoData\Unosquare.PocoData.csproj" />
   </ItemGroup>
 

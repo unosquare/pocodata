@@ -11,24 +11,32 @@
     {
         static async Task Main(string[] args)
         {
-            using (var db = await Database.OpenLocalConnectionAsync("litedata"))
+            using (var db = await SqlPocoDb.OpenLocalAsync("litedata"))
             {
-                if (await db.TableExistsAsync<Employee>())
-                    await db.DropTableAsync<Employee>();
+                if (await db.Definition.TableExistsAsync<Employee>())
+                    await db.Definition.DropTableAsync<Employee>();
 
-                await db.CreateTableAsync<Employee>();
-
+                await db.Definition.CreateTableAsync<Employee>();
                 var data = GenerateEmployeeData(10000);
 
                 var sw = new Stopwatch();
                 sw.Start();
 
                 foreach (var e in data)
-                    await db.InsertAsync(e, true);
+                    await db.InsertAsync(e, false);
 
                 sw.Stop();
+
                 Console.WriteLine($"Wrote {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");
+
+                sw.Restart();
+                data = await db.RetrieveAsync<Employee>();
+
+                sw.Stop();
+                Console.WriteLine($"Read {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");
             }
+
+            Console.ReadKey(true);
         }
 
         private static IReadOnlyList<Employee> EmployeeSeedData
