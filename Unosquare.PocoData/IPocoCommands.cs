@@ -7,8 +7,6 @@
     {
         string SelectAllCommandText(Type T);
 
-        string SelectManyCommandText(Type T);
-
         string SelectSingleCommandText(Type T);
 
         string InsertCommandText(Type T);
@@ -16,6 +14,8 @@
         string UpdateCommandText(Type T);
 
         string DeleteCommandText(Type T);
+
+        string CountAllCommandText(Type T);
 
         IDbCommand CreateSelectAllCommand(Type T);
 
@@ -26,5 +26,7 @@
         IDbCommand CreateUpdateCommand(object obj);
 
         IDbCommand CreateDeleteCommand(object obj);
+
+        IDbCommand CreateCountAllCommand(Type T);
     }
 }

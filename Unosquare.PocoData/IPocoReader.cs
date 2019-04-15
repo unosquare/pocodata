@@ -1,15 +1,13 @@
 ﻿namespace Unosquare.PocoData
 {
-    using System.Data.Common;
+    using System.Data;
 
     public interface IPocoReader
     {
-        T ReadValue<T>(DbDataReader reader, string columnName);
+        object ReadObject(IDataReader reader, object result);
 
-        object ReadObject(DbDataReader reader, object result);
+        T ReadObject<T>(IDataReader reader, T result) where T : class;
 
-        T ReadObject<T>(DbDataReader reader, T result) where T : class;
-
-        T ReadObject<T>(DbDataReader reader) where T : class, new();
+        T ReadObject<T>(IDataReader reader) where T : class, new();
     }
 }

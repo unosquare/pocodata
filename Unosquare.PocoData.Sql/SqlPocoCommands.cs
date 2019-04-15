@@ -13,7 +13,8 @@
         private static readonly Dictionary<Type, string> InsertCommandTexts = new Dictionary<Type, string>(32);
         private static readonly Dictionary<Type, string> UpdateCommandTexts = new Dictionary<Type, string>(32);
         private static readonly Dictionary<Type, string> DeleteCommandTexts = new Dictionary<Type, string>(32);
-        private static readonly Dictionary<Type, string> SelectCommandTexts = new Dictionary<Type, string>(32);
+        private static readonly Dictionary<Type, string> SelectSingleCommandTexts = new Dictionary<Type, string>(32);
+        private static readonly Dictionary<Type, string> SelectAllCommandTexts = new Dictionary<Type, string>(32);
 
         private readonly SqlPocoDb Parent;
 
@@ -26,12 +27,31 @@
 
         private SqlConnection Connection => Parent.Connection as SqlConnection;
 
+        public string SelectAllCommandText(Type T)
+        {
+            lock (SyncLock)
+            {
+                if (SelectAllCommandTexts.ContainsKey(T))
+                    return SelectAllCommandTexts[T];
+
+                var table = Schema.Table(T);
+                var columns = Schema.Columns(T);
+                var columnNames = columns.Select(c => c.QualifiedName);
+
+                var commandText =
+                    $"SELECT {string.Join(", ", columnNames)} FROM {table.QualifiedName}";
+
+                SelectAllCommandTexts[T] = commandText;
+                return commandText;
+            }
+        }
+
         public string SelectSingleCommandText(Type T)
         {
             lock (SyncLock)
             {
-                if (SelectCommandTexts.ContainsKey(T))
-                    return SelectCommandTexts[T];
+                if (SelectSingleCommandTexts.ContainsKey(T))
+                    return SelectSingleCommandTexts[T];
 
                 var table = Schema.Table(T);
                 var columns = Schema.Columns(T);
@@ -42,7 +62,7 @@
                 var commandText =
                     $"SELECT {string.Join(", ", columnNames)} FROM {table.QualifiedName} WHERE {string.Join(" AND ", parameterNames)}";
 
-                SelectCommandTexts[T] = commandText;
+                SelectSingleCommandTexts[T] = commandText;
                 return commandText;
             }
         }
@@ -68,8 +88,6 @@
             }
         }
 
-        public string InsertCommandText<T>() => InsertCommandText(typeof(T));
-
         public string UpdateCommandText(Type T)
         {
             lock (SyncLock)
@@ -92,8 +110,6 @@
             }
         }
 
-        public string UpdateCommandText<T>() => UpdateCommandText(typeof(T));
-
         public string DeleteCommandText(Type T)
         {
             lock (SyncLock)
@@ -113,7 +129,26 @@
             }
         }
 
-        public string DeleteCommandText<T>() => DeleteCommandText(typeof(T));
+        public string CountAllCommandText(Type T) =>
+            $"SELECT COUNT (*) FROM {Schema.Table(T).QualifiedName}";
+
+        public IDbCommand CreateSelectAllCommand(Type T)
+        {
+            var command = Connection.CreateCommand();
+            command.CommandText = SelectAllCommandText(T);
+            return command;
+        }
+
+        public IDbCommand CreateSelectSingleCommand(object obj)
+        {
+            var T = obj.GetType();
+            var columns = Schema.Columns(T);
+
+            var command = Connection.CreateCommand();
+            command.CommandText = SelectSingleCommandText(T);
+            command.AddParameters(columns.Where(c => c.IsKeyColumn), obj);
+            return command;
+        }
 
         public IDbCommand CreateInsertCommand(object obj)
         {
@@ -122,32 +157,7 @@
 
             var command = Connection.CreateCommand();
             command.CommandText = InsertCommandText(T);
-            foreach (var col in columns)
-            {
-                if (col.IsKeyColumn && col.IsGenerated)
-                    continue;
-
-                command.AddParameter(col.ParameterName, col.GetValue(obj));
-            }
-
-            return command;
-        }
-
-        public IDbCommand CreateSelectSingleCommand( object obj)
-        {
-            var T = obj.GetType();
-            var columns = Schema.Columns(T);
-
-            var command = Connection.CreateCommand();
-            command.CommandText = SelectSingleCommandText(T);
-            foreach (var col in columns)
-            {
-                if (!col.IsKeyColumn)
-                    continue;
-
-                command.AddParameter(col.ParameterName, col.GetValue(obj));
-            }
-
+            command.AddParameters(columns.Where(c => !c.IsGenerated), obj);
             return command;
         }
 
@@ -158,20 +168,28 @@
 
             var command = Connection.CreateCommand();
             command.CommandText = UpdateCommandText(T);
-            foreach (var col in columns)
-            {
-                if (col.IsGenerated && !col.IsKeyColumn)
-                    continue;
-
-                command.AddParameter(col.ParameterName, col.GetValue(obj));
-            }
-
+            command.AddParameters(columns, obj);
             return command;
         }
 
         public IDbCommand CreateDeleteCommand(object obj)
         {
-            throw new NotImplementedException();
+            var T = obj.GetType();
+            var keyColumns = Schema.Columns(T).Where(c => c.IsKeyColumn);
+
+            var command = Connection.CreateCommand();
+            command.CommandText = DeleteCommandText(T);
+            command.AddParameters(keyColumns, obj);
+
+            return command;
+        }
+
+        public IDbCommand CreateCountAllCommand(Type T)
+        {
+            var command = Connection.CreateCommand();
+            command.CommandText = CountAllCommandText(T);
+
+            return command;
         }
     }
 }

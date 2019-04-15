@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Data;
     using System.Data.Common;
 
     internal sealed class SqlPocoReader : IPocoReader
@@ -13,22 +14,7 @@
 
         private PocoSchema Schema => PocoSchema.Instance;
 
-        public T ReadValue<T>(DbDataReader reader, string columnName)
-        {
-            var ordinal = reader.GetOrdinal(columnName);
-            try
-            {
-                return reader.IsDBNull(ordinal)
-                    ? default
-                    : reader.GetFieldValue<T>(ordinal);
-            }
-            catch (InvalidCastException icex)
-            {
-                throw new InvalidCastException($"Unable to cast value of '{columnName}' to {typeof(T).Name}.", icex);
-            }
-        }
-
-        public object ReadObject(DbDataReader reader, object result)
+        public object ReadObject(IDataReader reader, object result)
         {
             var T = result.GetType();
             var map = Schema.Columns(T);
@@ -71,13 +57,13 @@
             return result;
         }
 
-        public T ReadObject<T>(DbDataReader reader, T result)
+        public T ReadObject<T>(IDataReader reader, T result)
             where T : class
         {
             return ReadObject(reader, (object)result) as T;
         }
 
-        public T ReadObject<T>(DbDataReader reader)
+        public T ReadObject<T>(IDataReader reader)
             where T : class, new()
         {
             var result = new T();

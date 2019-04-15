@@ -16,7 +16,7 @@
 
         IPocoCommands Commands { get; }
 
-        IEnumerable SelectAll(Type t);
+        IEnumerable SelectAll(Type T);
 
         Task<IEnumerable> SelectAllAsync(Type T);
 
@@ -32,9 +32,9 @@
 
         Task<IEnumerable<T>> SelectManyAsync<T>(IDbCommand command) where T : class, new();
 
-        void SelectSingle(object target);
+        bool SelectSingle(object target);
 
-        Task SelectSingleAsync(object target);
+        Task<bool> SelectSingleAsync(object target);
 
         Task<int> InsertAsync(object item, bool update);
 
@@ -48,16 +48,12 @@
 
         int Update(object item);
 
-        Task<int> UpdateManyAsync(IEnumerable items, bool update);
+        Task<int> UpdateManyAsync(IEnumerable items);
 
-        int UpdateMany(IEnumerable items, bool update);
+        int UpdateMany(IEnumerable items);
 
         Task<int> DeleteAsync(object obj);
 
         int Delete(object obj);
-
-        Task<int> DeleteManyAsync(IEnumerable items);
-
-        int DeleteMany(IEnumerable items);
     }
 }

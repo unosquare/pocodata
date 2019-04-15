@@ -1,15 +1,17 @@
 ﻿namespace Unosquare.PocoData.Sql
 {
     using System;
+    using System.Collections;
+    using System.Collections.Generic;
     using System.Data;
     using System.Data.SqlClient;
     using System.Threading.Tasks;
 
     public partial class SqlPocoDb : IPocoDb, IDisposable
     {
-        private bool IsDsposed;
         private readonly string ConnectionString;
         private SqlConnection SqlConnection;
+        private bool IsDisposed;
 
         public SqlPocoDb(string connectionString)
             : this()
@@ -86,7 +88,7 @@
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!IsDsposed)
+            if (!IsDisposed)
             {
                 if (disposing)
                 {
@@ -94,7 +96,7 @@
                     SqlConnection = null;
                 }
 
-                IsDsposed = true;
+                IsDisposed = true;
             }
         }
     }
