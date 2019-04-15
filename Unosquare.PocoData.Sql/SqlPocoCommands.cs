@@ -135,6 +135,7 @@
         public IDbCommand CreateSelectAllCommand(Type T)
         {
             var command = Connection.CreateCommand();
+            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = SelectAllCommandText(T);
             return command;
         }
@@ -145,6 +146,7 @@
             var columns = Schema.Columns(T);
 
             var command = Connection.CreateCommand();
+            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = SelectSingleCommandText(T);
             command.AddParameters(columns.Where(c => c.IsKeyColumn), obj);
             return command;
@@ -156,6 +158,7 @@
             var columns = Schema.Columns(T);
 
             var command = Connection.CreateCommand();
+            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = InsertCommandText(T);
             command.AddParameters(columns.Where(c => !c.IsGenerated), obj);
             return command;
@@ -167,6 +170,7 @@
             var columns = Schema.Columns(T);
 
             var command = Connection.CreateCommand();
+            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = UpdateCommandText(T);
             command.AddParameters(columns, obj);
             return command;
@@ -178,6 +182,7 @@
             var keyColumns = Schema.Columns(T).Where(c => c.IsKeyColumn);
 
             var command = Connection.CreateCommand();
+            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = DeleteCommandText(T);
             command.AddParameters(keyColumns, obj);
 
@@ -187,6 +192,7 @@
         public IDbCommand CreateCountAllCommand(Type T)
         {
             var command = Connection.CreateCommand();
+            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = CountAllCommandText(T);
 
             return command;

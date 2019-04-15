@@ -49,6 +49,7 @@
                 $"PRIMARY KEY ({string.Join(", ", primaryKeyCols.Select(c => c.QualifiedName))}))";
 
             var command = Connection.CreateCommand();
+            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = createTable;
             return await command.ExecuteNonQueryAsync();
         }
@@ -59,6 +60,7 @@
         {
             var table = Schema.Table(T);
             var command = Connection.CreateCommand();
+            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = "SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = @Schema AND TABLE_NAME = @TableName";
             command.AddParameter("@Schema", table.Schema);
             command.AddParameter("@TableName", table.Name);
@@ -73,6 +75,7 @@
         {
             var table = Schema.Table(T);
             var command = Connection.CreateCommand();
+            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = $"DROP TABLE {table.QualifiedName}";
             await command.ExecuteNonQueryAsync();
         }
