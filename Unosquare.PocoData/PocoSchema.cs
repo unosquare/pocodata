@@ -13,6 +13,13 @@
         private readonly Dictionary<Type, IReadOnlyList<ColumnMetadata>> ColumnMaps = new Dictionary<Type, IReadOnlyList<ColumnMetadata>>(32);
         private readonly Dictionary<Type, TableAttribute> TableMaps = new Dictionary<Type, TableAttribute>(32);
 
+        private PocoSchema()
+        {
+            // placeholder
+        }
+
+        public static PocoSchema Instance { get; } = new PocoSchema();
+
         public static IReadOnlyList<Type> StandardValueTypes { get; } = new List<Type>()
         {
             typeof(sbyte),
@@ -99,6 +106,8 @@
             }
         }
 
+        public IReadOnlyList<ColumnMetadata> Columns<T>() where T : class => Columns(typeof(T));
+
         public TableAttribute Table(Type T)
         {
             lock (SyncLock)
@@ -113,5 +122,24 @@
                 return table;
             }
         }
+
+        public TableAttribute Table<T>() where T : class => Table(typeof(T));
+
+        public void Validate(Type T)
+        {
+            var columns = Columns(T);
+            if (columns.Count(c => c.IsGenerated) > 1)
+                throw new NotSupportedException("Only a single generated column is suppoted in the schema");
+
+            if (columns.Count(c => c.IsGenerated && !c.IsKeyColumn) > 0)
+                throw new NotSupportedException("Only agenerated columns must participate in the primary key set");
+
+            if (columns.Count(c => c.IsNullable && c.IsKeyColumn) > 0)
+                throw new NotSupportedException("Key columns must not be nullable");
+
+            // TODO: add more validation rules
+        }
+
+        public void Validate<T>() where T : class => Validate(typeof(T));
     }
 }

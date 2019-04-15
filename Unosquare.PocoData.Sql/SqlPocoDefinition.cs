@@ -6,7 +6,7 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public sealed class SqlPocoDefinition : IPocoDefinition
+    internal sealed class SqlPocoDefinition : IPocoDefinition
     {
         private readonly SqlPocoDb Parent;
 
@@ -17,7 +17,7 @@
 
         private SqlConnection Connection => Parent.Connection as SqlConnection;
 
-        private PocoSchema Schema => SqlPocoDb.GlobalSchema;
+        private PocoSchema Schema => PocoSchema.Instance;
 
         public async Task<int> CreateTableAsync(Type T)
         {

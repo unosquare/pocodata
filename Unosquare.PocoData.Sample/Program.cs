@@ -30,7 +30,7 @@
                 Console.WriteLine($"Wrote {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");
 
                 sw.Restart();
-                data = await db.RetrieveAsync<Employee>();
+                data = await db.SelectAsync<Employee>();
 
                 sw.Stop();
                 Console.WriteLine($"Read {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");

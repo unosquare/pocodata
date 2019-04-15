@@ -8,7 +8,7 @@
     {
         private readonly IPropertyProxy Proxy;
 
-        public ColumnMetadata(PropertyInfo property, string columnName, int length, bool isNullable, bool isKey, bool isGenerated)
+        internal ColumnMetadata(PropertyInfo property, string columnName, int length, bool isNullable, bool isKey, bool isGenerated)
         {
             Property = property;
             Length = length;

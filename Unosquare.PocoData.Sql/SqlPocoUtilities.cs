@@ -10,6 +10,8 @@
 
     public static class SqlPocoUtilities
     {
+        // TODO: https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlcommand.prepare?view=netframework-4.7.2
+
         public static SqlParameter AddParameter(this SqlCommand command, string parameterName, SqlDbType dbType, object value)
         {
             var param = command.CreateParameter();

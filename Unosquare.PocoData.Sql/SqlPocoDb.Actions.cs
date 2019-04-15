@@ -9,20 +9,7 @@
 
     public partial class SqlPocoDb
     {
-        public async Task<IReadOnlyList<T>> RetrieveAsync<T>(SqlCommand command)
-            where T : class, new()
-        {
-            var result = new List<T>(4096);
-            using (var reader = await command.ExecuteReaderAsync())
-            {
-                while (await reader.ReadAsync())
-                {
-                    result.Add(PocoReader.ReadObject<T>(reader));
-                }
-            }
-
-            return result;
-        }
+        // TODO: https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlcommand.prepare?view=netframework-4.7.2
 
         public async Task<IReadOnlyList<T>> RetrieveAsync<T>(string tableName, params string[] columnNames)
             where T : class, new()
@@ -39,7 +26,7 @@
             }
         }
 
-        public async Task<IReadOnlyList<T>> RetrieveAsync<T>()
+        public async Task<IReadOnlyList<T>> SelectAsync<T>()
             where T : class, new()
         {
             var table = Schema.Table(typeof(T)) ?? throw new ArgumentException($"{typeof(T)} does not specify {typeof(TableAttribute)}");
@@ -77,7 +64,7 @@
 
                 if (update)
                 {
-                    var selectCommand = Commands.CreateSelectCommand(obj) as SqlCommand;
+                    var selectCommand = Commands.CreateSelectSingleCommand(obj) as SqlCommand;
                     selectCommand.Transaction = tran;
                     using (var reader = await selectCommand.ExecuteReaderAsync())
                     {
@@ -97,5 +84,20 @@
 
         public async Task<int> DeleteAsync(object obj) =>
             await (Commands.CreateDeleteCommand(obj) as SqlCommand).ExecuteNonQueryAsync();
+
+        private async Task<IReadOnlyList<T>> RetrieveAsync<T>(SqlCommand command)
+            where T : class, new()
+        {
+            var result = new List<T>(4096);
+            using (var reader = await command.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    result.Add(PocoReader.ReadObject<T>(reader));
+                }
+            }
+
+            return result;
+        }
     }
 }

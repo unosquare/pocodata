@@ -7,18 +7,9 @@
 
     public partial class SqlPocoDb : IPocoDb, IDisposable
     {
-        internal static PocoSchema GlobalSchema = new PocoSchema();
-
         private bool IsDsposed;
         private readonly string ConnectionString;
         private SqlConnection SqlConnection;
-
-        public SqlPocoDb()
-        {
-            PocoReader = new SqlPocoReader();
-            Definition = new SqlPocoDefinition(this);
-            Commands = new SqlPocoCommands(this);
-        }
 
         public SqlPocoDb(string connectionString)
             : this()
@@ -26,7 +17,16 @@
             ConnectionString = connectionString;
         }
 
+        private SqlPocoDb()
+        {
+            PocoReader = new SqlPocoReader();
+            Definition = new SqlPocoDefinition(this);
+            Commands = new SqlPocoCommands(this);
+        }
+
         public int SqlCommandTimeoutSeconds { get; set; } = 60 * 5;
+
+        public PocoSchema Schema => PocoSchema.Instance;
 
         public IDbConnection Connection
         {
@@ -41,8 +41,6 @@
                 return SqlConnection;
             }
         }
-
-        public PocoSchema Schema => GlobalSchema;
 
         public IPocoReader PocoReader { get; }
 

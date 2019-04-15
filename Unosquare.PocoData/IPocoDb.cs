@@ -1,5 +1,7 @@
 ﻿namespace Unosquare.PocoData
 {
+    using System;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Data;
     using System.Threading.Tasks;
@@ -14,19 +16,48 @@
 
         IPocoCommands Commands { get; }
 
-        Task<IReadOnlyList<T>> RetrieveAsync<T>(string tableName, params string[] columnNames)
-            where T : class, new();
+        IEnumerable SelectAll(Type t);
 
-        Task<IReadOnlyList<T>> RetrieveAsync<T>()
-            where T : class, new();
+        Task<IEnumerable> SelectAllAsync(Type T);
 
-        Task<IReadOnlyList<T>> RetrieveAsync<T>(string sqlQueryText, int timeoutSeconds = 600)
-            where T : class, new();
+        IEnumerable<T> SelectAll<T>() where T : class, new();
 
-        Task<int> InsertAsync(object obj, bool update);
+        Task<IEnumerable<T>> SelectAllAsync<T>() where T : class, new();
 
-        Task<int> UpdateAsync(object obj);
+        IEnumerable SelectMany(Type T, IDbCommand command);
+
+        Task<IEnumerable> SelectManyAsync(Type T, IDbCommand command);
+
+        IEnumerable<T> SelectMany<T>(IDbCommand command) where T : class, new();
+
+        Task<IEnumerable<T>> SelectManyAsync<T>(IDbCommand command) where T : class, new();
+
+        void SelectSingle(object target);
+
+        Task SelectSingleAsync(object target);
+
+        Task<int> InsertAsync(object item, bool update);
+
+        int Insert(object item, bool update);
+
+        Task<int> InsertManyAsync(IEnumerable items, bool update);
+
+        int InsertMany(IEnumerable items, bool update);
+
+        Task<int> UpdateAsync(object item);
+
+        int Update(object item);
+
+        Task<int> UpdateManyAsync(IEnumerable items, bool update);
+
+        int UpdateMany(IEnumerable items, bool update);
 
         Task<int> DeleteAsync(object obj);
+
+        int Delete(object obj);
+
+        Task<int> DeleteManyAsync(IEnumerable items);
+
+        int DeleteMany(IEnumerable items);
     }
 }

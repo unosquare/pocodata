@@ -4,14 +4,14 @@
     using System.Collections.Generic;
     using System.Data.Common;
 
-    public sealed class SqlPocoReader : IPocoReader
+    internal sealed class SqlPocoReader : IPocoReader
     {
         internal SqlPocoReader()
         {
             // placeholder
         }
 
-        private PocoSchema Schema => SqlPocoDb.GlobalSchema;
+        private PocoSchema Schema => PocoSchema.Instance;
 
         public T ReadValue<T>(DbDataReader reader, string columnName)
         {

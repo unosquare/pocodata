@@ -6,7 +6,7 @@
     using System.Data.SqlClient;
     using System.Linq;
 
-    public sealed class SqlPocoCommands : IPocoCommands
+    internal sealed class SqlPocoCommands : IPocoCommands
     {
         private static readonly object SyncLock = new object();
 
@@ -22,11 +22,11 @@
             Parent = parent;
         }
 
-        private PocoSchema Schema => SqlPocoDb.GlobalSchema;
+        private PocoSchema Schema => PocoSchema.Instance;
 
         private SqlConnection Connection => Parent.Connection as SqlConnection;
 
-        public string SelectCommandText(Type T)
+        public string SelectSingleCommandText(Type T)
         {
             lock (SyncLock)
             {
@@ -115,7 +115,6 @@
 
         public string DeleteCommandText<T>() => DeleteCommandText(typeof(T));
 
-
         public IDbCommand CreateInsertCommand(object obj)
         {
             var T = obj.GetType();
@@ -134,13 +133,13 @@
             return command;
         }
 
-        public IDbCommand CreateSelectCommand( object obj)
+        public IDbCommand CreateSelectSingleCommand( object obj)
         {
             var T = obj.GetType();
             var columns = Schema.Columns(T);
 
             var command = Connection.CreateCommand();
-            command.CommandText = SelectCommandText(T);
+            command.CommandText = SelectSingleCommandText(T);
             foreach (var col in columns)
             {
                 if (!col.IsKeyColumn)

@@ -5,23 +5,23 @@
 
     public interface IPocoCommands
     {
-        string SelectCommandText(Type T);
+        string SelectAllCommandText(Type T);
+
+        string SelectManyCommandText(Type T);
+
+        string SelectSingleCommandText(Type T);
 
         string InsertCommandText(Type T);
 
-        string InsertCommandText<T>();
-
         string UpdateCommandText(Type T);
-
-        string UpdateCommandText<T>();
 
         string DeleteCommandText(Type T);
 
-        string DeleteCommandText<T>();
+        IDbCommand CreateSelectAllCommand(Type T);
+
+        IDbCommand CreateSelectSingleCommand(object obj);
 
         IDbCommand CreateInsertCommand(object obj);
-
-        IDbCommand CreateSelectCommand(object obj);
 
         IDbCommand CreateUpdateCommand(object obj);
 
