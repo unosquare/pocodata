@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Data.SqlClient;
     using System.Diagnostics;
     using System.Linq;
     using System.Threading.Tasks;
@@ -31,6 +32,13 @@
                 sw.Stop();
 
                 Console.WriteLine($"Wrote {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");
+
+                var command = db.Connection.CreateCommand() as SqlCommand;
+                command.CommandText = db.Commands.SelectAllCommandText(typeof(Employee)) + $" WHERE YEAR(DateOfBirth) >= @Year";
+                command.AddParameter("@Year", 1990);
+
+                var youngEmployees = await db.SelectManyAsync<Employee>(command);
+
 
                 sw.Restart();
                 data = (await db.SelectAllAsync<Employee>()).ToList();
