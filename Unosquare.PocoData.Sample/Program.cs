@@ -15,39 +15,40 @@
         {
             using (var db = new SampleDb())
             {
-                if (await db.Definition.TableExistsAsync<Employee>())
-                    await db.Definition.DropTableAsync<Employee>();
+                if (db.Employees.TableExists)
+                    db.Employees.DropTable();
 
-                await db.Definition.CreateTableAsync<Employee>();
+                db.Employees.CreateTable();
+
                 var data = GenerateEmployeeData(10000);
-
                 var sw = new Stopwatch();
-                sw.Start();
 
-                await db.InsertManyAsync(data, false);
-
-                // foreach (var e in data)
-                //    await db.InsertAsync(e, false);
-
+                sw.Restart();
+                await db.Employees.InsertManyAsync(data, false);
                 sw.Stop();
+                Console.WriteLine($"Wrote {db.Employees.CountAll()} records in {sw.ElapsedMilliseconds:0.000} ms.");
 
-                var employeesTable = db.TableProxy<Employee>();
-                var allEmps = employeesTable.SelectAll();
+                sw.Restart();
+                var youngEmployees = await db.Employees.GetYoungEmployeesAsync();
+                sw.Stop();
+                Console.WriteLine($"Selected {youngEmployees.Count()} records in {sw.ElapsedMilliseconds:0.000} ms.");
 
-                Console.WriteLine($"Wrote {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");
+                foreach (var e in youngEmployees)
+                    e.Children = 0;
 
-                var command = db.Connection.CreateCommand() as SqlCommand;
-                command.CommandText = db.Commands.SelectAllCommandText(typeof(Employee)) + $" WHERE YEAR(DateOfBirth) >= @Year";
-                command.AddParameter("@Year", 1990);
+                sw.Restart();
+                var updates = await db.Employees.UpdateManyAsync(youngEmployees);
+                sw.Stop();
+                Console.WriteLine($"Updated {updates} records in {sw.ElapsedMilliseconds:0.000} ms.");
 
-                var youngEmployees = await db.SelectManyAsync<Employee>(command);
-
+                youngEmployees = await db.Employees.GetYoungEmployeesAsync();
+                var asserted = youngEmployees.Where(e => e.Children.HasValue && e.Children.Value != 0).ToList();
 
                 sw.Restart();
                 data = (await db.SelectAllAsync<Employee>()).ToList();
-
                 sw.Stop();
-                Console.WriteLine($"Read {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");
+                Console.WriteLine($"Selected {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");
+
             }
 
             Console.ReadKey(true);

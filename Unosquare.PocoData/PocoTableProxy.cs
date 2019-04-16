@@ -16,6 +16,12 @@
 
         public IPocoDb PocoDb { get; }
 
+        public bool TableExists => PocoDb.Definition.TableExistsAsync<T>().GetAwaiter().GetResult();
+
+        public void CreateTable() => PocoDb.Definition.CreateTableAsync<T>().GetAwaiter().GetResult();
+
+        public void DropTable() => PocoDb.Definition.DropTableAsync<T>().GetAwaiter().GetResult();
+
         public TableAttribute Table => PocoSchema.Instance.Table<T>();
 
         public IReadOnlyList<ColumnMetadata> Columns => PocoSchema.Instance.Columns<T>();
@@ -51,5 +57,9 @@
         public async Task<int> DeleteAsync(T obj) => await PocoDb.DeleteAsync(obj);
 
         public int Delete(T obj) => PocoDb.Delete(obj);
+
+        public int CountAll() => PocoDb.CountAll(typeof(T));
+
+        public async Task<int> CountAllAsync() => await PocoDb.CountAllAsync(typeof(T));
     }
 }

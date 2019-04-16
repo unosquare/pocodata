@@ -57,5 +57,9 @@
         Task<int> DeleteAsync(object obj);
 
         int Delete(object obj);
+
+        int CountAll(Type T);
+
+        Task<int> CountAllAsync(Type T);
     }
 }

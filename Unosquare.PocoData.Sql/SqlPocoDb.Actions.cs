@@ -341,5 +341,9 @@
 
         public int Delete(object obj) =>
             Commands.CreateDeleteCommand(obj).ExecuteNonQuery();
+
+        public async Task<int> CountAllAsync(Type T) => Convert.ToInt32(await (Commands.CreateCountAllCommand(T) as SqlCommand).ExecuteScalarAsync());
+
+        public int CountAll(Type T) => Convert.ToInt32(Commands.CreateCountAllCommand(T).ExecuteScalar());
     }
 }
