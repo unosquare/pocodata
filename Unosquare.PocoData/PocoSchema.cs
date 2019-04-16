@@ -128,10 +128,13 @@
         public void Validate(Type T)
         {
             var columns = Columns(T);
-            if (columns.Count(c => c.IsGenerated) > 1)
+            if (columns.Count(c => c.IsKeyColumn) <= 0)
+                throw new NotSupportedException("At leat a key column must be defined");
+
+            if (columns.Count(c => c.IsKeyGenerated) > 1)
                 throw new NotSupportedException("Only a single generated column is suppoted in the schema");
 
-            if (columns.Count(c => c.IsGenerated && !c.IsKeyColumn) > 0)
+            if (columns.Count(c => c.IsKeyGenerated && !c.IsKeyColumn) > 0)
                 throw new NotSupportedException("Only agenerated columns must participate in the primary key set");
 
             if (columns.Count(c => c.IsNullable && c.IsKeyColumn) > 0)

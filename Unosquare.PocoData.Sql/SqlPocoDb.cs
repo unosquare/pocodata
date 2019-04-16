@@ -50,6 +50,8 @@
 
         public IPocoCommands Commands { get; }
 
+        public PocoTableProxy<T> TableProxy<T>() where T : class, new() => new PocoTableProxy<T>(this);
+
         public static async Task<SqlPocoDb> OpenAsync(string connectionString)
         {
             var result = new SqlPocoDb(connectionString)

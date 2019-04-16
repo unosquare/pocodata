@@ -93,7 +93,7 @@
             var T = item.GetType();
             var columns = Schema.Columns(T);
 
-            var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsGenerated);
+            var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
             object insertResult;
             var insertCommand = Commands.CreateInsertCommand(item) as SqlCommand;
 
@@ -103,7 +103,7 @@
                 insertResult = generatedColumn == null
                     ? await insertCommand.ExecuteNonQueryAsync()
                     : await insertCommand.ExecuteScalarAsync();
-                generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.PropertyNativeType));
+                generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType));
 
                 if (update)
                 {
@@ -127,7 +127,7 @@
             var T = item.GetType();
             var columns = Schema.Columns(T);
 
-            var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsGenerated);
+            var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
             object insertResult;
             var insertCommand = Commands.CreateInsertCommand(item);
 
@@ -137,7 +137,7 @@
                 insertResult = generatedColumn == null
                     ? insertCommand.ExecuteNonQuery()
                     : insertCommand.ExecuteScalar();
-                generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.PropertyNativeType));
+                generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType));
 
                 if (update)
                 {
@@ -165,10 +165,10 @@
 
             var T = firstItem.GetType();
             var columns = Schema.Columns(T);
-            var insertCommandColumns = columns.Where(c => !c.IsGenerated);
+            var insertCommandColumns = columns.Where(c => !c.IsKeyGenerated);
             var selectCommandColumns = columns.Where(c => c.IsKeyColumn);
 
-            var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsGenerated);
+            var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
             object insertResult;
 
             // we will reuse the commands
@@ -191,7 +191,7 @@
                         ? await insertCommand.ExecuteNonQueryAsync()
                         : await insertCommand.ExecuteScalarAsync();
 
-                    generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.PropertyNativeType));
+                    generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType));
 
                     if (update)
                     {
@@ -221,10 +221,10 @@
 
             var T = firstItem.GetType();
             var columns = Schema.Columns(T);
-            var insertCommandColumns = columns.Where(c => !c.IsGenerated);
+            var insertCommandColumns = columns.Where(c => !c.IsKeyGenerated);
             var selectCommandColumns = columns.Where(c => c.IsKeyColumn);
 
-            var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsGenerated);
+            var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
             object insertResult;
 
             // we will reuse the commands
@@ -247,7 +247,7 @@
                         ? insertCommand.ExecuteNonQuery()
                         : insertCommand.ExecuteScalar();
 
-                    generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.PropertyNativeType));
+                    generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType));
 
                     if (update)
                     {

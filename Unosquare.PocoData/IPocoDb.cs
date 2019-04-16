@@ -16,6 +16,8 @@
 
         IPocoCommands Commands { get; }
 
+        PocoTableProxy<T> TableProxy<T>() where T : class, new();
+
         IEnumerable SelectAll(Type T);
 
         Task<IEnumerable> SelectAllAsync(Type T);

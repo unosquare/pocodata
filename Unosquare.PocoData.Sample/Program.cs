@@ -13,7 +13,7 @@
     {
         static async Task Main(string[] args)
         {
-            using (var db = await SqlPocoDb.OpenLocalAsync("pocodata"))
+            using (var db = new SampleDb())
             {
                 if (await db.Definition.TableExistsAsync<Employee>())
                     await db.Definition.DropTableAsync<Employee>();
@@ -30,6 +30,9 @@
                 //    await db.InsertAsync(e, false);
 
                 sw.Stop();
+
+                var employeesTable = db.TableProxy<Employee>();
+                var allEmps = employeesTable.SelectAll();
 
                 Console.WriteLine($"Wrote {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");
 

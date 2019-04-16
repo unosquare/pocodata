@@ -47,7 +47,7 @@
                 if (!isNew) continue;
                 
                 param.ParameterName = col.ParameterName;
-                var T = col.PropertyNativeType;
+                var T = col.NativeType;
 
                 if (DbTypes.CanMap(T))
                     param.SqlDbType = DbTypes.Map(T);

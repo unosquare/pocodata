@@ -42,13 +42,13 @@
                 {
                     try
                     {
-                        var propertyValue = Convert.ChangeType(fieldValue, property.PropertyNativeType);
+                        var propertyValue = Convert.ChangeType(fieldValue, property.NativeType);
                         property.SetValue(result, propertyValue);
                     }
                     catch (Exception ex)
                     {
                         throw new InvalidCastException(
-                            $"Unable to convert '{fieldValue.GetType().Name}' to '{property.PropertyNativeType.Name}' for column '{property.ColumnName}'",
+                            $"Unable to convert '{fieldValue.GetType().Name}' to '{property.NativeType.Name}' for column '{property.ColumnName}'",
                             ex);
                     }
                 }

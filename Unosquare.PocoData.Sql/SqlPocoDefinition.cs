@@ -28,17 +28,17 @@
             var columnDefs = new List<string>(64);
             foreach (var c in primaryKeyCols)
             {
-                var sqlType = DbTypes.Map(c.PropertyNativeType).ToString().ToLowerInvariant();
-                if (c.PropertyNativeType == typeof(string))
+                var sqlType = DbTypes.Map(c.NativeType).ToString().ToLowerInvariant();
+                if (c.NativeType == typeof(string))
                     sqlType = $"{sqlType} ({c.Length})";
 
-                columnDefs.Add($"{c.QualifiedName} {sqlType} {(c.IsGenerated ? "IDENTITY(1,1)" : "NOT NULL")}");
+                columnDefs.Add($"{c.QualifiedName} {sqlType} {(c.IsKeyGenerated ? "IDENTITY(1,1)" : "NOT NULL")}");
             }
 
             foreach (var c in columns)
             {
-                var sqlType = DbTypes.Map(c.PropertyNativeType).ToString().ToLowerInvariant();
-                if (c.PropertyNativeType == typeof(string))
+                var sqlType = DbTypes.Map(c.NativeType).ToString().ToLowerInvariant();
+                if (c.NativeType == typeof(string))
                     sqlType = $"{sqlType} ({c.Length})";
 
                 columnDefs.Add($"{c.QualifiedName} {sqlType} {(c.IsNullable ? "NULL" : "NOT NULL")}");

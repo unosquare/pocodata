@@ -14,12 +14,12 @@
             Length = length;
             ColumnName = columnName;
             IsKeyColumn = isKey;
-            IsGenerated = isGenerated;
+            IsKeyGenerated = isKey && isGenerated;
             IsNullable = isNullable;
-            PropertyNativeType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
+            NativeType = Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType;
 
-            if (PropertyNativeType.IsEnum)
-                PropertyNativeType = PropertyNativeType.GetEnumUnderlyingType();
+            if (NativeType.IsEnum)
+                NativeType = NativeType.GetEnumUnderlyingType();
 
             Proxy = CreatePropertyProxy(property);
         }
@@ -28,13 +28,13 @@
 
         public string PropertyName => Property.Name;
 
-        public Type PropertyNativeType { get; }
+        public Type NativeType { get; }
 
         public int Length { get; }
 
         public bool IsKeyColumn { get; }
 
-        public bool IsGenerated { get; }
+        public bool IsKeyGenerated { get; }
 
         public bool IsNullable { get; }
 

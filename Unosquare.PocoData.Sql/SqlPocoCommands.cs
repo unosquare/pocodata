@@ -75,7 +75,7 @@
                     return InsertCommandTexts[T];
 
                 var table = Schema.Table(T);
-                var columns = Schema.Columns(T).Where(c => c.IsGenerated == false);
+                var columns = Schema.Columns(T).Where(c => c.IsKeyGenerated == false);
 
                 var columnNames = columns.Select(c => c.QualifiedName);
                 var parameterNames = columns.Select(c => c.ParameterName);
@@ -96,7 +96,7 @@
                     return UpdateCommandTexts[T];
 
                 var table = Schema.Table(T);
-                var setColumns = Schema.Columns(T).Where(c => c.IsGenerated == false && c.IsKeyColumn == false);
+                var setColumns = Schema.Columns(T).Where(c => c.IsKeyGenerated == false && c.IsKeyColumn == false);
                 var keyColumns = Schema.Columns(T).Where(c => c.IsKeyColumn);
 
                 var setArgument = setColumns.Select(col => $"{col.QualifiedName} = {col.ParameterName}");
@@ -160,7 +160,7 @@
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = InsertCommandText(T);
-            command.AddParameters(columns.Where(c => !c.IsGenerated), obj);
+            command.AddParameters(columns.Where(c => !c.IsKeyGenerated), obj);
             return command;
         }
 
