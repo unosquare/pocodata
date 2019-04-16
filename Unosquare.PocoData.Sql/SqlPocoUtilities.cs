@@ -2,7 +2,9 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Data;
     using System.Data.SqlClient;
+    using System.Text;
 
     public static class SqlPocoUtilities
     {
@@ -55,6 +57,30 @@
                 if (T == typeof(string) && col.Length > 0)
                     param.Size = col.Length;
             }
+        }
+
+        public static string DebugCommand(this IDbCommand command, bool outputToConsole = true)
+        {
+            var builder = new StringBuilder();
+            builder.AppendLine($"[{command.GetType()}]  {command.CommandText}");
+            foreach (var parameter in command.Parameters)
+            {
+                if (parameter is SqlParameter sp)
+                {
+                    builder.AppendLine($"    {$"{sp.SqlDbType,-10} {(sp.Size <= 0 ? string.Empty : $"({sp.Size})")}",-20} {sp.ParameterName,-20} = {(sp.Value == DBNull.Value ? nameof(DBNull) : sp.Value)}");
+                }
+                else
+                {
+                    var p = parameter as IDbDataParameter;
+                    builder.AppendLine($"    {$"{p.DbType,-10} {(p.Size <= 0 ? string.Empty : $"({p.Size})")}",-20} {p.ParameterName,-20} = {(p.Value == DBNull.Value ? nameof(DBNull) : p.Value)}");
+                }
+            }
+
+            var result = builder.ToString().TrimEnd();
+            if (outputToConsole)
+                Console.WriteLine(result);
+
+            return result;
         }
     }
 }

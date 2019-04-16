@@ -283,7 +283,6 @@
 
             var T = firstItem.GetType();
             var columns = Schema.Columns(T);
-            var updateCommandColumns = columns.Where(c => !c.IsKeyColumn);
 
             // we will reuse the command
             var updateCommand = Commands.CreateUpdateCommand(firstItem) as SqlCommand;
@@ -295,7 +294,8 @@
 
                 foreach (var item in items)
                 {
-                    updateCommand.AddParameters(updateCommandColumns, item);
+                    updateCommand.AddParameters(columns, item);
+                    updateCommand.DebugCommand();
                     updateCount += await updateCommand.ExecuteNonQueryAsync();
                 }
 
@@ -314,7 +314,6 @@
 
             var T = firstItem.GetType();
             var columns = Schema.Columns(T);
-            var updateCommandColumns = columns.Where(c => !c.IsKeyColumn);
 
             // we will reuse the command
             var updateCommand = Commands.CreateUpdateCommand(firstItem) as SqlCommand;
@@ -326,7 +325,7 @@
 
                 foreach (var item in items)
                 {
-                    updateCommand.AddParameters(updateCommandColumns, item);
+                    updateCommand.AddParameters(columns, item);
                     updateCount += updateCommand.ExecuteNonQuery();
                 }
 

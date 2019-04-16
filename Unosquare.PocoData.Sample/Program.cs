@@ -13,45 +13,33 @@
     {
         static async Task Main(string[] args)
         {
+            const int EmployeesToGenerate = 100;
+            const bool Reset = false;
+
             using (var db = new SampleDb())
             {
-                if (db.Employees.TableExists)
+                if (Reset && db.Employees.TableExists)
                     db.Employees.DropTable();
 
-                db.Employees.CreateTable();
+                if (!db.Employees.TableExists)
+                    db.Employees.CreateTable();
 
-                var data = GenerateEmployeeData(10000);
-                var sw = new Stopwatch();
+                if (db.Employees.CountAll() <= 0)
+                    await db.Employees.InsertManyAsync(GenerateEmployeeData(EmployeesToGenerate), false);
 
-                sw.Restart();
-                await db.Employees.InsertManyAsync(data, false);
-                sw.Stop();
-                Console.WriteLine($"Wrote {db.Employees.CountAll()} records in {sw.ElapsedMilliseconds:0.000} ms.");
+                var employees = new List<Employee>(EmployeesToGenerate);
+                employees.AddRange(await db.Employees.SelectAllAsync());
 
-                sw.Restart();
                 var youngEmployees = await db.Employees.GetYoungEmployeesAsync();
-                sw.Stop();
-                Console.WriteLine($"Selected {youngEmployees.Count()} records in {sw.ElapsedMilliseconds:0.000} ms.");
-
                 foreach (var e in youngEmployees)
-                    e.Children = 0;
+                    e.Children = null;
 
-                sw.Restart();
                 var updates = await db.Employees.UpdateManyAsync(youngEmployees);
-                sw.Stop();
-                Console.WriteLine($"Updated {updates} records in {sw.ElapsedMilliseconds:0.000} ms.");
 
-                youngEmployees = await db.Employees.GetYoungEmployeesAsync();
-                var asserted = youngEmployees.Where(e => e.Children.HasValue && e.Children.Value != 0).ToList();
-
-                sw.Restart();
-                data = (await db.SelectAllAsync<Employee>()).ToList();
-                sw.Stop();
-                Console.WriteLine($"Selected {data.Count} records in {sw.ElapsedMilliseconds:0.000} ms.");
-
+                var updatedYoungEmployees = await db.Employees.GetYoungEmployeesAsync();
+                var failedUpdates = updatedYoungEmployees.Where(e => e.Children.HasValue).ToList();
+                Console.WriteLine($"Failed Updates: {failedUpdates.Count}");
             }
-
-            Console.ReadKey(true);
         }
 
         private static IReadOnlyList<Employee> GenerateEmployeeData(int count)

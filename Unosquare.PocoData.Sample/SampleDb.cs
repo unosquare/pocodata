@@ -1,5 +1,6 @@
 ﻿namespace Unosquare.PocoData.Sample
 {
+    using Annotations;
     using DataModels;
     using System.Collections.Generic;
     using System.Data.SqlClient;

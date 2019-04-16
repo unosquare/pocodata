@@ -3,11 +3,12 @@
     using System;
     using Unosquare.PocoData.Annotations;
 
+    [Table("Employees")]
     public class Employee
     {
         public Employee()
         {
-
+            // placeholder
         }
 
         public Employee(int id, string fullName, string emailAddress, DateTime dob, int? children, MaritalStatus status, object reserved)
