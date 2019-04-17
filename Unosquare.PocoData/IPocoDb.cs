@@ -27,10 +27,23 @@
         /// </summary>
         IPocoDefinition Definition { get; }
 
+        /// <summary>
+        /// Provides a helper object containing methods to generate commands for standard operations.
+        /// </summary>
         IPocoCommands Commands { get; }
 
+        /// <summary>
+        /// Gets a dynamically generated table proxy containing methods to perform CRUD operations on the given table-mapped type.
+        /// </summary>
+        /// <typeparam name="T">The type mapped to a database table.</typeparam>
+        /// <returns>The table proxy.</returns>
         PocoTableProxy<T> TableProxy<T>() where T : class, new();
 
+        /// <summary>
+        /// Selects all records of the given table-mapped type.
+        /// </summary>
+        /// <param name="T">The table-mapped type.</param>
+        /// <returns>An enumerable collection of the records that were retrieved</returns>
         IEnumerable SelectAll(Type T);
 
         Task<IEnumerable> SelectAllAsync(Type T);
