@@ -1,13 +1,10 @@
 ﻿namespace Unosquare.PocoData.Sample
 {
+    using DataModels;
     using System;
     using System.Collections.Generic;
-    using System.Data.SqlClient;
-    using System.Diagnostics;
     using System.Linq;
     using System.Threading.Tasks;
-    using DataModels;
-    using Unosquare.PocoData.Sql;
 
     class Program
     {

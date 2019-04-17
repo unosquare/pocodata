@@ -12,6 +12,7 @@
         {
             PocoDb = pocoDb;
             PocoSchema.Instance.Validate<T>();
+            if (!TableExists) CreateTable();
         }
 
         public IPocoDb PocoDb { get; }
