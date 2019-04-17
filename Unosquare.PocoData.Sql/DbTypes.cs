@@ -4,6 +4,9 @@
     using System.Collections.Generic;
     using System.Data;
 
+    /// <summary>
+    /// Provides type-mapping facilities between CLR and SQL Server types
+    /// </summary>
     internal static class DbTypes
     {
         private static readonly IReadOnlyDictionary<Type, SqlDbType> SqlTypes = new Dictionary<Type, SqlDbType>()
@@ -41,12 +44,36 @@
             { SqlDbType.DateTime, typeof(DateTime) },
         };
 
+        /// <summary>
+        /// Maps the specified CLR type to a SqlDbType.
+        /// </summary>
+        /// <param name="clrType">The CLR type.</param>
+        /// <returns>The SqlDbType</returns>
         public static SqlDbType Map(Type clrType) => SqlTypes[clrType];
 
+        /// <summary>
+        /// Maps the specified SqlDbType to a CLR type.
+        /// </summary>
+        /// <param name="sqlType">The SqlDbType.</param>
+        /// <returns>The CLR type</returns>
         public static Type Map(SqlDbType sqlType) => ClrTypes[sqlType];
 
+        /// <summary>
+        /// Determines whether the CLR type can be mapped to a SqlDbType.
+        /// </summary>
+        /// <param name="clrType">The CLR Type.</param>
+        /// <returns>
+        ///   <c>true</c> if the types can be mapped.
+        /// </returns>
         public static bool CanMap(Type clrType) => SqlTypes.ContainsKey(clrType);
 
+        /// <summary>
+        /// Determines whether the SqlDbType can be mapped to a CLR type.
+        /// </summary>
+        /// <param name="sqlType">The SqlDbType.</param>
+        /// <returns>
+        ///   <c>true</c> if the types can be mapped.
+        /// </returns>
         public static bool CanMap(SqlDbType sqlType) => ClrTypes.ContainsKey(sqlType);
     }
 }

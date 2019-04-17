@@ -11,14 +11,19 @@
 
     public partial class SqlPocoDb
     {
+        /// <inheritdoc />
         public IEnumerable SelectAll(Type T) => SelectMany(T, Commands.CreateSelectAllCommand(T));
 
+        /// <inheritdoc />
         public async Task<IEnumerable> SelectAllAsync(Type T) => await SelectManyAsync(T, Commands.CreateSelectAllCommand(T));
 
+        /// <inheritdoc />
         public IEnumerable<T> SelectAll<T>() where T : class, new() => SelectAll(typeof(T)).Cast<T>();
 
+        /// <inheritdoc />
         public async Task<IEnumerable<T>> SelectAllAsync<T>() where T : class, new() => (await SelectAllAsync(typeof(T))).Cast<T>();
 
+        /// <inheritdoc />
         public IEnumerable SelectMany(Type T, IDbCommand command)
         {
             var result = new List<object>(4096);
@@ -28,13 +33,14 @@
                 while (reader.Read())
                 {
                     var item = Activator.CreateInstance(T);
-                    result.Add(PocoReader.ReadObject(reader, item));
+                    result.Add(ObjectReader.ReadObject(reader, item));
                 }
             }
 
             return result;
         }
 
+        /// <inheritdoc />
         public async Task<IEnumerable> SelectManyAsync(Type T, IDbCommand command)
         {
             var result = new List<object>(4096);
@@ -45,17 +51,20 @@
                 while (await reader.ReadAsync())
                 {
                     var item = Activator.CreateInstance(T);
-                    result.Add(PocoReader.ReadObject(reader, item));
+                    result.Add(ObjectReader.ReadObject(reader, item));
                 }
             }
 
             return result;
         }
 
+        /// <inheritdoc />
         public IEnumerable<T> SelectMany<T>(IDbCommand command) where T : class, new() => SelectMany(typeof(T), command).Cast<T>();
 
+        /// <inheritdoc />
         public async Task<IEnumerable<T>> SelectManyAsync<T>(IDbCommand command) where T : class, new() => (await SelectManyAsync(typeof(T), command)).Cast<T>();
 
+        /// <inheritdoc />
         public bool SelectSingle(object target)
         {
             var result = false;
@@ -64,7 +73,7 @@
             {
                 if (reader.Read())
                 {
-                    PocoReader.ReadObject(reader, target);
+                    ObjectReader.ReadObject(reader, target);
                     result = true;
                 }
             }
@@ -72,6 +81,7 @@
             return result;
         }
 
+        /// <inheritdoc />
         public async Task<bool> SelectSingleAsync(object target)
         {
             var result = false;
@@ -80,7 +90,7 @@
             {
                 if (await reader.ReadAsync())
                 {
-                    PocoReader.ReadObject(reader, target);
+                    ObjectReader.ReadObject(reader, target);
                     result = true;
                 }
             }
@@ -88,6 +98,7 @@
             return result;
         }
 
+        /// <inheritdoc />
         public async Task<int> InsertAsync(object item, bool update)
         {
             var T = item.GetType();
@@ -112,7 +123,7 @@
                     using (var reader = await selectCommand.ExecuteReaderAsync())
                     {
                         if (await reader.ReadAsync())
-                            PocoReader.ReadObject(reader, item);
+                            ObjectReader.ReadObject(reader, item);
                     }
                 }
 
@@ -122,6 +133,7 @@
             return 1;
         }
 
+        /// <inheritdoc />
         public int Insert(object item, bool update)
         {
             var T = item.GetType();
@@ -146,7 +158,7 @@
                     using (var reader = selectCommand.ExecuteReader())
                     {
                         if (reader.Read())
-                            PocoReader.ReadObject(reader, item);
+                            ObjectReader.ReadObject(reader, item);
                     }
                 }
 
@@ -156,6 +168,7 @@
             return 1;
         }
 
+        /// <inheritdoc />
         public async Task<int> InsertManyAsync(IEnumerable targetItems, bool update)
         {
             var insertCount = 0;
@@ -185,7 +198,7 @@
 
                 foreach (var item in items)
                 {
-                    insertCommand.AddParameters(insertCommandColumns, item);
+                    insertCommand.AddOrUpdateParameters(insertCommandColumns, item);
 
                     insertResult = generatedColumn == null
                         ? await insertCommand.ExecuteNonQueryAsync()
@@ -195,11 +208,11 @@
 
                     if (update)
                     {
-                        selectCommand.AddParameters(selectCommandColumns, item);
+                        selectCommand.AddOrUpdateParameters(selectCommandColumns, item);
                         using (var reader = await selectCommand.ExecuteReaderAsync())
                         {
                             if (await reader.ReadAsync())
-                                PocoReader.ReadObject(reader, item);
+                                ObjectReader.ReadObject(reader, item);
                         }
                     }
 
@@ -212,6 +225,7 @@
             return insertCount;
         }
 
+        /// <inheritdoc />
         public int InsertMany(IEnumerable targetItems, bool update)
         {
             var insertCount = 0;
@@ -241,7 +255,7 @@
 
                 foreach (var item in items)
                 {
-                    insertCommand.AddParameters(insertCommandColumns, item);
+                    insertCommand.AddOrUpdateParameters(insertCommandColumns, item);
 
                     insertResult = generatedColumn == null
                         ? insertCommand.ExecuteNonQuery()
@@ -251,11 +265,11 @@
 
                     if (update)
                     {
-                        selectCommand.AddParameters(selectCommandColumns, item);
+                        selectCommand.AddOrUpdateParameters(selectCommandColumns, item);
                         using (var reader = selectCommand.ExecuteReader())
                         {
                             if (reader.Read())
-                                PocoReader.ReadObject(reader, item);
+                                ObjectReader.ReadObject(reader, item);
                         }
                     }
 
@@ -268,12 +282,15 @@
             return insertCount;
         }
 
+        /// <inheritdoc />
         public async Task<int> UpdateAsync(object item) =>
             await (Commands.CreateUpdateCommand(item) as SqlCommand).ExecuteNonQueryAsync();
 
+        /// <inheritdoc />
         public int Update(object item) =>
             Commands.CreateUpdateCommand(item).ExecuteNonQuery();
 
+        /// <inheritdoc />
         public async Task<int> UpdateManyAsync(IEnumerable targetItems)
         {
             var updateCount = 0;
@@ -294,8 +311,7 @@
 
                 foreach (var item in items)
                 {
-                    updateCommand.AddParameters(columns, item);
-                    updateCommand.DebugCommand();
+                    updateCommand.AddOrUpdateParameters(columns, item);
                     updateCount += await updateCommand.ExecuteNonQueryAsync();
                 }
 
@@ -305,6 +321,7 @@
             return updateCount;
         }
 
+        /// <inheritdoc />
         public int UpdateMany(IEnumerable targetItems)
         {
             var updateCount = 0;
@@ -325,7 +342,7 @@
 
                 foreach (var item in items)
                 {
-                    updateCommand.AddParameters(columns, item);
+                    updateCommand.AddOrUpdateParameters(columns, item);
                     updateCount += updateCommand.ExecuteNonQuery();
                 }
 
@@ -335,14 +352,18 @@
             return updateCount;
         }
 
+        /// <inheritdoc />
         public async Task<int> DeleteAsync(object obj) =>
             await (Commands.CreateDeleteCommand(obj) as SqlCommand).ExecuteNonQueryAsync();
 
+        /// <inheritdoc />
         public int Delete(object obj) =>
             Commands.CreateDeleteCommand(obj).ExecuteNonQuery();
 
+        /// <inheritdoc />
         public async Task<int> CountAllAsync(Type T) => Convert.ToInt32(await (Commands.CreateCountAllCommand(T) as SqlCommand).ExecuteScalarAsync());
 
+        /// <inheritdoc />
         public int CountAll(Type T) => Convert.ToInt32(Commands.CreateCountAllCommand(T).ExecuteScalar());
     }
 }

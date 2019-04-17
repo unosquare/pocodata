@@ -5,7 +5,10 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class PocoSchema
+    /// <summary>
+    /// Storeas table and column mappings and their corresponding metadata.
+    /// </summary>
+    public sealed class PocoSchema
     {
         private readonly object SyncLock = new object();
 
@@ -13,13 +16,22 @@
         private readonly Dictionary<Type, IReadOnlyList<ColumnMetadata>> ColumnMaps = new Dictionary<Type, IReadOnlyList<ColumnMetadata>>(32);
         private readonly Dictionary<Type, TableAttribute> TableMaps = new Dictionary<Type, TableAttribute>(32);
 
+        /// <summary>
+        /// Prevents a default instance of the <see cref="PocoSchema"/> class from being created.
+        /// </summary>
         private PocoSchema()
         {
             // placeholder
         }
 
+        /// <summary>
+        /// Gets the singleton instance of this class.
+        /// </summary>
         public static PocoSchema Instance { get; } = new PocoSchema();
 
+        /// <summary>
+        /// Gets a list of the standard value types.
+        /// </summary>
         public static IReadOnlyList<Type> StandardValueTypes { get; } = new List<Type>()
         {
             typeof(sbyte),
@@ -39,6 +51,11 @@
             typeof(DateTime)
         };
 
+        /// <summary>
+        /// Provides column metadata for the specified table-mapped type.
+        /// </summary>
+        /// <param name="T">The table-mapped type.</param>
+        /// <returns>A list with column metadata.</returns>
         public IReadOnlyList<ColumnMetadata> Columns(Type T)
         {
             lock (SyncLock)
@@ -106,8 +123,18 @@
             }
         }
 
+        /// <summary>
+        /// Provides column metadata for the specified table-mapped type.
+        /// </summary>
+        /// <typeparam name="T">The table-mapped type.</typeparam>
+        /// <returns>A list with column metadata.</returns>
         public IReadOnlyList<ColumnMetadata> Columns<T>() where T : class => Columns(typeof(T));
 
+        /// <summary>
+        /// Provides table metadata for the specified table-mapped type.
+        /// </summary>
+        /// <param name="T">The table-mapped type.</param>
+        /// <returns>The table attributes applied to the type.</returns>
         public TableAttribute Table(Type T)
         {
             lock (SyncLock)
@@ -123,8 +150,17 @@
             }
         }
 
+        /// <summary>
+        /// Provides table metadata for the specified table-mapped type.
+        /// </summary>
+        /// <typeparam name="T">The table-mapped type.</typeparam>
+        /// <returns>The table attributes applied to the type.</returns>
         public TableAttribute Table<T>() where T : class => Table(typeof(T));
 
+        /// <summary>
+        /// Validates that the specified table-mapped type has appropriate attributes applied so it can be stored in its corresponding table.
+        /// </summary>
+        /// <param name="T">The table-mapped type.</param>
         public void Validate(Type T)
         {
             var columns = Columns(T);
@@ -143,6 +179,10 @@
             // TODO: add more validation rules
         }
 
+        /// <summary>
+        /// Validates that the specified table-mapped type has appropriate attributes applied so it can be stored in its corresponding table.
+        /// </summary>
+        /// <typeparam name="T">The table-mapped type.</typeparam>
         public void Validate<T>() where T : class => Validate(typeof(T));
     }
 }

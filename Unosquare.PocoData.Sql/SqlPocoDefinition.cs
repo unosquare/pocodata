@@ -6,10 +6,18 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Provides DDL actions that are specific to SQL Server.
+    /// </summary>
+    /// <seealso cref="IPocoDefinition" />
     internal sealed class SqlPocoDefinition : IPocoDefinition
     {
         private readonly SqlPocoDb Parent;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SqlPocoDefinition"/> class.
+        /// </summary>
+        /// <param name="parent">The parent database container object.</param>
         internal SqlPocoDefinition(SqlPocoDb parent)
         {
             Parent = parent;
@@ -19,6 +27,7 @@
 
         private PocoSchema Schema => PocoSchema.Instance;
 
+        /// <inheritdoc />
         public async Task<int> CreateTableAsync(Type T)
         {
             var table = Schema.Table(T);
@@ -54,8 +63,10 @@
             return await command.ExecuteNonQueryAsync();
         }
 
+        /// <inheritdoc />
         public async Task<int> CreateTableAsync<T>() => await CreateTableAsync(typeof(T));
 
+        /// <inheritdoc />
         public async Task<bool> TableExistsAsync(Type T)
         {
             var table = Schema.Table(T);
@@ -69,8 +80,10 @@
             return (int)result > 0;
         }
 
+        /// <inheritdoc />
         public async Task<bool> TableExistsAsync<T>() => await TableExistsAsync(typeof(T));
 
+        /// <inheritdoc />
         public async Task DropTableAsync(Type T)
         {
             var table = Schema.Table(T);
@@ -80,6 +93,7 @@
             await command.ExecuteNonQueryAsync();
         }
 
+        /// <inheritdoc />
         public async Task DropTableAsync<T>() => await DropTableAsync(typeof(T));
     }
 }

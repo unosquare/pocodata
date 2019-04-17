@@ -7,29 +7,42 @@
     using System.Data.SqlClient;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Provides a SQL Server-specific implementation of a POCO database functionality.
+    /// </summary>
+    /// <seealso cref="IPocoDb" />
+    /// <seealso cref="IDisposable" />
     public partial class SqlPocoDb : IPocoDb, IDisposable
     {
         private readonly string ConnectionString;
         private SqlConnection SqlConnection;
         private bool IsDisposed;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SqlPocoDb"/> class.
+        /// </summary>
+        /// <param name="connectionString">The connection string.</param>
         public SqlPocoDb(string connectionString)
             : this()
         {
             ConnectionString = connectionString;
         }
 
+        /// <summary>
+        /// Prevents a default instance of the <see cref="SqlPocoDb"/> class from being created.
+        /// </summary>
         private SqlPocoDb()
         {
-            PocoReader = new SqlPocoReader();
             Definition = new SqlPocoDefinition(this);
             Commands = new SqlPocoCommands(this);
         }
 
+        /// <summary>
+        /// Gets or sets the command execution timeout in seconds.
+        /// </summary>
         public int SqlCommandTimeoutSeconds { get; set; } = 60 * 5;
 
-        public PocoSchema Schema => PocoSchema.Instance;
-
+        /// <inheritdoc />
         public IDbConnection Connection
         {
             get
@@ -44,20 +57,22 @@
             }
         }
 
-        public IPocoReader PocoReader { get; }
+        /// <inheritdoc />
+        public PocoSchema Schema => PocoSchema.Instance;
 
+        /// <inheritdoc />
+        public PocoReader ObjectReader => PocoReader.Instance;
+
+        /// <inheritdoc />
         public IPocoDefinition Definition { get; }
 
+        /// <inheritdoc />
         public IPocoCommands Commands { get; }
 
-        /// <summary>
-        /// Obtaings a dynamically generated table proxy with standard functionality.
-        /// Please note that the table is not created if it does not exist.
-        /// </summary>
-        /// <typeparam name="T">The type to map to a backing table.</typeparam>
-        /// <returns>The table proxy object.</returns>
+        /// <inheritdoc />
         public PocoTableProxy<T> TableProxy<T>() where T : class, new() => new PocoTableProxy<T>(this, false);
 
+        /// <inheritdoc />
         public static async Task<SqlPocoDb> OpenAsync(string connectionString)
         {
             var result = new SqlPocoDb(connectionString)
@@ -69,12 +84,23 @@
             return result;
         }
 
+        /// <inheritdoc />
         public static async Task<SqlPocoDb> OpenAsync(string host, string username, string password, string databaseName) =>
             await OpenAsync($"Data Source={host}; User ID={username}; Password={password}; Initial Catalog={databaseName}; MultipleActiveResultSets=True;");
 
+        /// <summary>
+        /// Asynchronously opens a connection to the local server with integrated credentials and using the specified database name.
+        /// </summary>
+        /// <param name="databaseName">Name of the database.</param>
+        /// <returns>The database container object.</returns>
         public static async Task<SqlPocoDb> OpenLocalAsync(string databaseName) =>
             await OpenAsync($"Data Source=.; Integrated Security=True; Initial Catalog={databaseName}; MultipleActiveResultSets=True;");
 
+        /// <summary>
+        /// Opens the database using the specified connection string.
+        /// </summary>
+        /// <param name="connectionString">The connection string.</param>
+        /// <returns>The database container object.</returns>
         public static SqlPocoDb Open(string connectionString)
         {
             var result = new SqlPocoDb(connectionString)
@@ -86,14 +112,34 @@
             return result;
         }
 
+        /// <summary>
+        /// Opens the database using the specified common parameters.
+        /// </summary>
+        /// <param name="host">The host.</param>
+        /// <param name="username">The username.</param>
+        /// <param name="password">The password.</param>
+        /// <param name="databaseName">Name of the database.</param>
+        /// <returns>The database container object.</returns>
         public static SqlPocoDb Open(string host, string username, string password, string databaseName) =>
             Open($"Data Source={host}; User ID={username}; Password={password}; Initial Catalog={databaseName}; MultipleActiveResultSets=True;");
 
+        /// <summary>
+        /// Opens a connection to the local server with integrated credentials and using the specified database name.
+        /// </summary>
+        /// <param name="databaseName">Name of the database.</param>
+        /// <returns>The database container object.</returns>
         public static SqlPocoDb OpenLocal(string databaseName) =>
             Open($"Data Source=.; Integrated Security=True; Initial Catalog={databaseName}; MultipleActiveResultSets=True;");
 
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
         public void Dispose() => Dispose(true);
 
+        /// <summary>
+        /// Releases unmanaged and - optionally - managed resources.
+        /// </summary>
+        /// <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
             if (!IsDisposed)

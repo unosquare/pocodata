@@ -137,14 +137,14 @@
         private interface IPropertyProxy
         {
             /// <summary>
-            /// Gets the property value.
+            /// Gets the property value via a stored delegate.
             /// </summary>
             /// <param name="instance">The instance.</param>
             /// <returns></returns>
             object GetValue(object instance);
 
             /// <summary>
-            /// Sets the property value.
+            /// Sets the property value via a stored delegate.
             /// </summary>
             /// <param name="instance">The instance.</param>
             /// <param name="value">The value.</param>

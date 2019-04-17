@@ -6,6 +6,10 @@
     using System.Data.SqlClient;
     using System.Linq;
 
+    /// <summary>
+    /// Provides SQL Server-specific implementation of a POCO command generator.
+    /// </summary>
+    /// <seealso cref="IPocoCommands" />
     internal sealed class SqlPocoCommands : IPocoCommands
     {
         private static readonly object SyncLock = new object();
@@ -27,6 +31,7 @@
 
         private SqlConnection Connection => Parent.Connection as SqlConnection;
 
+        /// <inheritdoc />
         public string SelectAllCommandText(Type T)
         {
             lock (SyncLock)
@@ -46,6 +51,7 @@
             }
         }
 
+        /// <inheritdoc />
         public string SelectSingleCommandText(Type T)
         {
             lock (SyncLock)
@@ -67,6 +73,7 @@
             }
         }
 
+        /// <inheritdoc />
         public string InsertCommandText(Type T)
         {
             lock (SyncLock)
@@ -88,6 +95,7 @@
             }
         }
 
+        /// <inheritdoc />
         public string UpdateCommandText(Type T)
         {
             lock (SyncLock)
@@ -110,6 +118,7 @@
             }
         }
 
+        /// <inheritdoc />
         public string DeleteCommandText(Type T)
         {
             lock (SyncLock)
@@ -129,9 +138,11 @@
             }
         }
 
+        /// <inheritdoc />
         public string CountAllCommandText(Type T) =>
             $"SELECT COUNT (*) FROM {Schema.Table(T).QualifiedName}";
 
+        /// <inheritdoc />
         public IDbCommand CreateSelectAllCommand(Type T)
         {
             var command = Connection.CreateCommand();
@@ -140,6 +151,7 @@
             return command;
         }
 
+        /// <inheritdoc />
         public IDbCommand CreateSelectSingleCommand(object obj)
         {
             var T = obj.GetType();
@@ -148,10 +160,11 @@
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = SelectSingleCommandText(T);
-            command.AddParameters(columns.Where(c => c.IsKeyColumn), obj);
+            command.AddOrUpdateParameters(columns.Where(c => c.IsKeyColumn), obj);
             return command;
         }
 
+        /// <inheritdoc />
         public IDbCommand CreateInsertCommand(object obj)
         {
             var T = obj.GetType();
@@ -160,10 +173,11 @@
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = InsertCommandText(T);
-            command.AddParameters(columns.Where(c => !c.IsKeyGenerated), obj);
+            command.AddOrUpdateParameters(columns.Where(c => !c.IsKeyGenerated), obj);
             return command;
         }
 
+        /// <inheritdoc />
         public IDbCommand CreateUpdateCommand(object obj)
         {
             var T = obj.GetType();
@@ -172,10 +186,11 @@
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = UpdateCommandText(T);
-            command.AddParameters(columns, obj);
+            command.AddOrUpdateParameters(columns, obj);
             return command;
         }
 
+        /// <inheritdoc />
         public IDbCommand CreateDeleteCommand(object obj)
         {
             var T = obj.GetType();
@@ -184,11 +199,12 @@
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = DeleteCommandText(T);
-            command.AddParameters(keyColumns, obj);
+            command.AddOrUpdateParameters(keyColumns, obj);
 
             return command;
         }
 
+        /// <inheritdoc />
         public IDbCommand CreateCountAllCommand(Type T)
         {
             var command = Connection.CreateCommand();

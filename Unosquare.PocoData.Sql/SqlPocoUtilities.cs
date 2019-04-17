@@ -6,10 +6,19 @@
     using System.Data.SqlClient;
     using System.Text;
 
+    /// <summary>
+    /// Provides extension methods for database commands and their parameters.
+    /// </summary>
     public static class SqlPocoUtilities
     {
-        // TODO: https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlcommand.prepare?view=netframework-4.7.2
-
+        /// <summary>
+        /// Adds a parameter to the given SQL command.
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <param name="parameterName">Name of the parameter.</param>
+        /// <param name="value">The value.</param>
+        /// <param name="size">The size.</param>
+        /// <returns></returns>
         public static SqlParameter AddParameter(this SqlCommand command, string parameterName, object value, int size = -1)
         {
             var T = value.GetType();
@@ -27,7 +36,13 @@
             return param;
         }
 
-        public static void AddParameters(this SqlCommand command, IEnumerable<ColumnMetadata> columns, object item)
+        /// <summary>
+        /// Adds or updates the parameters for the specified command using column mappings.
+        /// </summary>
+        /// <param name="command">The command to add or change parameters from.</param>
+        /// <param name="columns">The column metadata.</param>
+        /// <param name="item">The table-mapped object containg the values to inject as parameters.</param>
+        public static void AddOrUpdateParameters(this SqlCommand command, IEnumerable<ColumnMetadata> columns, object item)
         {
             foreach (var col in columns)
             {
@@ -59,6 +74,12 @@
             }
         }
 
+        /// <summary>
+        /// Provides a text-based representation of the command and its parameters.
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <param name="outputToConsole">if set to <c>true</c> it will output to the console.</param>
+        /// <returns>The string representation of the command and its parameters.</returns>
         public static string DebugCommand(this IDbCommand command, bool outputToConsole = true)
         {
             var builder = new StringBuilder();
