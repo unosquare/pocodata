@@ -23,7 +23,7 @@
         internal ColumnMetadata(PropertyInfo property, string columnName, int length, bool isNullable, bool isKey, bool isGenerated)
         {
             Property = property;
-            Length = length;
+            StringLength = length;
             ColumnName = columnName;
             IsKeyColumn = isKey;
             IsKeyGenerated = isKey && isGenerated;
@@ -56,7 +56,7 @@
         /// <summary>
         /// Gets the string length.
         /// </summary>
-        public int Length { get; }
+        public int StringLength { get; }
 
         /// <summary>
         /// Gets a value indicating whether the property represents a key column.

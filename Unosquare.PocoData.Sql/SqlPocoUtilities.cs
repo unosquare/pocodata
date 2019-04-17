@@ -54,8 +54,8 @@
                 if (DbTypes.CanMap(T))
                     param.SqlDbType = DbTypes.Map(T);
 
-                if (T == typeof(string) && col.Length > 0)
-                    param.Size = col.Length;
+                if (T == typeof(string) && col.StringLength > 0)
+                    param.Size = col.StringLength;
             }
         }
 

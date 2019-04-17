@@ -22,7 +22,7 @@
         public class EmployeesTable : PocoTableProxy<Employee>
         {
             public EmployeesTable(IPocoDb db)
-                : base(db)
+                : base(db, true)
             {
 
             }

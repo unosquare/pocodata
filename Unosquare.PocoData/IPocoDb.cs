@@ -6,12 +6,25 @@
     using System.Data;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Defines standard database fields and methods to store, retrieve, update and delete
+    /// data from a backing store.
+    /// </summary>
     public interface IPocoDb
     {
+        /// <summary>
+        /// Gets the database connection object.
+        /// </summary>
         IDbConnection Connection { get; }
 
+        /// <summary>
+        /// Provides a helper object containing methods to read row data into object properties.
+        /// </summary>
         IPocoReader PocoReader { get; }
 
+        /// <summary>
+        /// Provides a helper object containing methods to create and delete tables.
+        /// </summary>
         IPocoDefinition Definition { get; }
 
         IPocoCommands Commands { get; }

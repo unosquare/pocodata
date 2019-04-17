@@ -50,7 +50,13 @@
 
         public IPocoCommands Commands { get; }
 
-        public PocoTableProxy<T> TableProxy<T>() where T : class, new() => new PocoTableProxy<T>(this);
+        /// <summary>
+        /// Obtaings a dynamically generated table proxy with standard functionality.
+        /// Please note that the table is not created if it does not exist.
+        /// </summary>
+        /// <typeparam name="T">The type to map to a backing table.</typeparam>
+        /// <returns>The table proxy object.</returns>
+        public PocoTableProxy<T> TableProxy<T>() where T : class, new() => new PocoTableProxy<T>(this, false);
 
         public static async Task<SqlPocoDb> OpenAsync(string connectionString)
         {

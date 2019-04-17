@@ -30,7 +30,7 @@
             {
                 var sqlType = DbTypes.Map(c.NativeType).ToString().ToLowerInvariant();
                 if (c.NativeType == typeof(string))
-                    sqlType = $"{sqlType} ({c.Length})";
+                    sqlType = $"{sqlType} ({c.StringLength})";
 
                 columnDefs.Add($"{c.QualifiedName} {sqlType} {(c.IsKeyGenerated ? "IDENTITY(1,1)" : "NOT NULL")}");
             }
@@ -39,7 +39,7 @@
             {
                 var sqlType = DbTypes.Map(c.NativeType).ToString().ToLowerInvariant();
                 if (c.NativeType == typeof(string))
-                    sqlType = $"{sqlType} ({c.Length})";
+                    sqlType = $"{sqlType} ({c.StringLength})";
 
                 columnDefs.Add($"{c.QualifiedName} {sqlType} {(c.IsNullable ? "NULL" : "NOT NULL")}");
             }

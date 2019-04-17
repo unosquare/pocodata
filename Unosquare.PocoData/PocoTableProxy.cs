@@ -8,11 +8,13 @@
     public class PocoTableProxy<T>
         where T : class, new()
     {
-        public PocoTableProxy(IPocoDb pocoDb)
+        public PocoTableProxy(IPocoDb pocoDb, bool createIfNotExists)
         {
             PocoDb = pocoDb;
             PocoSchema.Instance.Validate<T>();
-            if (!TableExists) CreateTable();
+
+            if (createIfNotExists && !TableExists)
+                CreateTable();
         }
 
         public IPocoDb PocoDb { get; }
