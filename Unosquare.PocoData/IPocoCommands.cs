@@ -3,8 +3,16 @@
     using System;
     using System.Data;
 
+    /// <summary>
+    /// Represents an interface with methods to generate standard commands.
+    /// </summary>
     public interface IPocoCommands
     {
+        /// <summary>
+        /// Selects all command text.
+        /// </summary>
+        /// <param name="T">The t.</param>
+        /// <returns></returns>
         string SelectAllCommandText(Type T);
 
         string SelectSingleCommandText(Type T);
