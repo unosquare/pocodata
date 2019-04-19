@@ -1,0 +1,1385 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPocoDb
+   | Unosquare PocoData </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPocoDb
+   | Unosquare PocoData ">
+    <meta name="generator" content="docfx 2.42.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="logo" src="../best-practices/resources/images/unosquare_logo.svg" alt="Unosquare">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar">
+          <div class="container-fluid hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container-fluid body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container-fluid body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Unosquare.PocoData.IPocoDb">
+  
+  
+  <h1 id="Unosquare_PocoData_IPocoDb" data-uid="Unosquare.PocoData.IPocoDb" class="text-break">Interface IPocoDb
+  </h1>
+  <div class="markdown level0 summary"><p>Defines standard database fields and methods to store, retrieve, update and delete
+data from a backing store.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unosquare.PocoData.html">Unosquare.PocoData</a></h6>
+  <h5 id="Unosquare_PocoData_IPocoDb_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPocoDb</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_Commands_" data-uid="Unosquare.PocoData.IPocoDb.Commands*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_Commands" data-uid="Unosquare.PocoData.IPocoDb.Commands">Commands</h4>
+  <div class="markdown level1 summary"><p>Provides a helper object containing methods to generate commands for standard operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPocoCommands Commands { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unosquare.PocoData.IPocoCommands.html">IPocoCommands</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_Connection_" data-uid="Unosquare.PocoData.IPocoDb.Connection*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_Connection" data-uid="Unosquare.PocoData.IPocoDb.Connection">Connection</h4>
+  <div class="markdown level1 summary"><p>Gets the database connection object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDbConnection Connection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDbConnection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_Definition_" data-uid="Unosquare.PocoData.IPocoDb.Definition*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_Definition" data-uid="Unosquare.PocoData.IPocoDb.Definition">Definition</h4>
+  <div class="markdown level1 summary"><p>Provides a helper object containing methods to create and delete tables.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPocoDefinition Definition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unosquare.PocoData.IPocoDefinition.html">IPocoDefinition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_ObjectReader_" data-uid="Unosquare.PocoData.IPocoDb.ObjectReader*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_ObjectReader" data-uid="Unosquare.PocoData.IPocoDb.ObjectReader">ObjectReader</h4>
+  <div class="markdown level1 summary"><p>Provides a helper object containing methods to read row data into object properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PocoReader ObjectReader { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unosquare.PocoData.PocoReader.html">PocoReader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_CountAll_" data-uid="Unosquare.PocoData.IPocoDb.CountAll*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_CountAll_System_Type_" data-uid="Unosquare.PocoData.IPocoDb.CountAll(System.Type)">CountAll(Type)</h4>
+  <div class="markdown level1 summary"><p>Counts all rows for the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int CountAll(Type mappedType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">mappedType</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of rows in the table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_CountAllAsync_" data-uid="Unosquare.PocoData.IPocoDb.CountAllAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_CountAllAsync_System_Type_" data-uid="Unosquare.PocoData.IPocoDb.CountAllAsync(System.Type)">CountAllAsync(Type)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously counts all rows for the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;int&gt; CountAllAsync(Type mappedType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">mappedType</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The number of rows in the table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_Delete_" data-uid="Unosquare.PocoData.IPocoDb.Delete*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_Delete_System_Object_" data-uid="Unosquare.PocoData.IPocoDb.Delete(System.Object)">Delete(Object)</h4>
+  <div class="markdown level1 summary"><p>Deletes the row with matching object key values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Delete(object item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The object to delete from the table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of affected rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_DeleteAsync_" data-uid="Unosquare.PocoData.IPocoDb.DeleteAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_DeleteAsync_System_Object_" data-uid="Unosquare.PocoData.IPocoDb.DeleteAsync(System.Object)">DeleteAsync(Object)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously deletes the row with matching object key values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;int&gt; DeleteAsync(object item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The object to delete from the table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The number of affected rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_Insert_" data-uid="Unosquare.PocoData.IPocoDb.Insert*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_Insert_System_Object_System_Boolean_" data-uid="Unosquare.PocoData.IPocoDb.Insert(System.Object,System.Boolean)">Insert(Object, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Inserts an item to its corresponding mapped table.
+If the object has an autogenerated key, the object will have its value updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Insert(object item, bool update)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">update</span></td>
+        <td><p>if set to <code>true</code> it updates all data values from the store after the insert (in addition to autogenerated key values).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of affected rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_InsertAsync_" data-uid="Unosquare.PocoData.IPocoDb.InsertAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_InsertAsync_System_Object_System_Boolean_" data-uid="Unosquare.PocoData.IPocoDb.InsertAsync(System.Object,System.Boolean)">InsertAsync(Object, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously inserts an item to its corresponding mapped table.
+If the object has an autogenerated key, the object will have its value updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;int&gt; InsertAsync(object item, bool update)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to insert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">update</span></td>
+        <td><p>if set to <code>true</code> it updates all data values from the store after the insert (in addition to autogenerated key values).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The number of affected rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_InsertMany_" data-uid="Unosquare.PocoData.IPocoDb.InsertMany*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_InsertMany_System_Collections_IEnumerable_System_Boolean_" data-uid="Unosquare.PocoData.IPocoDb.InsertMany(System.Collections.IEnumerable,System.Boolean)">InsertMany(IEnumerable, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Inserts a collection of items into their corresponding table-mapped type.
+The collection must exclusively be of objects of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int InsertMany(IEnumerable items, bool update)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The items to insert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">update</span></td>
+        <td><p>if set to <code>true</code> it will update data from inserted rows in addition to generated key values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of affected rows</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_InsertManyAsync_" data-uid="Unosquare.PocoData.IPocoDb.InsertManyAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_InsertManyAsync_System_Collections_IEnumerable_System_Boolean_" data-uid="Unosquare.PocoData.IPocoDb.InsertManyAsync(System.Collections.IEnumerable,System.Boolean)">InsertManyAsync(IEnumerable, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously inserts a collection of items into their corresponding table-mapped type.
+The collection must exclusively be of objects of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;int&gt; InsertManyAsync(IEnumerable items, bool update)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The items to insert.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">update</span></td>
+        <td><p>if set to <code>true</code> it will update data from inserted rows in addition to generated key values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The number of affected rows</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectAll_" data-uid="Unosquare.PocoData.IPocoDb.SelectAll*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectAll_System_Type_" data-uid="Unosquare.PocoData.IPocoDb.SelectAll(System.Type)">SelectAll(Type)</h4>
+  <div class="markdown level1 summary"><p>Selects all records of the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable SelectAll(Type mappedType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">mappedType</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></td>
+        <td><p>An enumerable collection of the records that were retrieved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectAll_" data-uid="Unosquare.PocoData.IPocoDb.SelectAll*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectAll__1" data-uid="Unosquare.PocoData.IPocoDb.SelectAll``1">SelectAll&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Selects all records of the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;T&gt; SelectAll&lt;T&gt;()
+    where T : class, new()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><p>An enumerable collection of the records that were retrieved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectAllAsync_" data-uid="Unosquare.PocoData.IPocoDb.SelectAllAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectAllAsync_System_Type_" data-uid="Unosquare.PocoData.IPocoDb.SelectAllAsync(System.Type)">SelectAllAsync(Type)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously selects all records of the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&gt; SelectAllAsync(Type mappedType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">mappedType</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>&gt;</td>
+        <td><p>An enumerable collection of the records that were retrieved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectAllAsync_" data-uid="Unosquare.PocoData.IPocoDb.SelectAllAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectAllAsync__1" data-uid="Unosquare.PocoData.IPocoDb.SelectAllAsync``1">SelectAllAsync&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Asynchronously selects all records of the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;T&gt;&gt; SelectAllAsync&lt;T&gt;()
+    where T : class, new()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</td>
+        <td><p>An enumerable collection of the records that were retrieved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectMany_" data-uid="Unosquare.PocoData.IPocoDb.SelectMany*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectMany_System_Type_IDbCommand_" data-uid="Unosquare.PocoData.IPocoDb.SelectMany(System.Type,IDbCommand)">SelectMany(Type, IDbCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes the specified command and reads the results as records of the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable SelectMany(Type mappedType, IDbCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">mappedType</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></td>
+        <td><p>An enumerable collection of the records that were retrieved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectMany_" data-uid="Unosquare.PocoData.IPocoDb.SelectMany*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectMany__1_IDbCommand_" data-uid="Unosquare.PocoData.IPocoDb.SelectMany``1(IDbCommand)">SelectMany&lt;T&gt;(IDbCommand)</h4>
+  <div class="markdown level1 summary"><p>Executes the specified command and reads the results as records of the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;T&gt; SelectMany&lt;T&gt;(IDbCommand command)
+    where T : class, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</td>
+        <td><p>An enumerable collection of the records that were retrieved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectManyAsync_" data-uid="Unosquare.PocoData.IPocoDb.SelectManyAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectManyAsync_System_Type_IDbCommand_" data-uid="Unosquare.PocoData.IPocoDb.SelectManyAsync(System.Type,IDbCommand)">SelectManyAsync(Type, IDbCommand)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously executes the specified command and reads the results as records of the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&gt; SelectManyAsync(Type mappedType, IDbCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">mappedType</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a>&gt;</td>
+        <td><p>An enumerable collection of the records that were retrieved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectManyAsync_" data-uid="Unosquare.PocoData.IPocoDb.SelectManyAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectManyAsync__1_IDbCommand_" data-uid="Unosquare.PocoData.IPocoDb.SelectManyAsync``1(IDbCommand)">SelectManyAsync&lt;T&gt;(IDbCommand)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously executes the specified command and reads the results as records of the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;T&gt;&gt; SelectManyAsync&lt;T&gt;(IDbCommand command)
+    where T : class, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;&gt;</td>
+        <td><p>An enumerable collection of the records that were retrieved</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The table-mapped type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectSingle_" data-uid="Unosquare.PocoData.IPocoDb.SelectSingle*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectSingle_System_Object_" data-uid="Unosquare.PocoData.IPocoDb.SelectSingle(System.Object)">SelectSingle(Object)</h4>
+  <div class="markdown level1 summary"><p>Selects a single record with matching keys of the given object and updates it with record data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SelectSingle(object target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target object to update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Whether the object was found and updated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_SelectSingleAsync_" data-uid="Unosquare.PocoData.IPocoDb.SelectSingleAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_SelectSingleAsync_System_Object_" data-uid="Unosquare.PocoData.IPocoDb.SelectSingleAsync(System.Object)">SelectSingleAsync(Object)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously selects a single record with matching keys of the given object and updates it with record data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;bool&gt; SelectSingleAsync(object target)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target object to update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><p>Whether the object was found and updated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_TableProxy_" data-uid="Unosquare.PocoData.IPocoDb.TableProxy*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_TableProxy__1" data-uid="Unosquare.PocoData.IPocoDb.TableProxy``1">TableProxy&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Gets a dynamically generated table proxy containing methods to perform CRUD operations on the given table-mapped type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PocoTableProxy&lt;T&gt; TableProxy&lt;T&gt;()
+    where T : class, new()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Unosquare.PocoData.PocoTableProxy-1.html">PocoTableProxy</a>&lt;T&gt;</td>
+        <td><p>The table proxy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type mapped to a database table.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_Update_" data-uid="Unosquare.PocoData.IPocoDb.Update*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_Update_System_Object_" data-uid="Unosquare.PocoData.IPocoDb.Update(System.Object)">Update(Object)</h4>
+  <div class="markdown level1 summary"><p>Updates an item in its corresponding mapped table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Update(object item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item to update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of affected rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_UpdateAsync_" data-uid="Unosquare.PocoData.IPocoDb.UpdateAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_UpdateAsync_System_Object_" data-uid="Unosquare.PocoData.IPocoDb.UpdateAsync(System.Object)">UpdateAsync(Object)</h4>
+  <div class="markdown level1 summary"><p>Updates an item in its corresponding mapped table.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;int&gt; UpdateAsync(object item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The number of affected rows.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_UpdateMany_" data-uid="Unosquare.PocoData.IPocoDb.UpdateMany*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_UpdateMany_System_Collections_IEnumerable_" data-uid="Unosquare.PocoData.IPocoDb.UpdateMany(System.Collections.IEnumerable)">UpdateMany(IEnumerable)</h4>
+  <div class="markdown level1 summary"><p>Updates a collection of items in their corresponding table-mapped type.
+The collection must exclusively be of objects of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int UpdateMany(IEnumerable items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The items to update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The number of affected rows</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unosquare_PocoData_IPocoDb_UpdateManyAsync_" data-uid="Unosquare.PocoData.IPocoDb.UpdateManyAsync*"></a>
+  <h4 id="Unosquare_PocoData_IPocoDb_UpdateManyAsync_System_Collections_IEnumerable_" data-uid="Unosquare.PocoData.IPocoDb.UpdateManyAsync(System.Collections.IEnumerable)">UpdateManyAsync(IEnumerable)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously updates a collection of items in their corresponding table-mapped type.
+The collection must exclusively be of objects of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;int&gt; UpdateManyAsync(IEnumerable items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The items to update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><p>The number of affected rows</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+<h3 id="disqus_thread">Comments</h3>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://unolabs.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="doc" align="center">
+              <span class="small mobile-hide">
+                <img id="logo" class="doc-logo" src="../pocodata.png" alt="">
+              </span>
+            </div>
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2017-2019 <a href="https://www.unosquare.com">Unosquare</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-8535255-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+  </body>
+</html>

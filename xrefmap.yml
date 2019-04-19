@@ -1,3 +1,3085 @@
 ### YamlMime:XRefMap
 sorted: true
-references: []
+references:
+- uid: CatLibrary
+  name: CatLibrary
+  href: api/CatLibrary.html
+  commentId: N:CatLibrary
+  fullName: CatLibrary
+  nameWithType: CatLibrary
+- uid: CatLibrary.Cat`2
+  name: Cat<T, K>
+  href: api/CatLibrary.Cat-2.html
+  commentId: T:CatLibrary.Cat`2
+  name.vb: Cat(Of T, K)
+  fullName: CatLibrary.Cat<T, K>
+  fullName.vb: CatLibrary.Cat(Of T, K)
+  nameWithType: Cat<T, K>
+  nameWithType.vb: Cat(Of T, K)
+- uid: CatLibrary.Cat`2.#ctor
+  name: Cat()
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2__ctor
+  commentId: M:CatLibrary.Cat`2.#ctor
+  fullName: CatLibrary.Cat<T, K>.Cat()
+  fullName.vb: CatLibrary.Cat(Of T, K).Cat()
+  nameWithType: Cat<T, K>.Cat()
+  nameWithType.vb: Cat(Of T, K).Cat()
+- uid: CatLibrary.Cat`2.#ctor(`0)
+  name: Cat(T)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2__ctor__0_
+  commentId: M:CatLibrary.Cat`2.#ctor(`0)
+  fullName: CatLibrary.Cat<T, K>.Cat(T)
+  fullName.vb: CatLibrary.Cat(Of T, K).Cat(T)
+  nameWithType: Cat<T, K>.Cat(T)
+  nameWithType.vb: Cat(Of T, K).Cat(T)
+- uid: CatLibrary.Cat`2.#ctor(System.String,System.Int32@,System.String,System.Boolean)
+  name: Cat(String, out Int32, String, Boolean)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2__ctor_System_String_System_Int32__System_String_System_Boolean_
+  commentId: M:CatLibrary.Cat`2.#ctor(System.String,System.Int32@,System.String,System.Boolean)
+  name.vb: Cat(String, ByRef Int32, String, Boolean)
+  fullName: CatLibrary.Cat<T, K>.Cat(System.String, out System.Int32, System.String, System.Boolean)
+  fullName.vb: CatLibrary.Cat(Of T, K).Cat(System.String, ByRef System.Int32, System.String, System.Boolean)
+  nameWithType: Cat<T, K>.Cat(String, out Int32, String, Boolean)
+  nameWithType.vb: Cat(Of T, K).Cat(String, ByRef Int32, String, Boolean)
+- uid: CatLibrary.Cat`2.#ctor*
+  name: Cat
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2__ctor_
+  commentId: Overload:CatLibrary.Cat`2.#ctor
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.Cat
+  fullName.vb: CatLibrary.Cat(Of T, K).Cat
+  nameWithType: Cat<T, K>.Cat
+  nameWithType.vb: Cat(Of T, K).Cat
+- uid: CatLibrary.Cat`2.Age
+  name: Age
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Age
+  commentId: P:CatLibrary.Cat`2.Age
+  fullName: CatLibrary.Cat<T, K>.Age
+  fullName.vb: CatLibrary.Cat(Of T, K).Age
+  nameWithType: Cat<T, K>.Age
+  nameWithType.vb: Cat(Of T, K).Age
+- uid: CatLibrary.Cat`2.Age*
+  name: Age
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Age_
+  commentId: Overload:CatLibrary.Cat`2.Age
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.Age
+  fullName.vb: CatLibrary.Cat(Of T, K).Age
+  nameWithType: Cat<T, K>.Age
+  nameWithType.vb: Cat(Of T, K).Age
+- uid: CatLibrary.Cat`2.CalculateFood(System.DateTime)
+  name: CalculateFood(DateTime)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_CalculateFood_System_DateTime_
+  commentId: M:CatLibrary.Cat`2.CalculateFood(System.DateTime)
+  fullName: CatLibrary.Cat<T, K>.CalculateFood(System.DateTime)
+  fullName.vb: CatLibrary.Cat(Of T, K).CalculateFood(System.DateTime)
+  nameWithType: Cat<T, K>.CalculateFood(DateTime)
+  nameWithType.vb: Cat(Of T, K).CalculateFood(DateTime)
+- uid: CatLibrary.Cat`2.CalculateFood*
+  name: CalculateFood
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_CalculateFood_
+  commentId: Overload:CatLibrary.Cat`2.CalculateFood
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.CalculateFood
+  fullName.vb: CatLibrary.Cat(Of T, K).CalculateFood
+  nameWithType: Cat<T, K>.CalculateFood
+  nameWithType.vb: Cat(Of T, K).CalculateFood
+- uid: CatLibrary.Cat`2.CatLibrary#IAnimal#Eat
+  name: IAnimal.Eat()
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_CatLibrary_IAnimal_Eat
+  commentId: M:CatLibrary.Cat`2.CatLibrary#IAnimal#Eat
+  name.vb: CatLibrary.IAnimal.Eat()
+  fullName: CatLibrary.Cat<T, K>.CatLibrary.IAnimal.Eat()
+  fullName.vb: CatLibrary.Cat(Of T, K).CatLibrary.IAnimal.Eat()
+  nameWithType: Cat<T, K>.IAnimal.Eat()
+  nameWithType.vb: Cat(Of T, K).CatLibrary.IAnimal.Eat()
+- uid: CatLibrary.Cat`2.CatLibrary#IAnimal#Eat(System.String)
+  name: IAnimal.Eat(String)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_CatLibrary_IAnimal_Eat_System_String_
+  commentId: M:CatLibrary.Cat`2.CatLibrary#IAnimal#Eat(System.String)
+  name.vb: CatLibrary.IAnimal.Eat(String)
+  fullName: CatLibrary.Cat<T, K>.CatLibrary.IAnimal.Eat(System.String)
+  fullName.vb: CatLibrary.Cat(Of T, K).CatLibrary.IAnimal.Eat(System.String)
+  nameWithType: Cat<T, K>.IAnimal.Eat(String)
+  nameWithType.vb: Cat(Of T, K).CatLibrary.IAnimal.Eat(String)
+- uid: CatLibrary.Cat`2.CatLibrary#IAnimal#Eat*
+  name: IAnimal.Eat
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_CatLibrary_IAnimal_Eat_
+  commentId: Overload:CatLibrary.Cat`2.CatLibrary#IAnimal#Eat
+  isSpec: "True"
+  name.vb: CatLibrary.IAnimal.Eat
+  fullName: CatLibrary.Cat<T, K>.CatLibrary.IAnimal.Eat
+  fullName.vb: CatLibrary.Cat(Of T, K).CatLibrary.IAnimal.Eat
+  nameWithType: Cat<T, K>.IAnimal.Eat
+  nameWithType.vb: Cat(Of T, K).CatLibrary.IAnimal.Eat
+- uid: CatLibrary.Cat`2.CatLibrary#IAnimal#Eat``1(``0)
+  name: IAnimal.Eat<Tool>(Tool)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_CatLibrary_IAnimal_Eat__1___0_
+  commentId: M:CatLibrary.Cat`2.CatLibrary#IAnimal#Eat``1(``0)
+  name.vb: CatLibrary.IAnimal.Eat(Of Tool)(Tool)
+  fullName: CatLibrary.Cat<T, K>.CatLibrary.IAnimal.Eat<Tool>(Tool)
+  fullName.vb: CatLibrary.Cat(Of T, K).CatLibrary.IAnimal.Eat(Of Tool)(Tool)
+  nameWithType: Cat<T, K>.IAnimal.Eat<Tool>(Tool)
+  nameWithType.vb: Cat(Of T, K).CatLibrary.IAnimal.Eat(Of Tool)(Tool)
+- uid: CatLibrary.Cat`2.CatLibrary#IAnimal#Item(System.Int32)
+  name: IAnimal.Item[Int32]
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_CatLibrary_IAnimal_Item_System_Int32_
+  commentId: P:CatLibrary.Cat`2.CatLibrary#IAnimal#Item(System.Int32)
+  name.vb: CatLibrary.IAnimal.Item(Int32)
+  fullName: CatLibrary.Cat<T, K>.CatLibrary.IAnimal.Item[System.Int32]
+  fullName.vb: CatLibrary.Cat(Of T, K).CatLibrary.IAnimal.Item(System.Int32)
+  nameWithType: Cat<T, K>.IAnimal.Item[Int32]
+  nameWithType.vb: Cat(Of T, K).CatLibrary.IAnimal.Item(Int32)
+- uid: CatLibrary.Cat`2.CatLibrary#IAnimal#Item*
+  name: IAnimal.Item
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_CatLibrary_IAnimal_Item_
+  commentId: Overload:CatLibrary.Cat`2.CatLibrary#IAnimal#Item
+  isSpec: "True"
+  name.vb: CatLibrary.IAnimal.Item
+  fullName: CatLibrary.Cat<T, K>.CatLibrary.IAnimal.Item
+  fullName.vb: CatLibrary.Cat(Of T, K).CatLibrary.IAnimal.Item
+  nameWithType: Cat<T, K>.IAnimal.Item
+  nameWithType.vb: Cat(Of T, K).CatLibrary.IAnimal.Item
+- uid: CatLibrary.Cat`2.CatLibrary#ICat#eat
+  name: ICat.eat
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_CatLibrary_ICat_eat
+  commentId: E:CatLibrary.Cat`2.CatLibrary#ICat#eat
+  name.vb: CatLibrary.ICat.eat
+  fullName: CatLibrary.Cat<T, K>.CatLibrary.ICat.eat
+  fullName.vb: CatLibrary.Cat(Of T, K).CatLibrary.ICat.eat
+  nameWithType: Cat<T, K>.ICat.eat
+  nameWithType.vb: Cat(Of T, K).CatLibrary.ICat.eat
+- uid: CatLibrary.Cat`2.Equals(System.Object)
+  name: Equals(Object)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Equals_System_Object_
+  commentId: M:CatLibrary.Cat`2.Equals(System.Object)
+  fullName: CatLibrary.Cat<T, K>.Equals(System.Object)
+  fullName.vb: CatLibrary.Cat(Of T, K).Equals(System.Object)
+  nameWithType: Cat<T, K>.Equals(Object)
+  nameWithType.vb: Cat(Of T, K).Equals(Object)
+- uid: CatLibrary.Cat`2.Equals*
+  name: Equals
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Equals_
+  commentId: Overload:CatLibrary.Cat`2.Equals
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.Equals
+  fullName.vb: CatLibrary.Cat(Of T, K).Equals
+  nameWithType: Cat<T, K>.Equals
+  nameWithType.vb: Cat(Of T, K).Equals
+- uid: CatLibrary.Cat`2.GetTailLength(System.Int32*,System.Object[])
+  name: GetTailLength(Int32*, Object[])
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_GetTailLength_System_Int32__System_Object___
+  commentId: M:CatLibrary.Cat`2.GetTailLength(System.Int32*,System.Object[])
+  name.vb: GetTailLength(Int32*, Object())
+  fullName: CatLibrary.Cat<T, K>.GetTailLength(System.Int32*, System.Object[])
+  fullName.vb: CatLibrary.Cat(Of T, K).GetTailLength(System.Int32*, System.Object())
+  nameWithType: Cat<T, K>.GetTailLength(Int32*, Object[])
+  nameWithType.vb: Cat(Of T, K).GetTailLength(Int32*, Object())
+- uid: CatLibrary.Cat`2.GetTailLength*
+  name: GetTailLength
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_GetTailLength_
+  commentId: Overload:CatLibrary.Cat`2.GetTailLength
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.GetTailLength
+  fullName.vb: CatLibrary.Cat(Of T, K).GetTailLength
+  nameWithType: Cat<T, K>.GetTailLength
+  nameWithType.vb: Cat(Of T, K).GetTailLength
+- uid: CatLibrary.Cat`2.isHealthy
+  name: isHealthy
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_isHealthy
+  commentId: F:CatLibrary.Cat`2.isHealthy
+  fullName: CatLibrary.Cat<T, K>.isHealthy
+  fullName.vb: CatLibrary.Cat(Of T, K).isHealthy
+  nameWithType: Cat<T, K>.isHealthy
+  nameWithType.vb: Cat(Of T, K).isHealthy
+- uid: CatLibrary.Cat`2.Item(System.String)
+  name: Item[String]
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Item_System_String_
+  commentId: P:CatLibrary.Cat`2.Item(System.String)
+  name.vb: Item(String)
+  fullName: CatLibrary.Cat<T, K>.Item[System.String]
+  fullName.vb: CatLibrary.Cat(Of T, K).Item(System.String)
+  nameWithType: Cat<T, K>.Item[String]
+  nameWithType.vb: Cat(Of T, K).Item(String)
+- uid: CatLibrary.Cat`2.Item*
+  name: Item
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Item_
+  commentId: Overload:CatLibrary.Cat`2.Item
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.Item
+  fullName.vb: CatLibrary.Cat(Of T, K).Item
+  nameWithType: Cat<T, K>.Item
+  nameWithType.vb: Cat(Of T, K).Item
+- uid: CatLibrary.Cat`2.Jump(`0,`1,System.Boolean@)
+  name: Jump(T, K, ref Boolean)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Jump__0__1_System_Boolean__
+  commentId: M:CatLibrary.Cat`2.Jump(`0,`1,System.Boolean@)
+  name.vb: Jump(T, K, ByRef Boolean)
+  fullName: CatLibrary.Cat<T, K>.Jump(T, K, ref System.Boolean)
+  fullName.vb: CatLibrary.Cat(Of T, K).Jump(T, K, ByRef System.Boolean)
+  nameWithType: Cat<T, K>.Jump(T, K, ref Boolean)
+  nameWithType.vb: Cat(Of T, K).Jump(T, K, ByRef Boolean)
+- uid: CatLibrary.Cat`2.Jump*
+  name: Jump
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Jump_
+  commentId: Overload:CatLibrary.Cat`2.Jump
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.Jump
+  fullName.vb: CatLibrary.Cat(Of T, K).Jump
+  nameWithType: Cat<T, K>.Jump
+  nameWithType.vb: Cat(Of T, K).Jump
+- uid: CatLibrary.Cat`2.Name
+  name: Name
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Name
+  commentId: P:CatLibrary.Cat`2.Name
+  fullName: CatLibrary.Cat<T, K>.Name
+  fullName.vb: CatLibrary.Cat(Of T, K).Name
+  nameWithType: Cat<T, K>.Name
+  nameWithType.vb: Cat(Of T, K).Name
+- uid: CatLibrary.Cat`2.Name*
+  name: Name
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_Name_
+  commentId: Overload:CatLibrary.Cat`2.Name
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.Name
+  fullName.vb: CatLibrary.Cat(Of T, K).Name
+  nameWithType: Cat<T, K>.Name
+  nameWithType.vb: Cat(Of T, K).Name
+- uid: CatLibrary.Cat`2.op_Addition(CatLibrary.Cat{`0,`1},System.Int32)
+  name: Addition(Cat<T, K>, Int32)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_op_Addition_CatLibrary_Cat__0__1__System_Int32_
+  commentId: M:CatLibrary.Cat`2.op_Addition(CatLibrary.Cat{`0,`1},System.Int32)
+  name.vb: Addition(Cat(Of T, K), Int32)
+  fullName: CatLibrary.Cat<T, K>.Addition(CatLibrary.Cat<T, K>, System.Int32)
+  fullName.vb: CatLibrary.Cat(Of T, K).Addition(CatLibrary.Cat(Of T, K), System.Int32)
+  nameWithType: Cat<T, K>.Addition(Cat<T, K>, Int32)
+  nameWithType.vb: Cat(Of T, K).Addition(Cat(Of T, K), Int32)
+- uid: CatLibrary.Cat`2.op_Addition*
+  name: Addition
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_op_Addition_
+  commentId: Overload:CatLibrary.Cat`2.op_Addition
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.Addition
+  fullName.vb: CatLibrary.Cat(Of T, K).Addition
+  nameWithType: Cat<T, K>.Addition
+  nameWithType.vb: Cat(Of T, K).Addition
+- uid: CatLibrary.Cat`2.op_Explicit(CatLibrary.Cat{`0,`1})~CatLibrary.Tom
+  name: Explicit(Cat<T, K> to Tom)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_op_Explicit_CatLibrary_Cat__0__1___CatLibrary_Tom
+  commentId: M:CatLibrary.Cat`2.op_Explicit(CatLibrary.Cat{`0,`1})~CatLibrary.Tom
+  name.vb: Narrowing(Cat(Of T, K) to Tom)
+  fullName: CatLibrary.Cat<T, K>.Explicit(CatLibrary.Cat<T, K> to CatLibrary.Tom)
+  fullName.vb: CatLibrary.Cat(Of T, K).Narrowing(CatLibrary.Cat(Of T, K) to CatLibrary.Tom)
+  nameWithType: Cat<T, K>.Explicit(Cat<T, K> to Tom)
+  nameWithType.vb: Cat(Of T, K).Narrowing(Cat(Of T, K) to Tom)
+- uid: CatLibrary.Cat`2.op_Explicit*
+  name: Explicit
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_op_Explicit_
+  commentId: Overload:CatLibrary.Cat`2.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: CatLibrary.Cat<T, K>.Explicit
+  fullName.vb: CatLibrary.Cat(Of T, K).Narrowing
+  nameWithType: Cat<T, K>.Explicit
+  nameWithType.vb: Cat(Of T, K).Narrowing
+- uid: CatLibrary.Cat`2.op_Subtraction(CatLibrary.Cat{`0,`1},System.Int32)
+  name: Subtraction(Cat<T, K>, Int32)
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_op_Subtraction_CatLibrary_Cat__0__1__System_Int32_
+  commentId: M:CatLibrary.Cat`2.op_Subtraction(CatLibrary.Cat{`0,`1},System.Int32)
+  name.vb: Subtraction(Cat(Of T, K), Int32)
+  fullName: CatLibrary.Cat<T, K>.Subtraction(CatLibrary.Cat<T, K>, System.Int32)
+  fullName.vb: CatLibrary.Cat(Of T, K).Subtraction(CatLibrary.Cat(Of T, K), System.Int32)
+  nameWithType: Cat<T, K>.Subtraction(Cat<T, K>, Int32)
+  nameWithType.vb: Cat(Of T, K).Subtraction(Cat(Of T, K), Int32)
+- uid: CatLibrary.Cat`2.op_Subtraction*
+  name: Subtraction
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_op_Subtraction_
+  commentId: Overload:CatLibrary.Cat`2.op_Subtraction
+  isSpec: "True"
+  fullName: CatLibrary.Cat<T, K>.Subtraction
+  fullName.vb: CatLibrary.Cat(Of T, K).Subtraction
+  nameWithType: Cat<T, K>.Subtraction
+  nameWithType.vb: Cat(Of T, K).Subtraction
+- uid: CatLibrary.Cat`2.ownEat
+  name: ownEat
+  href: api/CatLibrary.Cat-2.html#CatLibrary_Cat_2_ownEat
+  commentId: E:CatLibrary.Cat`2.ownEat
+  fullName: CatLibrary.Cat<T, K>.ownEat
+  fullName.vb: CatLibrary.Cat(Of T, K).ownEat
+  nameWithType: Cat<T, K>.ownEat
+  nameWithType.vb: Cat(Of T, K).ownEat
+- uid: CatLibrary.CatException`1
+  name: CatException<T>
+  href: api/CatLibrary.CatException-1.html
+  commentId: T:CatLibrary.CatException`1
+  name.vb: CatException(Of T)
+  fullName: CatLibrary.CatException<T>
+  fullName.vb: CatLibrary.CatException(Of T)
+  nameWithType: CatException<T>
+  nameWithType.vb: CatException(Of T)
+- uid: CatLibrary.Complex`2
+  name: Complex<T, J>
+  href: api/CatLibrary.Complex-2.html
+  commentId: T:CatLibrary.Complex`2
+  name.vb: Complex(Of T, J)
+  fullName: CatLibrary.Complex<T, J>
+  fullName.vb: CatLibrary.Complex(Of T, J)
+  nameWithType: Complex<T, J>
+  nameWithType.vb: Complex(Of T, J)
+- uid: CatLibrary.FakeDelegate`1
+  name: FakeDelegate<T>
+  href: api/CatLibrary.FakeDelegate-1.html
+  commentId: T:CatLibrary.FakeDelegate`1
+  name.vb: FakeDelegate(Of T)
+  fullName: CatLibrary.FakeDelegate<T>
+  fullName.vb: CatLibrary.FakeDelegate(Of T)
+  nameWithType: FakeDelegate<T>
+  nameWithType.vb: FakeDelegate(Of T)
+- uid: CatLibrary.IAnimal
+  name: IAnimal
+  href: api/CatLibrary.IAnimal.html
+  commentId: T:CatLibrary.IAnimal
+  fullName: CatLibrary.IAnimal
+  nameWithType: IAnimal
+- uid: CatLibrary.IAnimal.Eat
+  name: Eat()
+  href: api/CatLibrary.IAnimal.html#CatLibrary_IAnimal_Eat
+  commentId: M:CatLibrary.IAnimal.Eat
+  fullName: CatLibrary.IAnimal.Eat()
+  nameWithType: IAnimal.Eat()
+- uid: CatLibrary.IAnimal.Eat(System.String)
+  name: Eat(String)
+  href: api/CatLibrary.IAnimal.html#CatLibrary_IAnimal_Eat_System_String_
+  commentId: M:CatLibrary.IAnimal.Eat(System.String)
+  fullName: CatLibrary.IAnimal.Eat(System.String)
+  nameWithType: IAnimal.Eat(String)
+- uid: CatLibrary.IAnimal.Eat*
+  name: Eat
+  href: api/CatLibrary.IAnimal.html#CatLibrary_IAnimal_Eat_
+  commentId: Overload:CatLibrary.IAnimal.Eat
+  isSpec: "True"
+  fullName: CatLibrary.IAnimal.Eat
+  nameWithType: IAnimal.Eat
+- uid: CatLibrary.IAnimal.Eat``1(``0)
+  name: Eat<Tool>(Tool)
+  href: api/CatLibrary.IAnimal.html#CatLibrary_IAnimal_Eat__1___0_
+  commentId: M:CatLibrary.IAnimal.Eat``1(``0)
+  name.vb: Eat(Of Tool)(Tool)
+  fullName: CatLibrary.IAnimal.Eat<Tool>(Tool)
+  fullName.vb: CatLibrary.IAnimal.Eat(Of Tool)(Tool)
+  nameWithType: IAnimal.Eat<Tool>(Tool)
+  nameWithType.vb: IAnimal.Eat(Of Tool)(Tool)
+- uid: CatLibrary.IAnimal.Item(System.Int32)
+  name: Item[Int32]
+  href: api/CatLibrary.IAnimal.html#CatLibrary_IAnimal_Item_System_Int32_
+  commentId: P:CatLibrary.IAnimal.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: CatLibrary.IAnimal.Item[System.Int32]
+  fullName.vb: CatLibrary.IAnimal.Item(System.Int32)
+  nameWithType: IAnimal.Item[Int32]
+  nameWithType.vb: IAnimal.Item(Int32)
+- uid: CatLibrary.IAnimal.Item*
+  name: Item
+  href: api/CatLibrary.IAnimal.html#CatLibrary_IAnimal_Item_
+  commentId: Overload:CatLibrary.IAnimal.Item
+  isSpec: "True"
+  fullName: CatLibrary.IAnimal.Item
+  nameWithType: IAnimal.Item
+- uid: CatLibrary.IAnimal.Name
+  name: Name
+  href: api/CatLibrary.IAnimal.html#CatLibrary_IAnimal_Name
+  commentId: P:CatLibrary.IAnimal.Name
+  fullName: CatLibrary.IAnimal.Name
+  nameWithType: IAnimal.Name
+- uid: CatLibrary.IAnimal.Name*
+  name: Name
+  href: api/CatLibrary.IAnimal.html#CatLibrary_IAnimal_Name_
+  commentId: Overload:CatLibrary.IAnimal.Name
+  isSpec: "True"
+  fullName: CatLibrary.IAnimal.Name
+  nameWithType: IAnimal.Name
+- uid: CatLibrary.ICat
+  name: ICat
+  href: api/CatLibrary.ICat.html
+  commentId: T:CatLibrary.ICat
+  fullName: CatLibrary.ICat
+  nameWithType: ICat
+- uid: CatLibrary.ICat.eat
+  name: eat
+  href: api/CatLibrary.ICat.html#CatLibrary_ICat_eat
+  commentId: E:CatLibrary.ICat.eat
+  fullName: CatLibrary.ICat.eat
+  nameWithType: ICat.eat
+- uid: CatLibrary.ICatExtension
+  name: ICatExtension
+  href: api/CatLibrary.ICatExtension.html
+  commentId: T:CatLibrary.ICatExtension
+  fullName: CatLibrary.ICatExtension
+  nameWithType: ICatExtension
+- uid: CatLibrary.ICatExtension.Play(CatLibrary.ICat,System.String)
+  name: Play(ICat, String)
+  href: api/CatLibrary.ICatExtension.html#CatLibrary_ICatExtension_Play_CatLibrary_ICat_System_String_
+  commentId: M:CatLibrary.ICatExtension.Play(CatLibrary.ICat,System.String)
+  fullName: CatLibrary.ICatExtension.Play(CatLibrary.ICat, System.String)
+  nameWithType: ICatExtension.Play(ICat, String)
+- uid: CatLibrary.ICatExtension.Play*
+  name: Play
+  href: api/CatLibrary.ICatExtension.html#CatLibrary_ICatExtension_Play_
+  commentId: Overload:CatLibrary.ICatExtension.Play
+  isSpec: "True"
+  fullName: CatLibrary.ICatExtension.Play
+  nameWithType: ICatExtension.Play
+- uid: CatLibrary.ICatExtension.Sleep(CatLibrary.ICat,System.Int64)
+  name: Sleep(ICat, Int64)
+  href: api/CatLibrary.ICatExtension.html#CatLibrary_ICatExtension_Sleep_CatLibrary_ICat_System_Int64_
+  commentId: M:CatLibrary.ICatExtension.Sleep(CatLibrary.ICat,System.Int64)
+  fullName: CatLibrary.ICatExtension.Sleep(CatLibrary.ICat, System.Int64)
+  nameWithType: ICatExtension.Sleep(ICat, Int64)
+- uid: CatLibrary.ICatExtension.Sleep*
+  name: Sleep
+  href: api/CatLibrary.ICatExtension.html#CatLibrary_ICatExtension_Sleep_
+  commentId: Overload:CatLibrary.ICatExtension.Sleep
+  isSpec: "True"
+  fullName: CatLibrary.ICatExtension.Sleep
+  nameWithType: ICatExtension.Sleep
+- uid: CatLibrary.MRefDelegate`3
+  name: MRefDelegate<K, T, L>
+  href: api/CatLibrary.MRefDelegate-3.html
+  commentId: T:CatLibrary.MRefDelegate`3
+  name.vb: MRefDelegate(Of K, T, L)
+  fullName: CatLibrary.MRefDelegate<K, T, L>
+  fullName.vb: CatLibrary.MRefDelegate(Of K, T, L)
+  nameWithType: MRefDelegate<K, T, L>
+  nameWithType.vb: MRefDelegate(Of K, T, L)
+- uid: CatLibrary.MRefNormalDelegate
+  name: MRefNormalDelegate
+  href: api/CatLibrary.MRefNormalDelegate.html
+  commentId: T:CatLibrary.MRefNormalDelegate
+  fullName: CatLibrary.MRefNormalDelegate
+  nameWithType: MRefNormalDelegate
+- uid: CatLibrary.Tom
+  name: Tom
+  href: api/CatLibrary.Tom.html
+  commentId: T:CatLibrary.Tom
+  fullName: CatLibrary.Tom
+  nameWithType: Tom
+- uid: CatLibrary.Tom.TomMethod(CatLibrary.Complex{CatLibrary.TomFromBaseClass,CatLibrary.TomFromBaseClass},System.Tuple{System.String,CatLibrary.Tom})
+  name: TomMethod(Complex<TomFromBaseClass, TomFromBaseClass>, Tuple<String, Tom>)
+  href: api/CatLibrary.Tom.html#CatLibrary_Tom_TomMethod_CatLibrary_Complex_CatLibrary_TomFromBaseClass_CatLibrary_TomFromBaseClass__System_Tuple_System_String_CatLibrary_Tom__
+  commentId: M:CatLibrary.Tom.TomMethod(CatLibrary.Complex{CatLibrary.TomFromBaseClass,CatLibrary.TomFromBaseClass},System.Tuple{System.String,CatLibrary.Tom})
+  name.vb: TomMethod(Complex(Of TomFromBaseClass, TomFromBaseClass), Tuple(Of String, Tom))
+  fullName: CatLibrary.Tom.TomMethod(CatLibrary.Complex<CatLibrary.TomFromBaseClass, CatLibrary.TomFromBaseClass>, System.Tuple<System.String, CatLibrary.Tom>)
+  fullName.vb: CatLibrary.Tom.TomMethod(CatLibrary.Complex(Of CatLibrary.TomFromBaseClass, CatLibrary.TomFromBaseClass), System.Tuple(Of System.String, CatLibrary.Tom))
+  nameWithType: Tom.TomMethod(Complex<TomFromBaseClass, TomFromBaseClass>, Tuple<String, Tom>)
+  nameWithType.vb: Tom.TomMethod(Complex(Of TomFromBaseClass, TomFromBaseClass), Tuple(Of String, Tom))
+- uid: CatLibrary.Tom.TomMethod*
+  name: TomMethod
+  href: api/CatLibrary.Tom.html#CatLibrary_Tom_TomMethod_
+  commentId: Overload:CatLibrary.Tom.TomMethod
+  isSpec: "True"
+  fullName: CatLibrary.Tom.TomMethod
+  nameWithType: Tom.TomMethod
+- uid: CatLibrary.TomFromBaseClass
+  name: TomFromBaseClass
+  href: api/CatLibrary.TomFromBaseClass.html
+  commentId: T:CatLibrary.TomFromBaseClass
+  fullName: CatLibrary.TomFromBaseClass
+  nameWithType: TomFromBaseClass
+- uid: CatLibrary.TomFromBaseClass.#ctor(System.Int32)
+  name: TomFromBaseClass(Int32)
+  href: api/CatLibrary.TomFromBaseClass.html#CatLibrary_TomFromBaseClass__ctor_System_Int32_
+  commentId: M:CatLibrary.TomFromBaseClass.#ctor(System.Int32)
+  fullName: CatLibrary.TomFromBaseClass.TomFromBaseClass(System.Int32)
+  nameWithType: TomFromBaseClass.TomFromBaseClass(Int32)
+- uid: CatLibrary.TomFromBaseClass.#ctor*
+  name: TomFromBaseClass
+  href: api/CatLibrary.TomFromBaseClass.html#CatLibrary_TomFromBaseClass__ctor_
+  commentId: Overload:CatLibrary.TomFromBaseClass.#ctor
+  isSpec: "True"
+  fullName: CatLibrary.TomFromBaseClass.TomFromBaseClass
+  nameWithType: TomFromBaseClass.TomFromBaseClass
+- uid: DotnetNew
+  name: DotnetNew
+  href: api/DotnetNew.html
+  commentId: N:DotnetNew
+  fullName: DotnetNew
+  nameWithType: DotnetNew
+- uid: DotnetNew.Class1
+  name: Class1
+  href: api/DotnetNew.Class1.html
+  commentId: T:DotnetNew.Class1
+  fullName: DotnetNew.Class1
+  nameWithType: Class1
+- uid: Microsoft.DevDiv
+  name: Microsoft.DevDiv
+  href: api/Microsoft.DevDiv.html
+  commentId: N:Microsoft.DevDiv
+  fullName: Microsoft.DevDiv
+  nameWithType: Microsoft.DevDiv
+- uid: Microsoft.DevDiv.ContainersRefType
+  name: ContainersRefType
+  href: api/Microsoft.DevDiv.ContainersRefType.html
+  commentId: T:Microsoft.DevDiv.ContainersRefType
+  fullName: Microsoft.DevDiv.ContainersRefType
+  nameWithType: ContainersRefType
+- uid: Microsoft.DevDiv.ContainersRefType.ColorCount
+  name: ColorCount
+  href: api/Microsoft.DevDiv.ContainersRefType.html#Microsoft_DevDiv_ContainersRefType_ColorCount
+  commentId: F:Microsoft.DevDiv.ContainersRefType.ColorCount
+  fullName: Microsoft.DevDiv.ContainersRefType.ColorCount
+  nameWithType: ContainersRefType.ColorCount
+- uid: Microsoft.DevDiv.ContainersRefType.ColorType
+  name: ContainersRefType.ColorType
+  href: api/Microsoft.DevDiv.ContainersRefType.ColorType.html
+  commentId: T:Microsoft.DevDiv.ContainersRefType.ColorType
+  fullName: Microsoft.DevDiv.ContainersRefType.ColorType
+  nameWithType: ContainersRefType.ColorType
+- uid: Microsoft.DevDiv.ContainersRefType.ColorType.Blue
+  name: Blue
+  href: api/Microsoft.DevDiv.ContainersRefType.ColorType.html#Microsoft_DevDiv_ContainersRefType_ColorType_Blue
+  commentId: F:Microsoft.DevDiv.ContainersRefType.ColorType.Blue
+  fullName: Microsoft.DevDiv.ContainersRefType.ColorType.Blue
+  nameWithType: ContainersRefType.ColorType.Blue
+- uid: Microsoft.DevDiv.ContainersRefType.ColorType.Red
+  name: Red
+  href: api/Microsoft.DevDiv.ContainersRefType.ColorType.html#Microsoft_DevDiv_ContainersRefType_ColorType_Red
+  commentId: F:Microsoft.DevDiv.ContainersRefType.ColorType.Red
+  fullName: Microsoft.DevDiv.ContainersRefType.ColorType.Red
+  nameWithType: ContainersRefType.ColorType.Red
+- uid: Microsoft.DevDiv.ContainersRefType.ColorType.Yellow
+  name: Yellow
+  href: api/Microsoft.DevDiv.ContainersRefType.ColorType.html#Microsoft_DevDiv_ContainersRefType_ColorType_Yellow
+  commentId: F:Microsoft.DevDiv.ContainersRefType.ColorType.Yellow
+  fullName: Microsoft.DevDiv.ContainersRefType.ColorType.Yellow
+  nameWithType: ContainersRefType.ColorType.Yellow
+- uid: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeChild
+  name: ContainersRefType.ContainersRefTypeChild
+  href: api/Microsoft.DevDiv.ContainersRefType.ContainersRefTypeChild.html
+  commentId: T:Microsoft.DevDiv.ContainersRefType.ContainersRefTypeChild
+  fullName: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeChild
+  nameWithType: ContainersRefType.ContainersRefTypeChild
+- uid: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeChildInterface
+  name: ContainersRefType.ContainersRefTypeChildInterface
+  href: api/Microsoft.DevDiv.ContainersRefType.ContainersRefTypeChildInterface.html
+  commentId: T:Microsoft.DevDiv.ContainersRefType.ContainersRefTypeChildInterface
+  fullName: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeChildInterface
+  nameWithType: ContainersRefType.ContainersRefTypeChildInterface
+- uid: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeDelegate
+  name: ContainersRefType.ContainersRefTypeDelegate
+  href: api/Microsoft.DevDiv.ContainersRefType.ContainersRefTypeDelegate.html
+  commentId: T:Microsoft.DevDiv.ContainersRefType.ContainersRefTypeDelegate
+  fullName: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeDelegate
+  nameWithType: ContainersRefType.ContainersRefTypeDelegate
+- uid: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeEventHandler
+  name: ContainersRefTypeEventHandler
+  href: api/Microsoft.DevDiv.ContainersRefType.html#Microsoft_DevDiv_ContainersRefType_ContainersRefTypeEventHandler
+  commentId: E:Microsoft.DevDiv.ContainersRefType.ContainersRefTypeEventHandler
+  fullName: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeEventHandler
+  nameWithType: ContainersRefType.ContainersRefTypeEventHandler
+- uid: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeNonRefMethod(System.Object[])
+  name: ContainersRefTypeNonRefMethod(Object[])
+  href: api/Microsoft.DevDiv.ContainersRefType.html#Microsoft_DevDiv_ContainersRefType_ContainersRefTypeNonRefMethod_System_Object___
+  commentId: M:Microsoft.DevDiv.ContainersRefType.ContainersRefTypeNonRefMethod(System.Object[])
+  name.vb: ContainersRefTypeNonRefMethod(Object())
+  fullName: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeNonRefMethod(System.Object[])
+  fullName.vb: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeNonRefMethod(System.Object())
+  nameWithType: ContainersRefType.ContainersRefTypeNonRefMethod(Object[])
+  nameWithType.vb: ContainersRefType.ContainersRefTypeNonRefMethod(Object())
+- uid: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeNonRefMethod*
+  name: ContainersRefTypeNonRefMethod
+  href: api/Microsoft.DevDiv.ContainersRefType.html#Microsoft_DevDiv_ContainersRefType_ContainersRefTypeNonRefMethod_
+  commentId: Overload:Microsoft.DevDiv.ContainersRefType.ContainersRefTypeNonRefMethod
+  isSpec: "True"
+  fullName: Microsoft.DevDiv.ContainersRefType.ContainersRefTypeNonRefMethod
+  nameWithType: ContainersRefType.ContainersRefTypeNonRefMethod
+- uid: Microsoft.DevDiv.ContainersRefType.GetColorCount
+  name: GetColorCount
+  href: api/Microsoft.DevDiv.ContainersRefType.html#Microsoft_DevDiv_ContainersRefType_GetColorCount
+  commentId: P:Microsoft.DevDiv.ContainersRefType.GetColorCount
+  fullName: Microsoft.DevDiv.ContainersRefType.GetColorCount
+  nameWithType: ContainersRefType.GetColorCount
+- uid: Microsoft.DevDiv.ContainersRefType.GetColorCount*
+  name: GetColorCount
+  href: api/Microsoft.DevDiv.ContainersRefType.html#Microsoft_DevDiv_ContainersRefType_GetColorCount_
+  commentId: Overload:Microsoft.DevDiv.ContainersRefType.GetColorCount
+  isSpec: "True"
+  fullName: Microsoft.DevDiv.ContainersRefType.GetColorCount
+  nameWithType: ContainersRefType.GetColorCount
+- uid: Microsoft.DevDiv.ExplicitLayoutClass
+  name: ExplicitLayoutClass
+  href: api/Microsoft.DevDiv.ExplicitLayoutClass.html
+  commentId: T:Microsoft.DevDiv.ExplicitLayoutClass
+  fullName: Microsoft.DevDiv.ExplicitLayoutClass
+  nameWithType: ExplicitLayoutClass
+- uid: MRef.Demo.Enumeration
+  name: MRef.Demo.Enumeration
+  href: api/MRef.Demo.Enumeration.html
+  commentId: N:MRef.Demo.Enumeration
+  fullName: MRef.Demo.Enumeration
+  nameWithType: MRef.Demo.Enumeration
+- uid: MRef.Demo.Enumeration.ColorType
+  name: ColorType
+  href: api/MRef.Demo.Enumeration.ColorType.html
+  commentId: T:MRef.Demo.Enumeration.ColorType
+  fullName: MRef.Demo.Enumeration.ColorType
+  nameWithType: ColorType
+- uid: MRef.Demo.Enumeration.ColorType.Blue
+  name: Blue
+  href: api/MRef.Demo.Enumeration.ColorType.html#MRef_Demo_Enumeration_ColorType_Blue
+  commentId: F:MRef.Demo.Enumeration.ColorType.Blue
+  fullName: MRef.Demo.Enumeration.ColorType.Blue
+  nameWithType: ColorType.Blue
+- uid: MRef.Demo.Enumeration.ColorType.Red
+  name: Red
+  href: api/MRef.Demo.Enumeration.ColorType.html#MRef_Demo_Enumeration_ColorType_Red
+  commentId: F:MRef.Demo.Enumeration.ColorType.Red
+  fullName: MRef.Demo.Enumeration.ColorType.Red
+  nameWithType: ColorType.Red
+- uid: MRef.Demo.Enumeration.ColorType.Yellow
+  name: Yellow
+  href: api/MRef.Demo.Enumeration.ColorType.html#MRef_Demo_Enumeration_ColorType_Yellow
+  commentId: F:MRef.Demo.Enumeration.ColorType.Yellow
+  fullName: MRef.Demo.Enumeration.ColorType.Yellow
+  nameWithType: ColorType.Yellow
+- uid: Unosquare.PocoData
+  name: Unosquare.PocoData
+  href: api/Unosquare.PocoData.html
+  commentId: N:Unosquare.PocoData
+  fullName: Unosquare.PocoData
+  nameWithType: Unosquare.PocoData
+- uid: Unosquare.PocoData.Annotations
+  name: Unosquare.PocoData.Annotations
+  href: api/Unosquare.PocoData.Annotations.html
+  commentId: N:Unosquare.PocoData.Annotations
+  fullName: Unosquare.PocoData.Annotations
+  nameWithType: Unosquare.PocoData.Annotations
+- uid: Unosquare.PocoData.Annotations.ColumnAttribute
+  name: ColumnAttribute
+  href: api/Unosquare.PocoData.Annotations.ColumnAttribute.html
+  commentId: T:Unosquare.PocoData.Annotations.ColumnAttribute
+  fullName: Unosquare.PocoData.Annotations.ColumnAttribute
+  nameWithType: ColumnAttribute
+- uid: Unosquare.PocoData.Annotations.ColumnAttribute.#ctor(System.String)
+  name: ColumnAttribute(String)
+  href: api/Unosquare.PocoData.Annotations.ColumnAttribute.html#Unosquare_PocoData_Annotations_ColumnAttribute__ctor_System_String_
+  commentId: M:Unosquare.PocoData.Annotations.ColumnAttribute.#ctor(System.String)
+  fullName: Unosquare.PocoData.Annotations.ColumnAttribute.ColumnAttribute(System.String)
+  nameWithType: ColumnAttribute.ColumnAttribute(String)
+- uid: Unosquare.PocoData.Annotations.ColumnAttribute.#ctor*
+  name: ColumnAttribute
+  href: api/Unosquare.PocoData.Annotations.ColumnAttribute.html#Unosquare_PocoData_Annotations_ColumnAttribute__ctor_
+  commentId: Overload:Unosquare.PocoData.Annotations.ColumnAttribute.#ctor
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.ColumnAttribute.ColumnAttribute
+  nameWithType: ColumnAttribute.ColumnAttribute
+- uid: Unosquare.PocoData.Annotations.ColumnAttribute.Name
+  name: Name
+  href: api/Unosquare.PocoData.Annotations.ColumnAttribute.html#Unosquare_PocoData_Annotations_ColumnAttribute_Name
+  commentId: P:Unosquare.PocoData.Annotations.ColumnAttribute.Name
+  fullName: Unosquare.PocoData.Annotations.ColumnAttribute.Name
+  nameWithType: ColumnAttribute.Name
+- uid: Unosquare.PocoData.Annotations.ColumnAttribute.Name*
+  name: Name
+  href: api/Unosquare.PocoData.Annotations.ColumnAttribute.html#Unosquare_PocoData_Annotations_ColumnAttribute_Name_
+  commentId: Overload:Unosquare.PocoData.Annotations.ColumnAttribute.Name
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.ColumnAttribute.Name
+  nameWithType: ColumnAttribute.Name
+- uid: Unosquare.PocoData.Annotations.KeyAttribute
+  name: KeyAttribute
+  href: api/Unosquare.PocoData.Annotations.KeyAttribute.html
+  commentId: T:Unosquare.PocoData.Annotations.KeyAttribute
+  fullName: Unosquare.PocoData.Annotations.KeyAttribute
+  nameWithType: KeyAttribute
+- uid: Unosquare.PocoData.Annotations.KeyAttribute.#ctor(System.Boolean)
+  name: KeyAttribute(Boolean)
+  href: api/Unosquare.PocoData.Annotations.KeyAttribute.html#Unosquare_PocoData_Annotations_KeyAttribute__ctor_System_Boolean_
+  commentId: M:Unosquare.PocoData.Annotations.KeyAttribute.#ctor(System.Boolean)
+  fullName: Unosquare.PocoData.Annotations.KeyAttribute.KeyAttribute(System.Boolean)
+  nameWithType: KeyAttribute.KeyAttribute(Boolean)
+- uid: Unosquare.PocoData.Annotations.KeyAttribute.#ctor*
+  name: KeyAttribute
+  href: api/Unosquare.PocoData.Annotations.KeyAttribute.html#Unosquare_PocoData_Annotations_KeyAttribute__ctor_
+  commentId: Overload:Unosquare.PocoData.Annotations.KeyAttribute.#ctor
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.KeyAttribute.KeyAttribute
+  nameWithType: KeyAttribute.KeyAttribute
+- uid: Unosquare.PocoData.Annotations.KeyAttribute.IsGenerated
+  name: IsGenerated
+  href: api/Unosquare.PocoData.Annotations.KeyAttribute.html#Unosquare_PocoData_Annotations_KeyAttribute_IsGenerated
+  commentId: P:Unosquare.PocoData.Annotations.KeyAttribute.IsGenerated
+  fullName: Unosquare.PocoData.Annotations.KeyAttribute.IsGenerated
+  nameWithType: KeyAttribute.IsGenerated
+- uid: Unosquare.PocoData.Annotations.KeyAttribute.IsGenerated*
+  name: IsGenerated
+  href: api/Unosquare.PocoData.Annotations.KeyAttribute.html#Unosquare_PocoData_Annotations_KeyAttribute_IsGenerated_
+  commentId: Overload:Unosquare.PocoData.Annotations.KeyAttribute.IsGenerated
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.KeyAttribute.IsGenerated
+  nameWithType: KeyAttribute.IsGenerated
+- uid: Unosquare.PocoData.Annotations.NotMappedAttribute
+  name: NotMappedAttribute
+  href: api/Unosquare.PocoData.Annotations.NotMappedAttribute.html
+  commentId: T:Unosquare.PocoData.Annotations.NotMappedAttribute
+  fullName: Unosquare.PocoData.Annotations.NotMappedAttribute
+  nameWithType: NotMappedAttribute
+- uid: Unosquare.PocoData.Annotations.RequiredAttribute
+  name: RequiredAttribute
+  href: api/Unosquare.PocoData.Annotations.RequiredAttribute.html
+  commentId: T:Unosquare.PocoData.Annotations.RequiredAttribute
+  fullName: Unosquare.PocoData.Annotations.RequiredAttribute
+  nameWithType: RequiredAttribute
+- uid: Unosquare.PocoData.Annotations.StringLengthAttribute
+  name: StringLengthAttribute
+  href: api/Unosquare.PocoData.Annotations.StringLengthAttribute.html
+  commentId: T:Unosquare.PocoData.Annotations.StringLengthAttribute
+  fullName: Unosquare.PocoData.Annotations.StringLengthAttribute
+  nameWithType: StringLengthAttribute
+- uid: Unosquare.PocoData.Annotations.StringLengthAttribute.#ctor(System.Int32)
+  name: StringLengthAttribute(Int32)
+  href: api/Unosquare.PocoData.Annotations.StringLengthAttribute.html#Unosquare_PocoData_Annotations_StringLengthAttribute__ctor_System_Int32_
+  commentId: M:Unosquare.PocoData.Annotations.StringLengthAttribute.#ctor(System.Int32)
+  fullName: Unosquare.PocoData.Annotations.StringLengthAttribute.StringLengthAttribute(System.Int32)
+  nameWithType: StringLengthAttribute.StringLengthAttribute(Int32)
+- uid: Unosquare.PocoData.Annotations.StringLengthAttribute.#ctor*
+  name: StringLengthAttribute
+  href: api/Unosquare.PocoData.Annotations.StringLengthAttribute.html#Unosquare_PocoData_Annotations_StringLengthAttribute__ctor_
+  commentId: Overload:Unosquare.PocoData.Annotations.StringLengthAttribute.#ctor
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.StringLengthAttribute.StringLengthAttribute
+  nameWithType: StringLengthAttribute.StringLengthAttribute
+- uid: Unosquare.PocoData.Annotations.StringLengthAttribute.Length
+  name: Length
+  href: api/Unosquare.PocoData.Annotations.StringLengthAttribute.html#Unosquare_PocoData_Annotations_StringLengthAttribute_Length
+  commentId: P:Unosquare.PocoData.Annotations.StringLengthAttribute.Length
+  fullName: Unosquare.PocoData.Annotations.StringLengthAttribute.Length
+  nameWithType: StringLengthAttribute.Length
+- uid: Unosquare.PocoData.Annotations.StringLengthAttribute.Length*
+  name: Length
+  href: api/Unosquare.PocoData.Annotations.StringLengthAttribute.html#Unosquare_PocoData_Annotations_StringLengthAttribute_Length_
+  commentId: Overload:Unosquare.PocoData.Annotations.StringLengthAttribute.Length
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.StringLengthAttribute.Length
+  nameWithType: StringLengthAttribute.Length
+- uid: Unosquare.PocoData.Annotations.TableAttribute
+  name: TableAttribute
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html
+  commentId: T:Unosquare.PocoData.Annotations.TableAttribute
+  fullName: Unosquare.PocoData.Annotations.TableAttribute
+  nameWithType: TableAttribute
+- uid: Unosquare.PocoData.Annotations.TableAttribute.#ctor(System.String)
+  name: TableAttribute(String)
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html#Unosquare_PocoData_Annotations_TableAttribute__ctor_System_String_
+  commentId: M:Unosquare.PocoData.Annotations.TableAttribute.#ctor(System.String)
+  fullName: Unosquare.PocoData.Annotations.TableAttribute.TableAttribute(System.String)
+  nameWithType: TableAttribute.TableAttribute(String)
+- uid: Unosquare.PocoData.Annotations.TableAttribute.#ctor(System.String,System.String)
+  name: TableAttribute(String, String)
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html#Unosquare_PocoData_Annotations_TableAttribute__ctor_System_String_System_String_
+  commentId: M:Unosquare.PocoData.Annotations.TableAttribute.#ctor(System.String,System.String)
+  fullName: Unosquare.PocoData.Annotations.TableAttribute.TableAttribute(System.String, System.String)
+  nameWithType: TableAttribute.TableAttribute(String, String)
+- uid: Unosquare.PocoData.Annotations.TableAttribute.#ctor*
+  name: TableAttribute
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html#Unosquare_PocoData_Annotations_TableAttribute__ctor_
+  commentId: Overload:Unosquare.PocoData.Annotations.TableAttribute.#ctor
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.TableAttribute.TableAttribute
+  nameWithType: TableAttribute.TableAttribute
+- uid: Unosquare.PocoData.Annotations.TableAttribute.Name
+  name: Name
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html#Unosquare_PocoData_Annotations_TableAttribute_Name
+  commentId: P:Unosquare.PocoData.Annotations.TableAttribute.Name
+  fullName: Unosquare.PocoData.Annotations.TableAttribute.Name
+  nameWithType: TableAttribute.Name
+- uid: Unosquare.PocoData.Annotations.TableAttribute.Name*
+  name: Name
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html#Unosquare_PocoData_Annotations_TableAttribute_Name_
+  commentId: Overload:Unosquare.PocoData.Annotations.TableAttribute.Name
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.TableAttribute.Name
+  nameWithType: TableAttribute.Name
+- uid: Unosquare.PocoData.Annotations.TableAttribute.QualifiedName
+  name: QualifiedName
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html#Unosquare_PocoData_Annotations_TableAttribute_QualifiedName
+  commentId: P:Unosquare.PocoData.Annotations.TableAttribute.QualifiedName
+  fullName: Unosquare.PocoData.Annotations.TableAttribute.QualifiedName
+  nameWithType: TableAttribute.QualifiedName
+- uid: Unosquare.PocoData.Annotations.TableAttribute.QualifiedName*
+  name: QualifiedName
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html#Unosquare_PocoData_Annotations_TableAttribute_QualifiedName_
+  commentId: Overload:Unosquare.PocoData.Annotations.TableAttribute.QualifiedName
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.TableAttribute.QualifiedName
+  nameWithType: TableAttribute.QualifiedName
+- uid: Unosquare.PocoData.Annotations.TableAttribute.Schema
+  name: Schema
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html#Unosquare_PocoData_Annotations_TableAttribute_Schema
+  commentId: P:Unosquare.PocoData.Annotations.TableAttribute.Schema
+  fullName: Unosquare.PocoData.Annotations.TableAttribute.Schema
+  nameWithType: TableAttribute.Schema
+- uid: Unosquare.PocoData.Annotations.TableAttribute.Schema*
+  name: Schema
+  href: api/Unosquare.PocoData.Annotations.TableAttribute.html#Unosquare_PocoData_Annotations_TableAttribute_Schema_
+  commentId: Overload:Unosquare.PocoData.Annotations.TableAttribute.Schema
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Annotations.TableAttribute.Schema
+  nameWithType: TableAttribute.Schema
+- uid: Unosquare.PocoData.ColumnMetadata
+  name: ColumnMetadata
+  href: api/Unosquare.PocoData.ColumnMetadata.html
+  commentId: T:Unosquare.PocoData.ColumnMetadata
+  fullName: Unosquare.PocoData.ColumnMetadata
+  nameWithType: ColumnMetadata
+- uid: Unosquare.PocoData.ColumnMetadata.ColumnName
+  name: ColumnName
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_ColumnName
+  commentId: P:Unosquare.PocoData.ColumnMetadata.ColumnName
+  fullName: Unosquare.PocoData.ColumnMetadata.ColumnName
+  nameWithType: ColumnMetadata.ColumnName
+- uid: Unosquare.PocoData.ColumnMetadata.ColumnName*
+  name: ColumnName
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_ColumnName_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.ColumnName
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.ColumnName
+  nameWithType: ColumnMetadata.ColumnName
+- uid: Unosquare.PocoData.ColumnMetadata.GetDefault
+  name: GetDefault()
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_GetDefault
+  commentId: M:Unosquare.PocoData.ColumnMetadata.GetDefault
+  fullName: Unosquare.PocoData.ColumnMetadata.GetDefault()
+  nameWithType: ColumnMetadata.GetDefault()
+- uid: Unosquare.PocoData.ColumnMetadata.GetDefault*
+  name: GetDefault
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_GetDefault_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.GetDefault
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.GetDefault
+  nameWithType: ColumnMetadata.GetDefault
+- uid: Unosquare.PocoData.ColumnMetadata.GetValue(System.Object)
+  name: GetValue(Object)
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_GetValue_System_Object_
+  commentId: M:Unosquare.PocoData.ColumnMetadata.GetValue(System.Object)
+  fullName: Unosquare.PocoData.ColumnMetadata.GetValue(System.Object)
+  nameWithType: ColumnMetadata.GetValue(Object)
+- uid: Unosquare.PocoData.ColumnMetadata.GetValue*
+  name: GetValue
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_GetValue_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.GetValue
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.GetValue
+  nameWithType: ColumnMetadata.GetValue
+- uid: Unosquare.PocoData.ColumnMetadata.IsKeyColumn
+  name: IsKeyColumn
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_IsKeyColumn
+  commentId: P:Unosquare.PocoData.ColumnMetadata.IsKeyColumn
+  fullName: Unosquare.PocoData.ColumnMetadata.IsKeyColumn
+  nameWithType: ColumnMetadata.IsKeyColumn
+- uid: Unosquare.PocoData.ColumnMetadata.IsKeyColumn*
+  name: IsKeyColumn
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_IsKeyColumn_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.IsKeyColumn
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.IsKeyColumn
+  nameWithType: ColumnMetadata.IsKeyColumn
+- uid: Unosquare.PocoData.ColumnMetadata.IsKeyGenerated
+  name: IsKeyGenerated
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_IsKeyGenerated
+  commentId: P:Unosquare.PocoData.ColumnMetadata.IsKeyGenerated
+  fullName: Unosquare.PocoData.ColumnMetadata.IsKeyGenerated
+  nameWithType: ColumnMetadata.IsKeyGenerated
+- uid: Unosquare.PocoData.ColumnMetadata.IsKeyGenerated*
+  name: IsKeyGenerated
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_IsKeyGenerated_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.IsKeyGenerated
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.IsKeyGenerated
+  nameWithType: ColumnMetadata.IsKeyGenerated
+- uid: Unosquare.PocoData.ColumnMetadata.IsNullable
+  name: IsNullable
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_IsNullable
+  commentId: P:Unosquare.PocoData.ColumnMetadata.IsNullable
+  fullName: Unosquare.PocoData.ColumnMetadata.IsNullable
+  nameWithType: ColumnMetadata.IsNullable
+- uid: Unosquare.PocoData.ColumnMetadata.IsNullable*
+  name: IsNullable
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_IsNullable_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.IsNullable
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.IsNullable
+  nameWithType: ColumnMetadata.IsNullable
+- uid: Unosquare.PocoData.ColumnMetadata.NativeType
+  name: NativeType
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_NativeType
+  commentId: P:Unosquare.PocoData.ColumnMetadata.NativeType
+  fullName: Unosquare.PocoData.ColumnMetadata.NativeType
+  nameWithType: ColumnMetadata.NativeType
+- uid: Unosquare.PocoData.ColumnMetadata.NativeType*
+  name: NativeType
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_NativeType_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.NativeType
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.NativeType
+  nameWithType: ColumnMetadata.NativeType
+- uid: Unosquare.PocoData.ColumnMetadata.ParameterName
+  name: ParameterName
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_ParameterName
+  commentId: P:Unosquare.PocoData.ColumnMetadata.ParameterName
+  fullName: Unosquare.PocoData.ColumnMetadata.ParameterName
+  nameWithType: ColumnMetadata.ParameterName
+- uid: Unosquare.PocoData.ColumnMetadata.ParameterName*
+  name: ParameterName
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_ParameterName_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.ParameterName
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.ParameterName
+  nameWithType: ColumnMetadata.ParameterName
+- uid: Unosquare.PocoData.ColumnMetadata.Property
+  name: Property
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_Property
+  commentId: P:Unosquare.PocoData.ColumnMetadata.Property
+  fullName: Unosquare.PocoData.ColumnMetadata.Property
+  nameWithType: ColumnMetadata.Property
+- uid: Unosquare.PocoData.ColumnMetadata.Property*
+  name: Property
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_Property_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.Property
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.Property
+  nameWithType: ColumnMetadata.Property
+- uid: Unosquare.PocoData.ColumnMetadata.PropertyName
+  name: PropertyName
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_PropertyName
+  commentId: P:Unosquare.PocoData.ColumnMetadata.PropertyName
+  fullName: Unosquare.PocoData.ColumnMetadata.PropertyName
+  nameWithType: ColumnMetadata.PropertyName
+- uid: Unosquare.PocoData.ColumnMetadata.PropertyName*
+  name: PropertyName
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_PropertyName_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.PropertyName
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.PropertyName
+  nameWithType: ColumnMetadata.PropertyName
+- uid: Unosquare.PocoData.ColumnMetadata.QualifiedName
+  name: QualifiedName
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_QualifiedName
+  commentId: P:Unosquare.PocoData.ColumnMetadata.QualifiedName
+  fullName: Unosquare.PocoData.ColumnMetadata.QualifiedName
+  nameWithType: ColumnMetadata.QualifiedName
+- uid: Unosquare.PocoData.ColumnMetadata.QualifiedName*
+  name: QualifiedName
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_QualifiedName_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.QualifiedName
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.QualifiedName
+  nameWithType: ColumnMetadata.QualifiedName
+- uid: Unosquare.PocoData.ColumnMetadata.SetValue(System.Object,System.Object)
+  name: SetValue(Object, Object)
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_SetValue_System_Object_System_Object_
+  commentId: M:Unosquare.PocoData.ColumnMetadata.SetValue(System.Object,System.Object)
+  fullName: Unosquare.PocoData.ColumnMetadata.SetValue(System.Object, System.Object)
+  nameWithType: ColumnMetadata.SetValue(Object, Object)
+- uid: Unosquare.PocoData.ColumnMetadata.SetValue*
+  name: SetValue
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_SetValue_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.SetValue
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.SetValue
+  nameWithType: ColumnMetadata.SetValue
+- uid: Unosquare.PocoData.ColumnMetadata.StringLength
+  name: StringLength
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_StringLength
+  commentId: P:Unosquare.PocoData.ColumnMetadata.StringLength
+  fullName: Unosquare.PocoData.ColumnMetadata.StringLength
+  nameWithType: ColumnMetadata.StringLength
+- uid: Unosquare.PocoData.ColumnMetadata.StringLength*
+  name: StringLength
+  href: api/Unosquare.PocoData.ColumnMetadata.html#Unosquare_PocoData_ColumnMetadata_StringLength_
+  commentId: Overload:Unosquare.PocoData.ColumnMetadata.StringLength
+  isSpec: "True"
+  fullName: Unosquare.PocoData.ColumnMetadata.StringLength
+  nameWithType: ColumnMetadata.StringLength
+- uid: Unosquare.PocoData.IPocoCommands
+  name: IPocoCommands
+  href: api/Unosquare.PocoData.IPocoCommands.html
+  commentId: T:Unosquare.PocoData.IPocoCommands
+  fullName: Unosquare.PocoData.IPocoCommands
+  nameWithType: IPocoCommands
+- uid: Unosquare.PocoData.IPocoCommands.CountAllCommandText(System.Type)
+  name: CountAllCommandText(Type)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CountAllCommandText_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoCommands.CountAllCommandText(System.Type)
+  fullName: Unosquare.PocoData.IPocoCommands.CountAllCommandText(System.Type)
+  nameWithType: IPocoCommands.CountAllCommandText(Type)
+- uid: Unosquare.PocoData.IPocoCommands.CountAllCommandText*
+  name: CountAllCommandText
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CountAllCommandText_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.CountAllCommandText
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.CountAllCommandText
+  nameWithType: IPocoCommands.CountAllCommandText
+- uid: Unosquare.PocoData.IPocoCommands.CreateCountAllCommand(System.Type)
+  name: CreateCountAllCommand(Type)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateCountAllCommand_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoCommands.CreateCountAllCommand(System.Type)
+  fullName: Unosquare.PocoData.IPocoCommands.CreateCountAllCommand(System.Type)
+  nameWithType: IPocoCommands.CreateCountAllCommand(Type)
+- uid: Unosquare.PocoData.IPocoCommands.CreateCountAllCommand*
+  name: CreateCountAllCommand
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateCountAllCommand_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.CreateCountAllCommand
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.CreateCountAllCommand
+  nameWithType: IPocoCommands.CreateCountAllCommand
+- uid: Unosquare.PocoData.IPocoCommands.CreateDeleteCommand(System.Object)
+  name: CreateDeleteCommand(Object)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateDeleteCommand_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoCommands.CreateDeleteCommand(System.Object)
+  fullName: Unosquare.PocoData.IPocoCommands.CreateDeleteCommand(System.Object)
+  nameWithType: IPocoCommands.CreateDeleteCommand(Object)
+- uid: Unosquare.PocoData.IPocoCommands.CreateDeleteCommand*
+  name: CreateDeleteCommand
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateDeleteCommand_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.CreateDeleteCommand
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.CreateDeleteCommand
+  nameWithType: IPocoCommands.CreateDeleteCommand
+- uid: Unosquare.PocoData.IPocoCommands.CreateInsertCommand(System.Object)
+  name: CreateInsertCommand(Object)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateInsertCommand_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoCommands.CreateInsertCommand(System.Object)
+  fullName: Unosquare.PocoData.IPocoCommands.CreateInsertCommand(System.Object)
+  nameWithType: IPocoCommands.CreateInsertCommand(Object)
+- uid: Unosquare.PocoData.IPocoCommands.CreateInsertCommand*
+  name: CreateInsertCommand
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateInsertCommand_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.CreateInsertCommand
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.CreateInsertCommand
+  nameWithType: IPocoCommands.CreateInsertCommand
+- uid: Unosquare.PocoData.IPocoCommands.CreateSelectAllCommand(System.Type)
+  name: CreateSelectAllCommand(Type)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateSelectAllCommand_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoCommands.CreateSelectAllCommand(System.Type)
+  fullName: Unosquare.PocoData.IPocoCommands.CreateSelectAllCommand(System.Type)
+  nameWithType: IPocoCommands.CreateSelectAllCommand(Type)
+- uid: Unosquare.PocoData.IPocoCommands.CreateSelectAllCommand*
+  name: CreateSelectAllCommand
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateSelectAllCommand_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.CreateSelectAllCommand
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.CreateSelectAllCommand
+  nameWithType: IPocoCommands.CreateSelectAllCommand
+- uid: Unosquare.PocoData.IPocoCommands.CreateSelectSingleCommand(System.Object)
+  name: CreateSelectSingleCommand(Object)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateSelectSingleCommand_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoCommands.CreateSelectSingleCommand(System.Object)
+  fullName: Unosquare.PocoData.IPocoCommands.CreateSelectSingleCommand(System.Object)
+  nameWithType: IPocoCommands.CreateSelectSingleCommand(Object)
+- uid: Unosquare.PocoData.IPocoCommands.CreateSelectSingleCommand*
+  name: CreateSelectSingleCommand
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateSelectSingleCommand_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.CreateSelectSingleCommand
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.CreateSelectSingleCommand
+  nameWithType: IPocoCommands.CreateSelectSingleCommand
+- uid: Unosquare.PocoData.IPocoCommands.CreateUpdateCommand(System.Object)
+  name: CreateUpdateCommand(Object)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateUpdateCommand_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoCommands.CreateUpdateCommand(System.Object)
+  fullName: Unosquare.PocoData.IPocoCommands.CreateUpdateCommand(System.Object)
+  nameWithType: IPocoCommands.CreateUpdateCommand(Object)
+- uid: Unosquare.PocoData.IPocoCommands.CreateUpdateCommand*
+  name: CreateUpdateCommand
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_CreateUpdateCommand_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.CreateUpdateCommand
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.CreateUpdateCommand
+  nameWithType: IPocoCommands.CreateUpdateCommand
+- uid: Unosquare.PocoData.IPocoCommands.DeleteCommandText(System.Type)
+  name: DeleteCommandText(Type)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_DeleteCommandText_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoCommands.DeleteCommandText(System.Type)
+  fullName: Unosquare.PocoData.IPocoCommands.DeleteCommandText(System.Type)
+  nameWithType: IPocoCommands.DeleteCommandText(Type)
+- uid: Unosquare.PocoData.IPocoCommands.DeleteCommandText*
+  name: DeleteCommandText
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_DeleteCommandText_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.DeleteCommandText
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.DeleteCommandText
+  nameWithType: IPocoCommands.DeleteCommandText
+- uid: Unosquare.PocoData.IPocoCommands.InsertCommandText(System.Type)
+  name: InsertCommandText(Type)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_InsertCommandText_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoCommands.InsertCommandText(System.Type)
+  fullName: Unosquare.PocoData.IPocoCommands.InsertCommandText(System.Type)
+  nameWithType: IPocoCommands.InsertCommandText(Type)
+- uid: Unosquare.PocoData.IPocoCommands.InsertCommandText*
+  name: InsertCommandText
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_InsertCommandText_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.InsertCommandText
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.InsertCommandText
+  nameWithType: IPocoCommands.InsertCommandText
+- uid: Unosquare.PocoData.IPocoCommands.SelectAllCommandText(System.Type)
+  name: SelectAllCommandText(Type)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_SelectAllCommandText_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoCommands.SelectAllCommandText(System.Type)
+  fullName: Unosquare.PocoData.IPocoCommands.SelectAllCommandText(System.Type)
+  nameWithType: IPocoCommands.SelectAllCommandText(Type)
+- uid: Unosquare.PocoData.IPocoCommands.SelectAllCommandText*
+  name: SelectAllCommandText
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_SelectAllCommandText_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.SelectAllCommandText
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.SelectAllCommandText
+  nameWithType: IPocoCommands.SelectAllCommandText
+- uid: Unosquare.PocoData.IPocoCommands.SelectSingleCommandText(System.Type)
+  name: SelectSingleCommandText(Type)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_SelectSingleCommandText_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoCommands.SelectSingleCommandText(System.Type)
+  fullName: Unosquare.PocoData.IPocoCommands.SelectSingleCommandText(System.Type)
+  nameWithType: IPocoCommands.SelectSingleCommandText(Type)
+- uid: Unosquare.PocoData.IPocoCommands.SelectSingleCommandText*
+  name: SelectSingleCommandText
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_SelectSingleCommandText_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.SelectSingleCommandText
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.SelectSingleCommandText
+  nameWithType: IPocoCommands.SelectSingleCommandText
+- uid: Unosquare.PocoData.IPocoCommands.UpdateCommandText(System.Type)
+  name: UpdateCommandText(Type)
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_UpdateCommandText_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoCommands.UpdateCommandText(System.Type)
+  fullName: Unosquare.PocoData.IPocoCommands.UpdateCommandText(System.Type)
+  nameWithType: IPocoCommands.UpdateCommandText(Type)
+- uid: Unosquare.PocoData.IPocoCommands.UpdateCommandText*
+  name: UpdateCommandText
+  href: api/Unosquare.PocoData.IPocoCommands.html#Unosquare_PocoData_IPocoCommands_UpdateCommandText_
+  commentId: Overload:Unosquare.PocoData.IPocoCommands.UpdateCommandText
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoCommands.UpdateCommandText
+  nameWithType: IPocoCommands.UpdateCommandText
+- uid: Unosquare.PocoData.IPocoDb
+  name: IPocoDb
+  href: api/Unosquare.PocoData.IPocoDb.html
+  commentId: T:Unosquare.PocoData.IPocoDb
+  fullName: Unosquare.PocoData.IPocoDb
+  nameWithType: IPocoDb
+- uid: Unosquare.PocoData.IPocoDb.Commands
+  name: Commands
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Commands
+  commentId: P:Unosquare.PocoData.IPocoDb.Commands
+  fullName: Unosquare.PocoData.IPocoDb.Commands
+  nameWithType: IPocoDb.Commands
+- uid: Unosquare.PocoData.IPocoDb.Commands*
+  name: Commands
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Commands_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.Commands
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.Commands
+  nameWithType: IPocoDb.Commands
+- uid: Unosquare.PocoData.IPocoDb.Connection
+  name: Connection
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Connection
+  commentId: P:Unosquare.PocoData.IPocoDb.Connection
+  fullName: Unosquare.PocoData.IPocoDb.Connection
+  nameWithType: IPocoDb.Connection
+- uid: Unosquare.PocoData.IPocoDb.Connection*
+  name: Connection
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Connection_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.Connection
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.Connection
+  nameWithType: IPocoDb.Connection
+- uid: Unosquare.PocoData.IPocoDb.CountAll(System.Type)
+  name: CountAll(Type)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_CountAll_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoDb.CountAll(System.Type)
+  fullName: Unosquare.PocoData.IPocoDb.CountAll(System.Type)
+  nameWithType: IPocoDb.CountAll(Type)
+- uid: Unosquare.PocoData.IPocoDb.CountAll*
+  name: CountAll
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_CountAll_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.CountAll
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.CountAll
+  nameWithType: IPocoDb.CountAll
+- uid: Unosquare.PocoData.IPocoDb.CountAllAsync(System.Type)
+  name: CountAllAsync(Type)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_CountAllAsync_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoDb.CountAllAsync(System.Type)
+  fullName: Unosquare.PocoData.IPocoDb.CountAllAsync(System.Type)
+  nameWithType: IPocoDb.CountAllAsync(Type)
+- uid: Unosquare.PocoData.IPocoDb.CountAllAsync*
+  name: CountAllAsync
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_CountAllAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.CountAllAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.CountAllAsync
+  nameWithType: IPocoDb.CountAllAsync
+- uid: Unosquare.PocoData.IPocoDb.Definition
+  name: Definition
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Definition
+  commentId: P:Unosquare.PocoData.IPocoDb.Definition
+  fullName: Unosquare.PocoData.IPocoDb.Definition
+  nameWithType: IPocoDb.Definition
+- uid: Unosquare.PocoData.IPocoDb.Definition*
+  name: Definition
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Definition_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.Definition
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.Definition
+  nameWithType: IPocoDb.Definition
+- uid: Unosquare.PocoData.IPocoDb.Delete(System.Object)
+  name: Delete(Object)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Delete_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoDb.Delete(System.Object)
+  fullName: Unosquare.PocoData.IPocoDb.Delete(System.Object)
+  nameWithType: IPocoDb.Delete(Object)
+- uid: Unosquare.PocoData.IPocoDb.Delete*
+  name: Delete
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Delete_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.Delete
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.Delete
+  nameWithType: IPocoDb.Delete
+- uid: Unosquare.PocoData.IPocoDb.DeleteAsync(System.Object)
+  name: DeleteAsync(Object)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_DeleteAsync_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoDb.DeleteAsync(System.Object)
+  fullName: Unosquare.PocoData.IPocoDb.DeleteAsync(System.Object)
+  nameWithType: IPocoDb.DeleteAsync(Object)
+- uid: Unosquare.PocoData.IPocoDb.DeleteAsync*
+  name: DeleteAsync
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_DeleteAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.DeleteAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.DeleteAsync
+  nameWithType: IPocoDb.DeleteAsync
+- uid: Unosquare.PocoData.IPocoDb.Insert(System.Object,System.Boolean)
+  name: Insert(Object, Boolean)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Insert_System_Object_System_Boolean_
+  commentId: M:Unosquare.PocoData.IPocoDb.Insert(System.Object,System.Boolean)
+  fullName: Unosquare.PocoData.IPocoDb.Insert(System.Object, System.Boolean)
+  nameWithType: IPocoDb.Insert(Object, Boolean)
+- uid: Unosquare.PocoData.IPocoDb.Insert*
+  name: Insert
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Insert_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.Insert
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.Insert
+  nameWithType: IPocoDb.Insert
+- uid: Unosquare.PocoData.IPocoDb.InsertAsync(System.Object,System.Boolean)
+  name: InsertAsync(Object, Boolean)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_InsertAsync_System_Object_System_Boolean_
+  commentId: M:Unosquare.PocoData.IPocoDb.InsertAsync(System.Object,System.Boolean)
+  fullName: Unosquare.PocoData.IPocoDb.InsertAsync(System.Object, System.Boolean)
+  nameWithType: IPocoDb.InsertAsync(Object, Boolean)
+- uid: Unosquare.PocoData.IPocoDb.InsertAsync*
+  name: InsertAsync
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_InsertAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.InsertAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.InsertAsync
+  nameWithType: IPocoDb.InsertAsync
+- uid: Unosquare.PocoData.IPocoDb.InsertMany(System.Collections.IEnumerable,System.Boolean)
+  name: InsertMany(IEnumerable, Boolean)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_InsertMany_System_Collections_IEnumerable_System_Boolean_
+  commentId: M:Unosquare.PocoData.IPocoDb.InsertMany(System.Collections.IEnumerable,System.Boolean)
+  fullName: Unosquare.PocoData.IPocoDb.InsertMany(System.Collections.IEnumerable, System.Boolean)
+  nameWithType: IPocoDb.InsertMany(IEnumerable, Boolean)
+- uid: Unosquare.PocoData.IPocoDb.InsertMany*
+  name: InsertMany
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_InsertMany_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.InsertMany
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.InsertMany
+  nameWithType: IPocoDb.InsertMany
+- uid: Unosquare.PocoData.IPocoDb.InsertManyAsync(System.Collections.IEnumerable,System.Boolean)
+  name: InsertManyAsync(IEnumerable, Boolean)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_InsertManyAsync_System_Collections_IEnumerable_System_Boolean_
+  commentId: M:Unosquare.PocoData.IPocoDb.InsertManyAsync(System.Collections.IEnumerable,System.Boolean)
+  fullName: Unosquare.PocoData.IPocoDb.InsertManyAsync(System.Collections.IEnumerable, System.Boolean)
+  nameWithType: IPocoDb.InsertManyAsync(IEnumerable, Boolean)
+- uid: Unosquare.PocoData.IPocoDb.InsertManyAsync*
+  name: InsertManyAsync
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_InsertManyAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.InsertManyAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.InsertManyAsync
+  nameWithType: IPocoDb.InsertManyAsync
+- uid: Unosquare.PocoData.IPocoDb.ObjectReader
+  name: ObjectReader
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_ObjectReader
+  commentId: P:Unosquare.PocoData.IPocoDb.ObjectReader
+  fullName: Unosquare.PocoData.IPocoDb.ObjectReader
+  nameWithType: IPocoDb.ObjectReader
+- uid: Unosquare.PocoData.IPocoDb.ObjectReader*
+  name: ObjectReader
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_ObjectReader_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.ObjectReader
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.ObjectReader
+  nameWithType: IPocoDb.ObjectReader
+- uid: Unosquare.PocoData.IPocoDb.SelectAll(System.Type)
+  name: SelectAll(Type)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectAll_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectAll(System.Type)
+  fullName: Unosquare.PocoData.IPocoDb.SelectAll(System.Type)
+  nameWithType: IPocoDb.SelectAll(Type)
+- uid: Unosquare.PocoData.IPocoDb.SelectAll*
+  name: SelectAll
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectAll_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.SelectAll
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.SelectAll
+  nameWithType: IPocoDb.SelectAll
+- uid: Unosquare.PocoData.IPocoDb.SelectAll``1
+  name: SelectAll<T>()
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectAll__1
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectAll``1
+  name.vb: SelectAll(Of T)()
+  fullName: Unosquare.PocoData.IPocoDb.SelectAll<T>()
+  fullName.vb: Unosquare.PocoData.IPocoDb.SelectAll(Of T)()
+  nameWithType: IPocoDb.SelectAll<T>()
+  nameWithType.vb: IPocoDb.SelectAll(Of T)()
+- uid: Unosquare.PocoData.IPocoDb.SelectAllAsync(System.Type)
+  name: SelectAllAsync(Type)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectAllAsync_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectAllAsync(System.Type)
+  fullName: Unosquare.PocoData.IPocoDb.SelectAllAsync(System.Type)
+  nameWithType: IPocoDb.SelectAllAsync(Type)
+- uid: Unosquare.PocoData.IPocoDb.SelectAllAsync*
+  name: SelectAllAsync
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectAllAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.SelectAllAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.SelectAllAsync
+  nameWithType: IPocoDb.SelectAllAsync
+- uid: Unosquare.PocoData.IPocoDb.SelectAllAsync``1
+  name: SelectAllAsync<T>()
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectAllAsync__1
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectAllAsync``1
+  name.vb: SelectAllAsync(Of T)()
+  fullName: Unosquare.PocoData.IPocoDb.SelectAllAsync<T>()
+  fullName.vb: Unosquare.PocoData.IPocoDb.SelectAllAsync(Of T)()
+  nameWithType: IPocoDb.SelectAllAsync<T>()
+  nameWithType.vb: IPocoDb.SelectAllAsync(Of T)()
+- uid: Unosquare.PocoData.IPocoDb.SelectMany(System.Type,IDbCommand)
+  name: SelectMany(Type, IDbCommand)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectMany_System_Type_IDbCommand_
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectMany(System.Type,IDbCommand)
+  fullName: Unosquare.PocoData.IPocoDb.SelectMany(System.Type, IDbCommand)
+  nameWithType: IPocoDb.SelectMany(Type, IDbCommand)
+- uid: Unosquare.PocoData.IPocoDb.SelectMany*
+  name: SelectMany
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectMany_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.SelectMany
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.SelectMany
+  nameWithType: IPocoDb.SelectMany
+- uid: Unosquare.PocoData.IPocoDb.SelectMany``1(IDbCommand)
+  name: SelectMany<T>(IDbCommand)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectMany__1_IDbCommand_
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectMany``1(IDbCommand)
+  name.vb: SelectMany(Of T)(IDbCommand)
+  fullName: Unosquare.PocoData.IPocoDb.SelectMany<T>(IDbCommand)
+  fullName.vb: Unosquare.PocoData.IPocoDb.SelectMany(Of T)(IDbCommand)
+  nameWithType: IPocoDb.SelectMany<T>(IDbCommand)
+  nameWithType.vb: IPocoDb.SelectMany(Of T)(IDbCommand)
+- uid: Unosquare.PocoData.IPocoDb.SelectManyAsync(System.Type,IDbCommand)
+  name: SelectManyAsync(Type, IDbCommand)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectManyAsync_System_Type_IDbCommand_
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectManyAsync(System.Type,IDbCommand)
+  fullName: Unosquare.PocoData.IPocoDb.SelectManyAsync(System.Type, IDbCommand)
+  nameWithType: IPocoDb.SelectManyAsync(Type, IDbCommand)
+- uid: Unosquare.PocoData.IPocoDb.SelectManyAsync*
+  name: SelectManyAsync
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectManyAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.SelectManyAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.SelectManyAsync
+  nameWithType: IPocoDb.SelectManyAsync
+- uid: Unosquare.PocoData.IPocoDb.SelectManyAsync``1(IDbCommand)
+  name: SelectManyAsync<T>(IDbCommand)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectManyAsync__1_IDbCommand_
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectManyAsync``1(IDbCommand)
+  name.vb: SelectManyAsync(Of T)(IDbCommand)
+  fullName: Unosquare.PocoData.IPocoDb.SelectManyAsync<T>(IDbCommand)
+  fullName.vb: Unosquare.PocoData.IPocoDb.SelectManyAsync(Of T)(IDbCommand)
+  nameWithType: IPocoDb.SelectManyAsync<T>(IDbCommand)
+  nameWithType.vb: IPocoDb.SelectManyAsync(Of T)(IDbCommand)
+- uid: Unosquare.PocoData.IPocoDb.SelectSingle(System.Object)
+  name: SelectSingle(Object)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectSingle_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectSingle(System.Object)
+  fullName: Unosquare.PocoData.IPocoDb.SelectSingle(System.Object)
+  nameWithType: IPocoDb.SelectSingle(Object)
+- uid: Unosquare.PocoData.IPocoDb.SelectSingle*
+  name: SelectSingle
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectSingle_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.SelectSingle
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.SelectSingle
+  nameWithType: IPocoDb.SelectSingle
+- uid: Unosquare.PocoData.IPocoDb.SelectSingleAsync(System.Object)
+  name: SelectSingleAsync(Object)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectSingleAsync_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoDb.SelectSingleAsync(System.Object)
+  fullName: Unosquare.PocoData.IPocoDb.SelectSingleAsync(System.Object)
+  nameWithType: IPocoDb.SelectSingleAsync(Object)
+- uid: Unosquare.PocoData.IPocoDb.SelectSingleAsync*
+  name: SelectSingleAsync
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_SelectSingleAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.SelectSingleAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.SelectSingleAsync
+  nameWithType: IPocoDb.SelectSingleAsync
+- uid: Unosquare.PocoData.IPocoDb.TableProxy*
+  name: TableProxy
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_TableProxy_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.TableProxy
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.TableProxy
+  nameWithType: IPocoDb.TableProxy
+- uid: Unosquare.PocoData.IPocoDb.TableProxy``1
+  name: TableProxy<T>()
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_TableProxy__1
+  commentId: M:Unosquare.PocoData.IPocoDb.TableProxy``1
+  name.vb: TableProxy(Of T)()
+  fullName: Unosquare.PocoData.IPocoDb.TableProxy<T>()
+  fullName.vb: Unosquare.PocoData.IPocoDb.TableProxy(Of T)()
+  nameWithType: IPocoDb.TableProxy<T>()
+  nameWithType.vb: IPocoDb.TableProxy(Of T)()
+- uid: Unosquare.PocoData.IPocoDb.Update(System.Object)
+  name: Update(Object)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Update_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoDb.Update(System.Object)
+  fullName: Unosquare.PocoData.IPocoDb.Update(System.Object)
+  nameWithType: IPocoDb.Update(Object)
+- uid: Unosquare.PocoData.IPocoDb.Update*
+  name: Update
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_Update_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.Update
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.Update
+  nameWithType: IPocoDb.Update
+- uid: Unosquare.PocoData.IPocoDb.UpdateAsync(System.Object)
+  name: UpdateAsync(Object)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_UpdateAsync_System_Object_
+  commentId: M:Unosquare.PocoData.IPocoDb.UpdateAsync(System.Object)
+  fullName: Unosquare.PocoData.IPocoDb.UpdateAsync(System.Object)
+  nameWithType: IPocoDb.UpdateAsync(Object)
+- uid: Unosquare.PocoData.IPocoDb.UpdateAsync*
+  name: UpdateAsync
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_UpdateAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.UpdateAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.UpdateAsync
+  nameWithType: IPocoDb.UpdateAsync
+- uid: Unosquare.PocoData.IPocoDb.UpdateMany(System.Collections.IEnumerable)
+  name: UpdateMany(IEnumerable)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_UpdateMany_System_Collections_IEnumerable_
+  commentId: M:Unosquare.PocoData.IPocoDb.UpdateMany(System.Collections.IEnumerable)
+  fullName: Unosquare.PocoData.IPocoDb.UpdateMany(System.Collections.IEnumerable)
+  nameWithType: IPocoDb.UpdateMany(IEnumerable)
+- uid: Unosquare.PocoData.IPocoDb.UpdateMany*
+  name: UpdateMany
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_UpdateMany_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.UpdateMany
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.UpdateMany
+  nameWithType: IPocoDb.UpdateMany
+- uid: Unosquare.PocoData.IPocoDb.UpdateManyAsync(System.Collections.IEnumerable)
+  name: UpdateManyAsync(IEnumerable)
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_UpdateManyAsync_System_Collections_IEnumerable_
+  commentId: M:Unosquare.PocoData.IPocoDb.UpdateManyAsync(System.Collections.IEnumerable)
+  fullName: Unosquare.PocoData.IPocoDb.UpdateManyAsync(System.Collections.IEnumerable)
+  nameWithType: IPocoDb.UpdateManyAsync(IEnumerable)
+- uid: Unosquare.PocoData.IPocoDb.UpdateManyAsync*
+  name: UpdateManyAsync
+  href: api/Unosquare.PocoData.IPocoDb.html#Unosquare_PocoData_IPocoDb_UpdateManyAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDb.UpdateManyAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDb.UpdateManyAsync
+  nameWithType: IPocoDb.UpdateManyAsync
+- uid: Unosquare.PocoData.IPocoDefinition
+  name: IPocoDefinition
+  href: api/Unosquare.PocoData.IPocoDefinition.html
+  commentId: T:Unosquare.PocoData.IPocoDefinition
+  fullName: Unosquare.PocoData.IPocoDefinition
+  nameWithType: IPocoDefinition
+- uid: Unosquare.PocoData.IPocoDefinition.CreateTableAsync(System.Type)
+  name: CreateTableAsync(Type)
+  href: api/Unosquare.PocoData.IPocoDefinition.html#Unosquare_PocoData_IPocoDefinition_CreateTableAsync_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoDefinition.CreateTableAsync(System.Type)
+  fullName: Unosquare.PocoData.IPocoDefinition.CreateTableAsync(System.Type)
+  nameWithType: IPocoDefinition.CreateTableAsync(Type)
+- uid: Unosquare.PocoData.IPocoDefinition.CreateTableAsync*
+  name: CreateTableAsync
+  href: api/Unosquare.PocoData.IPocoDefinition.html#Unosquare_PocoData_IPocoDefinition_CreateTableAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDefinition.CreateTableAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDefinition.CreateTableAsync
+  nameWithType: IPocoDefinition.CreateTableAsync
+- uid: Unosquare.PocoData.IPocoDefinition.CreateTableAsync``1
+  name: CreateTableAsync<T>()
+  href: api/Unosquare.PocoData.IPocoDefinition.html#Unosquare_PocoData_IPocoDefinition_CreateTableAsync__1
+  commentId: M:Unosquare.PocoData.IPocoDefinition.CreateTableAsync``1
+  name.vb: CreateTableAsync(Of T)()
+  fullName: Unosquare.PocoData.IPocoDefinition.CreateTableAsync<T>()
+  fullName.vb: Unosquare.PocoData.IPocoDefinition.CreateTableAsync(Of T)()
+  nameWithType: IPocoDefinition.CreateTableAsync<T>()
+  nameWithType.vb: IPocoDefinition.CreateTableAsync(Of T)()
+- uid: Unosquare.PocoData.IPocoDefinition.DropTableAsync(System.Type)
+  name: DropTableAsync(Type)
+  href: api/Unosquare.PocoData.IPocoDefinition.html#Unosquare_PocoData_IPocoDefinition_DropTableAsync_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoDefinition.DropTableAsync(System.Type)
+  fullName: Unosquare.PocoData.IPocoDefinition.DropTableAsync(System.Type)
+  nameWithType: IPocoDefinition.DropTableAsync(Type)
+- uid: Unosquare.PocoData.IPocoDefinition.DropTableAsync*
+  name: DropTableAsync
+  href: api/Unosquare.PocoData.IPocoDefinition.html#Unosquare_PocoData_IPocoDefinition_DropTableAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDefinition.DropTableAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDefinition.DropTableAsync
+  nameWithType: IPocoDefinition.DropTableAsync
+- uid: Unosquare.PocoData.IPocoDefinition.DropTableAsync``1
+  name: DropTableAsync<T>()
+  href: api/Unosquare.PocoData.IPocoDefinition.html#Unosquare_PocoData_IPocoDefinition_DropTableAsync__1
+  commentId: M:Unosquare.PocoData.IPocoDefinition.DropTableAsync``1
+  name.vb: DropTableAsync(Of T)()
+  fullName: Unosquare.PocoData.IPocoDefinition.DropTableAsync<T>()
+  fullName.vb: Unosquare.PocoData.IPocoDefinition.DropTableAsync(Of T)()
+  nameWithType: IPocoDefinition.DropTableAsync<T>()
+  nameWithType.vb: IPocoDefinition.DropTableAsync(Of T)()
+- uid: Unosquare.PocoData.IPocoDefinition.TableExistsAsync(System.Type)
+  name: TableExistsAsync(Type)
+  href: api/Unosquare.PocoData.IPocoDefinition.html#Unosquare_PocoData_IPocoDefinition_TableExistsAsync_System_Type_
+  commentId: M:Unosquare.PocoData.IPocoDefinition.TableExistsAsync(System.Type)
+  fullName: Unosquare.PocoData.IPocoDefinition.TableExistsAsync(System.Type)
+  nameWithType: IPocoDefinition.TableExistsAsync(Type)
+- uid: Unosquare.PocoData.IPocoDefinition.TableExistsAsync*
+  name: TableExistsAsync
+  href: api/Unosquare.PocoData.IPocoDefinition.html#Unosquare_PocoData_IPocoDefinition_TableExistsAsync_
+  commentId: Overload:Unosquare.PocoData.IPocoDefinition.TableExistsAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.IPocoDefinition.TableExistsAsync
+  nameWithType: IPocoDefinition.TableExistsAsync
+- uid: Unosquare.PocoData.IPocoDefinition.TableExistsAsync``1
+  name: TableExistsAsync<T>()
+  href: api/Unosquare.PocoData.IPocoDefinition.html#Unosquare_PocoData_IPocoDefinition_TableExistsAsync__1
+  commentId: M:Unosquare.PocoData.IPocoDefinition.TableExistsAsync``1
+  name.vb: TableExistsAsync(Of T)()
+  fullName: Unosquare.PocoData.IPocoDefinition.TableExistsAsync<T>()
+  fullName.vb: Unosquare.PocoData.IPocoDefinition.TableExistsAsync(Of T)()
+  nameWithType: IPocoDefinition.TableExistsAsync<T>()
+  nameWithType.vb: IPocoDefinition.TableExistsAsync(Of T)()
+- uid: Unosquare.PocoData.PocoReader
+  name: PocoReader
+  href: api/Unosquare.PocoData.PocoReader.html
+  commentId: T:Unosquare.PocoData.PocoReader
+  fullName: Unosquare.PocoData.PocoReader
+  nameWithType: PocoReader
+- uid: Unosquare.PocoData.PocoReader.Instance
+  name: Instance
+  href: api/Unosquare.PocoData.PocoReader.html#Unosquare_PocoData_PocoReader_Instance
+  commentId: P:Unosquare.PocoData.PocoReader.Instance
+  fullName: Unosquare.PocoData.PocoReader.Instance
+  nameWithType: PocoReader.Instance
+- uid: Unosquare.PocoData.PocoReader.Instance*
+  name: Instance
+  href: api/Unosquare.PocoData.PocoReader.html#Unosquare_PocoData_PocoReader_Instance_
+  commentId: Overload:Unosquare.PocoData.PocoReader.Instance
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoReader.Instance
+  nameWithType: PocoReader.Instance
+- uid: Unosquare.PocoData.PocoReader.ReadObject(IDataReader,System.Object)
+  name: ReadObject(IDataReader, Object)
+  href: api/Unosquare.PocoData.PocoReader.html#Unosquare_PocoData_PocoReader_ReadObject_IDataReader_System_Object_
+  commentId: M:Unosquare.PocoData.PocoReader.ReadObject(IDataReader,System.Object)
+  fullName: Unosquare.PocoData.PocoReader.ReadObject(IDataReader, System.Object)
+  nameWithType: PocoReader.ReadObject(IDataReader, Object)
+- uid: Unosquare.PocoData.PocoReader.ReadObject*
+  name: ReadObject
+  href: api/Unosquare.PocoData.PocoReader.html#Unosquare_PocoData_PocoReader_ReadObject_
+  commentId: Overload:Unosquare.PocoData.PocoReader.ReadObject
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoReader.ReadObject
+  nameWithType: PocoReader.ReadObject
+- uid: Unosquare.PocoData.PocoReader.ReadObject``1(IDataReader)
+  name: ReadObject<T>(IDataReader)
+  href: api/Unosquare.PocoData.PocoReader.html#Unosquare_PocoData_PocoReader_ReadObject__1_IDataReader_
+  commentId: M:Unosquare.PocoData.PocoReader.ReadObject``1(IDataReader)
+  name.vb: ReadObject(Of T)(IDataReader)
+  fullName: Unosquare.PocoData.PocoReader.ReadObject<T>(IDataReader)
+  fullName.vb: Unosquare.PocoData.PocoReader.ReadObject(Of T)(IDataReader)
+  nameWithType: PocoReader.ReadObject<T>(IDataReader)
+  nameWithType.vb: PocoReader.ReadObject(Of T)(IDataReader)
+- uid: Unosquare.PocoData.PocoReader.ReadObject``1(IDataReader,``0)
+  name: ReadObject<T>(IDataReader, T)
+  href: api/Unosquare.PocoData.PocoReader.html#Unosquare_PocoData_PocoReader_ReadObject__1_IDataReader___0_
+  commentId: M:Unosquare.PocoData.PocoReader.ReadObject``1(IDataReader,``0)
+  name.vb: ReadObject(Of T)(IDataReader, T)
+  fullName: Unosquare.PocoData.PocoReader.ReadObject<T>(IDataReader, T)
+  fullName.vb: Unosquare.PocoData.PocoReader.ReadObject(Of T)(IDataReader, T)
+  nameWithType: PocoReader.ReadObject<T>(IDataReader, T)
+  nameWithType.vb: PocoReader.ReadObject(Of T)(IDataReader, T)
+- uid: Unosquare.PocoData.PocoSchema
+  name: PocoSchema
+  href: api/Unosquare.PocoData.PocoSchema.html
+  commentId: T:Unosquare.PocoData.PocoSchema
+  fullName: Unosquare.PocoData.PocoSchema
+  nameWithType: PocoSchema
+- uid: Unosquare.PocoData.PocoSchema.Columns(System.Type)
+  name: Columns(Type)
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Columns_System_Type_
+  commentId: M:Unosquare.PocoData.PocoSchema.Columns(System.Type)
+  fullName: Unosquare.PocoData.PocoSchema.Columns(System.Type)
+  nameWithType: PocoSchema.Columns(Type)
+- uid: Unosquare.PocoData.PocoSchema.Columns*
+  name: Columns
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Columns_
+  commentId: Overload:Unosquare.PocoData.PocoSchema.Columns
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoSchema.Columns
+  nameWithType: PocoSchema.Columns
+- uid: Unosquare.PocoData.PocoSchema.Columns``1
+  name: Columns<T>()
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Columns__1
+  commentId: M:Unosquare.PocoData.PocoSchema.Columns``1
+  name.vb: Columns(Of T)()
+  fullName: Unosquare.PocoData.PocoSchema.Columns<T>()
+  fullName.vb: Unosquare.PocoData.PocoSchema.Columns(Of T)()
+  nameWithType: PocoSchema.Columns<T>()
+  nameWithType.vb: PocoSchema.Columns(Of T)()
+- uid: Unosquare.PocoData.PocoSchema.Instance
+  name: Instance
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Instance
+  commentId: P:Unosquare.PocoData.PocoSchema.Instance
+  fullName: Unosquare.PocoData.PocoSchema.Instance
+  nameWithType: PocoSchema.Instance
+- uid: Unosquare.PocoData.PocoSchema.Instance*
+  name: Instance
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Instance_
+  commentId: Overload:Unosquare.PocoData.PocoSchema.Instance
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoSchema.Instance
+  nameWithType: PocoSchema.Instance
+- uid: Unosquare.PocoData.PocoSchema.StandardValueTypes
+  name: StandardValueTypes
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_StandardValueTypes
+  commentId: P:Unosquare.PocoData.PocoSchema.StandardValueTypes
+  fullName: Unosquare.PocoData.PocoSchema.StandardValueTypes
+  nameWithType: PocoSchema.StandardValueTypes
+- uid: Unosquare.PocoData.PocoSchema.StandardValueTypes*
+  name: StandardValueTypes
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_StandardValueTypes_
+  commentId: Overload:Unosquare.PocoData.PocoSchema.StandardValueTypes
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoSchema.StandardValueTypes
+  nameWithType: PocoSchema.StandardValueTypes
+- uid: Unosquare.PocoData.PocoSchema.Table(System.Type)
+  name: Table(Type)
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Table_System_Type_
+  commentId: M:Unosquare.PocoData.PocoSchema.Table(System.Type)
+  fullName: Unosquare.PocoData.PocoSchema.Table(System.Type)
+  nameWithType: PocoSchema.Table(Type)
+- uid: Unosquare.PocoData.PocoSchema.Table*
+  name: Table
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Table_
+  commentId: Overload:Unosquare.PocoData.PocoSchema.Table
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoSchema.Table
+  nameWithType: PocoSchema.Table
+- uid: Unosquare.PocoData.PocoSchema.Table``1
+  name: Table<T>()
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Table__1
+  commentId: M:Unosquare.PocoData.PocoSchema.Table``1
+  name.vb: Table(Of T)()
+  fullName: Unosquare.PocoData.PocoSchema.Table<T>()
+  fullName.vb: Unosquare.PocoData.PocoSchema.Table(Of T)()
+  nameWithType: PocoSchema.Table<T>()
+  nameWithType.vb: PocoSchema.Table(Of T)()
+- uid: Unosquare.PocoData.PocoSchema.Validate(System.Type)
+  name: Validate(Type)
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Validate_System_Type_
+  commentId: M:Unosquare.PocoData.PocoSchema.Validate(System.Type)
+  fullName: Unosquare.PocoData.PocoSchema.Validate(System.Type)
+  nameWithType: PocoSchema.Validate(Type)
+- uid: Unosquare.PocoData.PocoSchema.Validate*
+  name: Validate
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Validate_
+  commentId: Overload:Unosquare.PocoData.PocoSchema.Validate
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoSchema.Validate
+  nameWithType: PocoSchema.Validate
+- uid: Unosquare.PocoData.PocoSchema.Validate``1
+  name: Validate<T>()
+  href: api/Unosquare.PocoData.PocoSchema.html#Unosquare_PocoData_PocoSchema_Validate__1
+  commentId: M:Unosquare.PocoData.PocoSchema.Validate``1
+  name.vb: Validate(Of T)()
+  fullName: Unosquare.PocoData.PocoSchema.Validate<T>()
+  fullName.vb: Unosquare.PocoData.PocoSchema.Validate(Of T)()
+  nameWithType: PocoSchema.Validate<T>()
+  nameWithType.vb: PocoSchema.Validate(Of T)()
+- uid: Unosquare.PocoData.PocoTableProxy`1
+  name: PocoTableProxy<T>
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html
+  commentId: T:Unosquare.PocoData.PocoTableProxy`1
+  name.vb: PocoTableProxy(Of T)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T)
+  nameWithType: PocoTableProxy<T>
+  nameWithType.vb: PocoTableProxy(Of T)
+- uid: Unosquare.PocoData.PocoTableProxy`1.#ctor(Unosquare.PocoData.IPocoDb,System.Boolean)
+  name: PocoTableProxy(IPocoDb, Boolean)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1__ctor_Unosquare_PocoData_IPocoDb_System_Boolean_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.#ctor(Unosquare.PocoData.IPocoDb,System.Boolean)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.PocoTableProxy(Unosquare.PocoData.IPocoDb, System.Boolean)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).PocoTableProxy(Unosquare.PocoData.IPocoDb, System.Boolean)
+  nameWithType: PocoTableProxy<T>.PocoTableProxy(IPocoDb, Boolean)
+  nameWithType.vb: PocoTableProxy(Of T).PocoTableProxy(IPocoDb, Boolean)
+- uid: Unosquare.PocoData.PocoTableProxy`1.#ctor*
+  name: PocoTableProxy
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1__ctor_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.#ctor
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.PocoTableProxy
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).PocoTableProxy
+  nameWithType: PocoTableProxy<T>.PocoTableProxy
+  nameWithType.vb: PocoTableProxy(Of T).PocoTableProxy
+- uid: Unosquare.PocoData.PocoTableProxy`1.Columns
+  name: Columns
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Columns
+  commentId: P:Unosquare.PocoData.PocoTableProxy`1.Columns
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Columns
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Columns
+  nameWithType: PocoTableProxy<T>.Columns
+  nameWithType.vb: PocoTableProxy(Of T).Columns
+- uid: Unosquare.PocoData.PocoTableProxy`1.Columns*
+  name: Columns
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Columns_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.Columns
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Columns
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Columns
+  nameWithType: PocoTableProxy<T>.Columns
+  nameWithType.vb: PocoTableProxy(Of T).Columns
+- uid: Unosquare.PocoData.PocoTableProxy`1.CountAll
+  name: CountAll()
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_CountAll
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.CountAll
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.CountAll()
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).CountAll()
+  nameWithType: PocoTableProxy<T>.CountAll()
+  nameWithType.vb: PocoTableProxy(Of T).CountAll()
+- uid: Unosquare.PocoData.PocoTableProxy`1.CountAll*
+  name: CountAll
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_CountAll_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.CountAll
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.CountAll
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).CountAll
+  nameWithType: PocoTableProxy<T>.CountAll
+  nameWithType.vb: PocoTableProxy(Of T).CountAll
+- uid: Unosquare.PocoData.PocoTableProxy`1.CountAllAsync
+  name: CountAllAsync()
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_CountAllAsync
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.CountAllAsync
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.CountAllAsync()
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).CountAllAsync()
+  nameWithType: PocoTableProxy<T>.CountAllAsync()
+  nameWithType.vb: PocoTableProxy(Of T).CountAllAsync()
+- uid: Unosquare.PocoData.PocoTableProxy`1.CountAllAsync*
+  name: CountAllAsync
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_CountAllAsync_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.CountAllAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.CountAllAsync
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).CountAllAsync
+  nameWithType: PocoTableProxy<T>.CountAllAsync
+  nameWithType.vb: PocoTableProxy(Of T).CountAllAsync
+- uid: Unosquare.PocoData.PocoTableProxy`1.CreateTable
+  name: CreateTable()
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_CreateTable
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.CreateTable
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.CreateTable()
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).CreateTable()
+  nameWithType: PocoTableProxy<T>.CreateTable()
+  nameWithType.vb: PocoTableProxy(Of T).CreateTable()
+- uid: Unosquare.PocoData.PocoTableProxy`1.CreateTable*
+  name: CreateTable
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_CreateTable_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.CreateTable
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.CreateTable
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).CreateTable
+  nameWithType: PocoTableProxy<T>.CreateTable
+  nameWithType.vb: PocoTableProxy(Of T).CreateTable
+- uid: Unosquare.PocoData.PocoTableProxy`1.Delete(`0)
+  name: Delete(T)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Delete__0_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.Delete(`0)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Delete(T)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Delete(T)
+  nameWithType: PocoTableProxy<T>.Delete(T)
+  nameWithType.vb: PocoTableProxy(Of T).Delete(T)
+- uid: Unosquare.PocoData.PocoTableProxy`1.Delete*
+  name: Delete
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Delete_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.Delete
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Delete
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Delete
+  nameWithType: PocoTableProxy<T>.Delete
+  nameWithType.vb: PocoTableProxy(Of T).Delete
+- uid: Unosquare.PocoData.PocoTableProxy`1.DeleteAsync(`0)
+  name: DeleteAsync(T)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_DeleteAsync__0_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.DeleteAsync(`0)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.DeleteAsync(T)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).DeleteAsync(T)
+  nameWithType: PocoTableProxy<T>.DeleteAsync(T)
+  nameWithType.vb: PocoTableProxy(Of T).DeleteAsync(T)
+- uid: Unosquare.PocoData.PocoTableProxy`1.DeleteAsync*
+  name: DeleteAsync
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_DeleteAsync_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.DeleteAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.DeleteAsync
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).DeleteAsync
+  nameWithType: PocoTableProxy<T>.DeleteAsync
+  nameWithType.vb: PocoTableProxy(Of T).DeleteAsync
+- uid: Unosquare.PocoData.PocoTableProxy`1.DropTable
+  name: DropTable()
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_DropTable
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.DropTable
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.DropTable()
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).DropTable()
+  nameWithType: PocoTableProxy<T>.DropTable()
+  nameWithType.vb: PocoTableProxy(Of T).DropTable()
+- uid: Unosquare.PocoData.PocoTableProxy`1.DropTable*
+  name: DropTable
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_DropTable_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.DropTable
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.DropTable
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).DropTable
+  nameWithType: PocoTableProxy<T>.DropTable
+  nameWithType.vb: PocoTableProxy(Of T).DropTable
+- uid: Unosquare.PocoData.PocoTableProxy`1.Insert(`0,System.Boolean)
+  name: Insert(T, Boolean)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Insert__0_System_Boolean_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.Insert(`0,System.Boolean)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Insert(T, System.Boolean)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Insert(T, System.Boolean)
+  nameWithType: PocoTableProxy<T>.Insert(T, Boolean)
+  nameWithType.vb: PocoTableProxy(Of T).Insert(T, Boolean)
+- uid: Unosquare.PocoData.PocoTableProxy`1.Insert*
+  name: Insert
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Insert_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.Insert
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Insert
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Insert
+  nameWithType: PocoTableProxy<T>.Insert
+  nameWithType.vb: PocoTableProxy(Of T).Insert
+- uid: Unosquare.PocoData.PocoTableProxy`1.InsertAsync(`0,System.Boolean)
+  name: InsertAsync(T, Boolean)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_InsertAsync__0_System_Boolean_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.InsertAsync(`0,System.Boolean)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.InsertAsync(T, System.Boolean)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).InsertAsync(T, System.Boolean)
+  nameWithType: PocoTableProxy<T>.InsertAsync(T, Boolean)
+  nameWithType.vb: PocoTableProxy(Of T).InsertAsync(T, Boolean)
+- uid: Unosquare.PocoData.PocoTableProxy`1.InsertAsync*
+  name: InsertAsync
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_InsertAsync_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.InsertAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.InsertAsync
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).InsertAsync
+  nameWithType: PocoTableProxy<T>.InsertAsync
+  nameWithType.vb: PocoTableProxy(Of T).InsertAsync
+- uid: Unosquare.PocoData.PocoTableProxy`1.InsertMany(System.Collections.Generic.IEnumerable{`0},System.Boolean)
+  name: InsertMany(IEnumerable<T>, Boolean)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_InsertMany_System_Collections_Generic_IEnumerable__0__System_Boolean_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.InsertMany(System.Collections.Generic.IEnumerable{`0},System.Boolean)
+  name.vb: InsertMany(IEnumerable(Of T), Boolean)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.InsertMany(System.Collections.Generic.IEnumerable<T>, System.Boolean)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).InsertMany(System.Collections.Generic.IEnumerable(Of T), System.Boolean)
+  nameWithType: PocoTableProxy<T>.InsertMany(IEnumerable<T>, Boolean)
+  nameWithType.vb: PocoTableProxy(Of T).InsertMany(IEnumerable(Of T), Boolean)
+- uid: Unosquare.PocoData.PocoTableProxy`1.InsertMany*
+  name: InsertMany
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_InsertMany_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.InsertMany
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.InsertMany
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).InsertMany
+  nameWithType: PocoTableProxy<T>.InsertMany
+  nameWithType.vb: PocoTableProxy(Of T).InsertMany
+- uid: Unosquare.PocoData.PocoTableProxy`1.InsertManyAsync(System.Collections.Generic.IEnumerable{`0},System.Boolean)
+  name: InsertManyAsync(IEnumerable<T>, Boolean)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_InsertManyAsync_System_Collections_Generic_IEnumerable__0__System_Boolean_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.InsertManyAsync(System.Collections.Generic.IEnumerable{`0},System.Boolean)
+  name.vb: InsertManyAsync(IEnumerable(Of T), Boolean)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.InsertManyAsync(System.Collections.Generic.IEnumerable<T>, System.Boolean)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).InsertManyAsync(System.Collections.Generic.IEnumerable(Of T), System.Boolean)
+  nameWithType: PocoTableProxy<T>.InsertManyAsync(IEnumerable<T>, Boolean)
+  nameWithType.vb: PocoTableProxy(Of T).InsertManyAsync(IEnumerable(Of T), Boolean)
+- uid: Unosquare.PocoData.PocoTableProxy`1.InsertManyAsync*
+  name: InsertManyAsync
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_InsertManyAsync_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.InsertManyAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.InsertManyAsync
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).InsertManyAsync
+  nameWithType: PocoTableProxy<T>.InsertManyAsync
+  nameWithType.vb: PocoTableProxy(Of T).InsertManyAsync
+- uid: Unosquare.PocoData.PocoTableProxy`1.PocoDb
+  name: PocoDb
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_PocoDb
+  commentId: P:Unosquare.PocoData.PocoTableProxy`1.PocoDb
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.PocoDb
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).PocoDb
+  nameWithType: PocoTableProxy<T>.PocoDb
+  nameWithType.vb: PocoTableProxy(Of T).PocoDb
+- uid: Unosquare.PocoData.PocoTableProxy`1.PocoDb*
+  name: PocoDb
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_PocoDb_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.PocoDb
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.PocoDb
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).PocoDb
+  nameWithType: PocoTableProxy<T>.PocoDb
+  nameWithType.vb: PocoTableProxy(Of T).PocoDb
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectAll
+  name: SelectAll()
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectAll
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.SelectAll
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectAll()
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectAll()
+  nameWithType: PocoTableProxy<T>.SelectAll()
+  nameWithType.vb: PocoTableProxy(Of T).SelectAll()
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectAll*
+  name: SelectAll
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectAll_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.SelectAll
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectAll
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectAll
+  nameWithType: PocoTableProxy<T>.SelectAll
+  nameWithType.vb: PocoTableProxy(Of T).SelectAll
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectAllAsync
+  name: SelectAllAsync()
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectAllAsync
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.SelectAllAsync
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectAllAsync()
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectAllAsync()
+  nameWithType: PocoTableProxy<T>.SelectAllAsync()
+  nameWithType.vb: PocoTableProxy(Of T).SelectAllAsync()
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectAllAsync*
+  name: SelectAllAsync
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectAllAsync_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.SelectAllAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectAllAsync
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectAllAsync
+  nameWithType: PocoTableProxy<T>.SelectAllAsync
+  nameWithType.vb: PocoTableProxy(Of T).SelectAllAsync
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectMany(IDbCommand)
+  name: SelectMany(IDbCommand)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectMany_IDbCommand_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.SelectMany(IDbCommand)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectMany(IDbCommand)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectMany(IDbCommand)
+  nameWithType: PocoTableProxy<T>.SelectMany(IDbCommand)
+  nameWithType.vb: PocoTableProxy(Of T).SelectMany(IDbCommand)
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectMany*
+  name: SelectMany
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectMany_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.SelectMany
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectMany
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectMany
+  nameWithType: PocoTableProxy<T>.SelectMany
+  nameWithType.vb: PocoTableProxy(Of T).SelectMany
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectManyAsync(IDbCommand)
+  name: SelectManyAsync(IDbCommand)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectManyAsync_IDbCommand_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.SelectManyAsync(IDbCommand)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectManyAsync(IDbCommand)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectManyAsync(IDbCommand)
+  nameWithType: PocoTableProxy<T>.SelectManyAsync(IDbCommand)
+  nameWithType.vb: PocoTableProxy(Of T).SelectManyAsync(IDbCommand)
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectManyAsync*
+  name: SelectManyAsync
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectManyAsync_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.SelectManyAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectManyAsync
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectManyAsync
+  nameWithType: PocoTableProxy<T>.SelectManyAsync
+  nameWithType.vb: PocoTableProxy(Of T).SelectManyAsync
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectSingle(`0)
+  name: SelectSingle(T)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectSingle__0_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.SelectSingle(`0)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectSingle(T)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectSingle(T)
+  nameWithType: PocoTableProxy<T>.SelectSingle(T)
+  nameWithType.vb: PocoTableProxy(Of T).SelectSingle(T)
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectSingle*
+  name: SelectSingle
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectSingle_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.SelectSingle
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectSingle
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectSingle
+  nameWithType: PocoTableProxy<T>.SelectSingle
+  nameWithType.vb: PocoTableProxy(Of T).SelectSingle
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectSingleAsync(`0)
+  name: SelectSingleAsync(T)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectSingleAsync__0_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.SelectSingleAsync(`0)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectSingleAsync(T)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectSingleAsync(T)
+  nameWithType: PocoTableProxy<T>.SelectSingleAsync(T)
+  nameWithType.vb: PocoTableProxy(Of T).SelectSingleAsync(T)
+- uid: Unosquare.PocoData.PocoTableProxy`1.SelectSingleAsync*
+  name: SelectSingleAsync
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_SelectSingleAsync_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.SelectSingleAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.SelectSingleAsync
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).SelectSingleAsync
+  nameWithType: PocoTableProxy<T>.SelectSingleAsync
+  nameWithType.vb: PocoTableProxy(Of T).SelectSingleAsync
+- uid: Unosquare.PocoData.PocoTableProxy`1.Table
+  name: Table
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Table
+  commentId: P:Unosquare.PocoData.PocoTableProxy`1.Table
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Table
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Table
+  nameWithType: PocoTableProxy<T>.Table
+  nameWithType.vb: PocoTableProxy(Of T).Table
+- uid: Unosquare.PocoData.PocoTableProxy`1.Table*
+  name: Table
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Table_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.Table
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Table
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Table
+  nameWithType: PocoTableProxy<T>.Table
+  nameWithType.vb: PocoTableProxy(Of T).Table
+- uid: Unosquare.PocoData.PocoTableProxy`1.TableExists
+  name: TableExists
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_TableExists
+  commentId: P:Unosquare.PocoData.PocoTableProxy`1.TableExists
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.TableExists
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).TableExists
+  nameWithType: PocoTableProxy<T>.TableExists
+  nameWithType.vb: PocoTableProxy(Of T).TableExists
+- uid: Unosquare.PocoData.PocoTableProxy`1.TableExists*
+  name: TableExists
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_TableExists_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.TableExists
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.TableExists
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).TableExists
+  nameWithType: PocoTableProxy<T>.TableExists
+  nameWithType.vb: PocoTableProxy(Of T).TableExists
+- uid: Unosquare.PocoData.PocoTableProxy`1.Update(`0)
+  name: Update(T)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Update__0_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.Update(`0)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Update(T)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Update(T)
+  nameWithType: PocoTableProxy<T>.Update(T)
+  nameWithType.vb: PocoTableProxy(Of T).Update(T)
+- uid: Unosquare.PocoData.PocoTableProxy`1.Update*
+  name: Update
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_Update_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.Update
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.Update
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).Update
+  nameWithType: PocoTableProxy<T>.Update
+  nameWithType.vb: PocoTableProxy(Of T).Update
+- uid: Unosquare.PocoData.PocoTableProxy`1.UpdateAsync(`0)
+  name: UpdateAsync(T)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_UpdateAsync__0_
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.UpdateAsync(`0)
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.UpdateAsync(T)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).UpdateAsync(T)
+  nameWithType: PocoTableProxy<T>.UpdateAsync(T)
+  nameWithType.vb: PocoTableProxy(Of T).UpdateAsync(T)
+- uid: Unosquare.PocoData.PocoTableProxy`1.UpdateAsync*
+  name: UpdateAsync
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_UpdateAsync_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.UpdateAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.UpdateAsync
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).UpdateAsync
+  nameWithType: PocoTableProxy<T>.UpdateAsync
+  nameWithType.vb: PocoTableProxy(Of T).UpdateAsync
+- uid: Unosquare.PocoData.PocoTableProxy`1.UpdateMany(System.Collections.Generic.IEnumerable{`0})
+  name: UpdateMany(IEnumerable<T>)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_UpdateMany_System_Collections_Generic_IEnumerable__0__
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.UpdateMany(System.Collections.Generic.IEnumerable{`0})
+  name.vb: UpdateMany(IEnumerable(Of T))
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.UpdateMany(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).UpdateMany(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: PocoTableProxy<T>.UpdateMany(IEnumerable<T>)
+  nameWithType.vb: PocoTableProxy(Of T).UpdateMany(IEnumerable(Of T))
+- uid: Unosquare.PocoData.PocoTableProxy`1.UpdateMany*
+  name: UpdateMany
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_UpdateMany_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.UpdateMany
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.UpdateMany
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).UpdateMany
+  nameWithType: PocoTableProxy<T>.UpdateMany
+  nameWithType.vb: PocoTableProxy(Of T).UpdateMany
+- uid: Unosquare.PocoData.PocoTableProxy`1.UpdateManyAsync(System.Collections.Generic.IEnumerable{`0})
+  name: UpdateManyAsync(IEnumerable<T>)
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_UpdateManyAsync_System_Collections_Generic_IEnumerable__0__
+  commentId: M:Unosquare.PocoData.PocoTableProxy`1.UpdateManyAsync(System.Collections.Generic.IEnumerable{`0})
+  name.vb: UpdateManyAsync(IEnumerable(Of T))
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.UpdateManyAsync(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).UpdateManyAsync(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: PocoTableProxy<T>.UpdateManyAsync(IEnumerable<T>)
+  nameWithType.vb: PocoTableProxy(Of T).UpdateManyAsync(IEnumerable(Of T))
+- uid: Unosquare.PocoData.PocoTableProxy`1.UpdateManyAsync*
+  name: UpdateManyAsync
+  href: api/Unosquare.PocoData.PocoTableProxy-1.html#Unosquare_PocoData_PocoTableProxy_1_UpdateManyAsync_
+  commentId: Overload:Unosquare.PocoData.PocoTableProxy`1.UpdateManyAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.PocoTableProxy<T>.UpdateManyAsync
+  fullName.vb: Unosquare.PocoData.PocoTableProxy(Of T).UpdateManyAsync
+  nameWithType: PocoTableProxy<T>.UpdateManyAsync
+  nameWithType.vb: PocoTableProxy(Of T).UpdateManyAsync
+- uid: Unosquare.PocoData.Sample
+  name: Unosquare.PocoData.Sample
+  href: api/Unosquare.PocoData.Sample.html
+  commentId: N:Unosquare.PocoData.Sample
+  fullName: Unosquare.PocoData.Sample
+  nameWithType: Unosquare.PocoData.Sample
+- uid: Unosquare.PocoData.Sample.DataModels
+  name: Unosquare.PocoData.Sample.DataModels
+  href: api/Unosquare.PocoData.Sample.DataModels.html
+  commentId: N:Unosquare.PocoData.Sample.DataModels
+  fullName: Unosquare.PocoData.Sample.DataModels
+  nameWithType: Unosquare.PocoData.Sample.DataModels
+- uid: Unosquare.PocoData.Sample.DataModels.Employee
+  name: Employee
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html
+  commentId: T:Unosquare.PocoData.Sample.DataModels.Employee
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee
+  nameWithType: Employee
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.#ctor
+  name: Employee()
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee__ctor
+  commentId: M:Unosquare.PocoData.Sample.DataModels.Employee.#ctor
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.Employee()
+  nameWithType: Employee.Employee()
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.#ctor(System.Int32,System.String,System.String,System.DateTime,System.Nullable{System.Int32},Unosquare.PocoData.Sample.DataModels.MaritalStatus,System.Object)
+  name: Employee(Int32, String, String, DateTime, Nullable<Int32>, MaritalStatus, Object)
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee__ctor_System_Int32_System_String_System_String_System_DateTime_System_Nullable_System_Int32__Unosquare_PocoData_Sample_DataModels_MaritalStatus_System_Object_
+  commentId: M:Unosquare.PocoData.Sample.DataModels.Employee.#ctor(System.Int32,System.String,System.String,System.DateTime,System.Nullable{System.Int32},Unosquare.PocoData.Sample.DataModels.MaritalStatus,System.Object)
+  name.vb: Employee(Int32, String, String, DateTime, Nullable(Of Int32), MaritalStatus, Object)
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.Employee(System.Int32, System.String, System.String, System.DateTime, System.Nullable<System.Int32>, Unosquare.PocoData.Sample.DataModels.MaritalStatus, System.Object)
+  fullName.vb: Unosquare.PocoData.Sample.DataModels.Employee.Employee(System.Int32, System.String, System.String, System.DateTime, System.Nullable(Of System.Int32), Unosquare.PocoData.Sample.DataModels.MaritalStatus, System.Object)
+  nameWithType: Employee.Employee(Int32, String, String, DateTime, Nullable<Int32>, MaritalStatus, Object)
+  nameWithType.vb: Employee.Employee(Int32, String, String, DateTime, Nullable(Of Int32), MaritalStatus, Object)
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.#ctor*
+  name: Employee
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee__ctor_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.#ctor
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.Employee
+  nameWithType: Employee.Employee
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.Children
+  name: Children
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_Children
+  commentId: P:Unosquare.PocoData.Sample.DataModels.Employee.Children
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.Children
+  nameWithType: Employee.Children
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.Children*
+  name: Children
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_Children_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.Children
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.Children
+  nameWithType: Employee.Children
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.DateOfBirth
+  name: DateOfBirth
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_DateOfBirth
+  commentId: P:Unosquare.PocoData.Sample.DataModels.Employee.DateOfBirth
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.DateOfBirth
+  nameWithType: Employee.DateOfBirth
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.DateOfBirth*
+  name: DateOfBirth
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_DateOfBirth_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.DateOfBirth
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.DateOfBirth
+  nameWithType: Employee.DateOfBirth
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.EmailAddress
+  name: EmailAddress
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_EmailAddress
+  commentId: P:Unosquare.PocoData.Sample.DataModels.Employee.EmailAddress
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.EmailAddress
+  nameWithType: Employee.EmailAddress
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.EmailAddress*
+  name: EmailAddress
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_EmailAddress_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.EmailAddress
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.EmailAddress
+  nameWithType: Employee.EmailAddress
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.EmployeeId
+  name: EmployeeId
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_EmployeeId
+  commentId: P:Unosquare.PocoData.Sample.DataModels.Employee.EmployeeId
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.EmployeeId
+  nameWithType: Employee.EmployeeId
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.EmployeeId*
+  name: EmployeeId
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_EmployeeId_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.EmployeeId
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.EmployeeId
+  nameWithType: Employee.EmployeeId
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.FullName
+  name: FullName
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_FullName
+  commentId: P:Unosquare.PocoData.Sample.DataModels.Employee.FullName
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.FullName
+  nameWithType: Employee.FullName
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.FullName*
+  name: FullName
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_FullName_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.FullName
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.FullName
+  nameWithType: Employee.FullName
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.HashCode
+  name: HashCode
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_HashCode
+  commentId: P:Unosquare.PocoData.Sample.DataModels.Employee.HashCode
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.HashCode
+  nameWithType: Employee.HashCode
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.HashCode*
+  name: HashCode
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_HashCode_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.HashCode
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.HashCode
+  nameWithType: Employee.HashCode
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.MaritalStatus
+  name: MaritalStatus
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_MaritalStatus
+  commentId: P:Unosquare.PocoData.Sample.DataModels.Employee.MaritalStatus
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.MaritalStatus
+  nameWithType: Employee.MaritalStatus
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.MaritalStatus*
+  name: MaritalStatus
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_MaritalStatus_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.MaritalStatus
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.MaritalStatus
+  nameWithType: Employee.MaritalStatus
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.Reserved
+  name: Reserved
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_Reserved
+  commentId: P:Unosquare.PocoData.Sample.DataModels.Employee.Reserved
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.Reserved
+  nameWithType: Employee.Reserved
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.Reserved*
+  name: Reserved
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_Reserved_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.Reserved
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.Reserved
+  nameWithType: Employee.Reserved
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.ToString
+  name: ToString()
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_ToString
+  commentId: M:Unosquare.PocoData.Sample.DataModels.Employee.ToString
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.ToString()
+  nameWithType: Employee.ToString()
+- uid: Unosquare.PocoData.Sample.DataModels.Employee.ToString*
+  name: ToString
+  href: api/Unosquare.PocoData.Sample.DataModels.Employee.html#Unosquare_PocoData_Sample_DataModels_Employee_ToString_
+  commentId: Overload:Unosquare.PocoData.Sample.DataModels.Employee.ToString
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.DataModels.Employee.ToString
+  nameWithType: Employee.ToString
+- uid: Unosquare.PocoData.Sample.DataModels.MaritalStatus
+  name: MaritalStatus
+  href: api/Unosquare.PocoData.Sample.DataModels.MaritalStatus.html
+  commentId: T:Unosquare.PocoData.Sample.DataModels.MaritalStatus
+  fullName: Unosquare.PocoData.Sample.DataModels.MaritalStatus
+  nameWithType: MaritalStatus
+- uid: Unosquare.PocoData.Sample.DataModels.MaritalStatus.Divorced
+  name: Divorced
+  href: api/Unosquare.PocoData.Sample.DataModels.MaritalStatus.html#Unosquare_PocoData_Sample_DataModels_MaritalStatus_Divorced
+  commentId: F:Unosquare.PocoData.Sample.DataModels.MaritalStatus.Divorced
+  fullName: Unosquare.PocoData.Sample.DataModels.MaritalStatus.Divorced
+  nameWithType: MaritalStatus.Divorced
+- uid: Unosquare.PocoData.Sample.DataModels.MaritalStatus.Married
+  name: Married
+  href: api/Unosquare.PocoData.Sample.DataModels.MaritalStatus.html#Unosquare_PocoData_Sample_DataModels_MaritalStatus_Married
+  commentId: F:Unosquare.PocoData.Sample.DataModels.MaritalStatus.Married
+  fullName: Unosquare.PocoData.Sample.DataModels.MaritalStatus.Married
+  nameWithType: MaritalStatus.Married
+- uid: Unosquare.PocoData.Sample.DataModels.MaritalStatus.None
+  name: None
+  href: api/Unosquare.PocoData.Sample.DataModels.MaritalStatus.html#Unosquare_PocoData_Sample_DataModels_MaritalStatus_None
+  commentId: F:Unosquare.PocoData.Sample.DataModels.MaritalStatus.None
+  fullName: Unosquare.PocoData.Sample.DataModels.MaritalStatus.None
+  nameWithType: MaritalStatus.None
+- uid: Unosquare.PocoData.Sample.DataModels.MaritalStatus.Single
+  name: Single
+  href: api/Unosquare.PocoData.Sample.DataModels.MaritalStatus.html#Unosquare_PocoData_Sample_DataModels_MaritalStatus_Single
+  commentId: F:Unosquare.PocoData.Sample.DataModels.MaritalStatus.Single
+  fullName: Unosquare.PocoData.Sample.DataModels.MaritalStatus.Single
+  nameWithType: MaritalStatus.Single
+- uid: Unosquare.PocoData.Sample.DataModels.MaritalStatus.Widowed
+  name: Widowed
+  href: api/Unosquare.PocoData.Sample.DataModels.MaritalStatus.html#Unosquare_PocoData_Sample_DataModels_MaritalStatus_Widowed
+  commentId: F:Unosquare.PocoData.Sample.DataModels.MaritalStatus.Widowed
+  fullName: Unosquare.PocoData.Sample.DataModels.MaritalStatus.Widowed
+  nameWithType: MaritalStatus.Widowed
+- uid: Unosquare.PocoData.Sample.SampleDb
+  name: SampleDb
+  href: api/Unosquare.PocoData.Sample.SampleDb.html
+  commentId: T:Unosquare.PocoData.Sample.SampleDb
+  fullName: Unosquare.PocoData.Sample.SampleDb
+  nameWithType: SampleDb
+- uid: Unosquare.PocoData.Sample.SampleDb.#ctor
+  name: SampleDb()
+  href: api/Unosquare.PocoData.Sample.SampleDb.html#Unosquare_PocoData_Sample_SampleDb__ctor
+  commentId: M:Unosquare.PocoData.Sample.SampleDb.#ctor
+  fullName: Unosquare.PocoData.Sample.SampleDb.SampleDb()
+  nameWithType: SampleDb.SampleDb()
+- uid: Unosquare.PocoData.Sample.SampleDb.#ctor*
+  name: SampleDb
+  href: api/Unosquare.PocoData.Sample.SampleDb.html#Unosquare_PocoData_Sample_SampleDb__ctor_
+  commentId: Overload:Unosquare.PocoData.Sample.SampleDb.#ctor
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.SampleDb.SampleDb
+  nameWithType: SampleDb.SampleDb
+- uid: Unosquare.PocoData.Sample.SampleDb.Employees
+  name: Employees
+  href: api/Unosquare.PocoData.Sample.SampleDb.html#Unosquare_PocoData_Sample_SampleDb_Employees
+  commentId: P:Unosquare.PocoData.Sample.SampleDb.Employees
+  fullName: Unosquare.PocoData.Sample.SampleDb.Employees
+  nameWithType: SampleDb.Employees
+- uid: Unosquare.PocoData.Sample.SampleDb.Employees*
+  name: Employees
+  href: api/Unosquare.PocoData.Sample.SampleDb.html#Unosquare_PocoData_Sample_SampleDb_Employees_
+  commentId: Overload:Unosquare.PocoData.Sample.SampleDb.Employees
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.SampleDb.Employees
+  nameWithType: SampleDb.Employees
+- uid: Unosquare.PocoData.Sample.SampleDb.EmployeesDefault
+  name: EmployeesDefault
+  href: api/Unosquare.PocoData.Sample.SampleDb.html#Unosquare_PocoData_Sample_SampleDb_EmployeesDefault
+  commentId: P:Unosquare.PocoData.Sample.SampleDb.EmployeesDefault
+  fullName: Unosquare.PocoData.Sample.SampleDb.EmployeesDefault
+  nameWithType: SampleDb.EmployeesDefault
+- uid: Unosquare.PocoData.Sample.SampleDb.EmployeesDefault*
+  name: EmployeesDefault
+  href: api/Unosquare.PocoData.Sample.SampleDb.html#Unosquare_PocoData_Sample_SampleDb_EmployeesDefault_
+  commentId: Overload:Unosquare.PocoData.Sample.SampleDb.EmployeesDefault
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.SampleDb.EmployeesDefault
+  nameWithType: SampleDb.EmployeesDefault
+- uid: Unosquare.PocoData.Sample.SampleDb.EmployeesTable
+  name: SampleDb.EmployeesTable
+  href: api/Unosquare.PocoData.Sample.SampleDb.EmployeesTable.html
+  commentId: T:Unosquare.PocoData.Sample.SampleDb.EmployeesTable
+  fullName: Unosquare.PocoData.Sample.SampleDb.EmployeesTable
+  nameWithType: SampleDb.EmployeesTable
+- uid: Unosquare.PocoData.Sample.SampleDb.EmployeesTable.#ctor(Unosquare.PocoData.IPocoDb)
+  name: EmployeesTable(IPocoDb)
+  href: api/Unosquare.PocoData.Sample.SampleDb.EmployeesTable.html#Unosquare_PocoData_Sample_SampleDb_EmployeesTable__ctor_Unosquare_PocoData_IPocoDb_
+  commentId: M:Unosquare.PocoData.Sample.SampleDb.EmployeesTable.#ctor(Unosquare.PocoData.IPocoDb)
+  fullName: Unosquare.PocoData.Sample.SampleDb.EmployeesTable.EmployeesTable(Unosquare.PocoData.IPocoDb)
+  nameWithType: SampleDb.EmployeesTable.EmployeesTable(IPocoDb)
+- uid: Unosquare.PocoData.Sample.SampleDb.EmployeesTable.#ctor*
+  name: EmployeesTable
+  href: api/Unosquare.PocoData.Sample.SampleDb.EmployeesTable.html#Unosquare_PocoData_Sample_SampleDb_EmployeesTable__ctor_
+  commentId: Overload:Unosquare.PocoData.Sample.SampleDb.EmployeesTable.#ctor
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.SampleDb.EmployeesTable.EmployeesTable
+  nameWithType: SampleDb.EmployeesTable.EmployeesTable
+- uid: Unosquare.PocoData.Sample.SampleDb.EmployeesTable.GetYoungEmployeesAsync
+  name: GetYoungEmployeesAsync()
+  href: api/Unosquare.PocoData.Sample.SampleDb.EmployeesTable.html#Unosquare_PocoData_Sample_SampleDb_EmployeesTable_GetYoungEmployeesAsync
+  commentId: M:Unosquare.PocoData.Sample.SampleDb.EmployeesTable.GetYoungEmployeesAsync
+  fullName: Unosquare.PocoData.Sample.SampleDb.EmployeesTable.GetYoungEmployeesAsync()
+  nameWithType: SampleDb.EmployeesTable.GetYoungEmployeesAsync()
+- uid: Unosquare.PocoData.Sample.SampleDb.EmployeesTable.GetYoungEmployeesAsync*
+  name: GetYoungEmployeesAsync
+  href: api/Unosquare.PocoData.Sample.SampleDb.EmployeesTable.html#Unosquare_PocoData_Sample_SampleDb_EmployeesTable_GetYoungEmployeesAsync_
+  commentId: Overload:Unosquare.PocoData.Sample.SampleDb.EmployeesTable.GetYoungEmployeesAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sample.SampleDb.EmployeesTable.GetYoungEmployeesAsync
+  nameWithType: SampleDb.EmployeesTable.GetYoungEmployeesAsync
+- uid: Unosquare.PocoData.SchemaExtensions
+  name: SchemaExtensions
+  href: api/Unosquare.PocoData.SchemaExtensions.html
+  commentId: T:Unosquare.PocoData.SchemaExtensions
+  fullName: Unosquare.PocoData.SchemaExtensions
+  nameWithType: SchemaExtensions
+- uid: Unosquare.PocoData.SchemaExtensions.Column(System.Type,System.String)
+  name: Column(Type, String)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_Column_System_Type_System_String_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.Column(System.Type,System.String)
+  fullName: Unosquare.PocoData.SchemaExtensions.Column(System.Type, System.String)
+  nameWithType: SchemaExtensions.Column(Type, String)
+- uid: Unosquare.PocoData.SchemaExtensions.Column*
+  name: Column
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_Column_
+  commentId: Overload:Unosquare.PocoData.SchemaExtensions.Column
+  isSpec: "True"
+  fullName: Unosquare.PocoData.SchemaExtensions.Column
+  nameWithType: SchemaExtensions.Column
+- uid: Unosquare.PocoData.SchemaExtensions.HasColumnName(Unosquare.PocoData.ColumnMetadata,System.String)
+  name: HasColumnName(ColumnMetadata, String)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_HasColumnName_Unosquare_PocoData_ColumnMetadata_System_String_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.HasColumnName(Unosquare.PocoData.ColumnMetadata,System.String)
+  fullName: Unosquare.PocoData.SchemaExtensions.HasColumnName(Unosquare.PocoData.ColumnMetadata, System.String)
+  nameWithType: SchemaExtensions.HasColumnName(ColumnMetadata, String)
+- uid: Unosquare.PocoData.SchemaExtensions.HasColumnName*
+  name: HasColumnName
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_HasColumnName_
+  commentId: Overload:Unosquare.PocoData.SchemaExtensions.HasColumnName
+  isSpec: "True"
+  fullName: Unosquare.PocoData.SchemaExtensions.HasColumnName
+  nameWithType: SchemaExtensions.HasColumnName
+- uid: Unosquare.PocoData.SchemaExtensions.HasStringLength(Unosquare.PocoData.ColumnMetadata,System.Int32)
+  name: HasStringLength(ColumnMetadata, Int32)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_HasStringLength_Unosquare_PocoData_ColumnMetadata_System_Int32_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.HasStringLength(Unosquare.PocoData.ColumnMetadata,System.Int32)
+  fullName: Unosquare.PocoData.SchemaExtensions.HasStringLength(Unosquare.PocoData.ColumnMetadata, System.Int32)
+  nameWithType: SchemaExtensions.HasStringLength(ColumnMetadata, Int32)
+- uid: Unosquare.PocoData.SchemaExtensions.HasStringLength*
+  name: HasStringLength
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_HasStringLength_
+  commentId: Overload:Unosquare.PocoData.SchemaExtensions.HasStringLength
+  isSpec: "True"
+  fullName: Unosquare.PocoData.SchemaExtensions.HasStringLength
+  nameWithType: SchemaExtensions.HasStringLength
+- uid: Unosquare.PocoData.SchemaExtensions.IsGeneratedKeyColumn(Unosquare.PocoData.ColumnMetadata)
+  name: IsGeneratedKeyColumn(ColumnMetadata)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_IsGeneratedKeyColumn_Unosquare_PocoData_ColumnMetadata_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.IsGeneratedKeyColumn(Unosquare.PocoData.ColumnMetadata)
+  fullName: Unosquare.PocoData.SchemaExtensions.IsGeneratedKeyColumn(Unosquare.PocoData.ColumnMetadata)
+  nameWithType: SchemaExtensions.IsGeneratedKeyColumn(ColumnMetadata)
+- uid: Unosquare.PocoData.SchemaExtensions.IsGeneratedKeyColumn*
+  name: IsGeneratedKeyColumn
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_IsGeneratedKeyColumn_
+  commentId: Overload:Unosquare.PocoData.SchemaExtensions.IsGeneratedKeyColumn
+  isSpec: "True"
+  fullName: Unosquare.PocoData.SchemaExtensions.IsGeneratedKeyColumn
+  nameWithType: SchemaExtensions.IsGeneratedKeyColumn
+- uid: Unosquare.PocoData.SchemaExtensions.IsKeyColumn(Unosquare.PocoData.ColumnMetadata)
+  name: IsKeyColumn(ColumnMetadata)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_IsKeyColumn_Unosquare_PocoData_ColumnMetadata_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.IsKeyColumn(Unosquare.PocoData.ColumnMetadata)
+  fullName: Unosquare.PocoData.SchemaExtensions.IsKeyColumn(Unosquare.PocoData.ColumnMetadata)
+  nameWithType: SchemaExtensions.IsKeyColumn(ColumnMetadata)
+- uid: Unosquare.PocoData.SchemaExtensions.IsKeyColumn*
+  name: IsKeyColumn
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_IsKeyColumn_
+  commentId: Overload:Unosquare.PocoData.SchemaExtensions.IsKeyColumn
+  isSpec: "True"
+  fullName: Unosquare.PocoData.SchemaExtensions.IsKeyColumn
+  nameWithType: SchemaExtensions.IsKeyColumn
+- uid: Unosquare.PocoData.SchemaExtensions.IsNullable(Unosquare.PocoData.ColumnMetadata)
+  name: IsNullable(ColumnMetadata)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_IsNullable_Unosquare_PocoData_ColumnMetadata_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.IsNullable(Unosquare.PocoData.ColumnMetadata)
+  fullName: Unosquare.PocoData.SchemaExtensions.IsNullable(Unosquare.PocoData.ColumnMetadata)
+  nameWithType: SchemaExtensions.IsNullable(ColumnMetadata)
+- uid: Unosquare.PocoData.SchemaExtensions.IsNullable*
+  name: IsNullable
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_IsNullable_
+  commentId: Overload:Unosquare.PocoData.SchemaExtensions.IsNullable
+  isSpec: "True"
+  fullName: Unosquare.PocoData.SchemaExtensions.IsNullable
+  nameWithType: SchemaExtensions.IsNullable
+- uid: Unosquare.PocoData.SchemaExtensions.NotMapped(Unosquare.PocoData.ColumnMetadata)
+  name: NotMapped(ColumnMetadata)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_NotMapped_Unosquare_PocoData_ColumnMetadata_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.NotMapped(Unosquare.PocoData.ColumnMetadata)
+  fullName: Unosquare.PocoData.SchemaExtensions.NotMapped(Unosquare.PocoData.ColumnMetadata)
+  nameWithType: SchemaExtensions.NotMapped(ColumnMetadata)
+- uid: Unosquare.PocoData.SchemaExtensions.NotMapped*
+  name: NotMapped
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_NotMapped_
+  commentId: Overload:Unosquare.PocoData.SchemaExtensions.NotMapped
+  isSpec: "True"
+  fullName: Unosquare.PocoData.SchemaExtensions.NotMapped
+  nameWithType: SchemaExtensions.NotMapped
+- uid: Unosquare.PocoData.SchemaExtensions.Table(System.Type)
+  name: Table(Type)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_Table_System_Type_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.Table(System.Type)
+  fullName: Unosquare.PocoData.SchemaExtensions.Table(System.Type)
+  nameWithType: SchemaExtensions.Table(Type)
+- uid: Unosquare.PocoData.SchemaExtensions.Table*
+  name: Table
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_Table_
+  commentId: Overload:Unosquare.PocoData.SchemaExtensions.Table
+  isSpec: "True"
+  fullName: Unosquare.PocoData.SchemaExtensions.Table
+  nameWithType: SchemaExtensions.Table
+- uid: Unosquare.PocoData.SchemaExtensions.ToTable(Unosquare.PocoData.Annotations.TableAttribute,System.String)
+  name: ToTable(TableAttribute, String)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_ToTable_Unosquare_PocoData_Annotations_TableAttribute_System_String_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.ToTable(Unosquare.PocoData.Annotations.TableAttribute,System.String)
+  fullName: Unosquare.PocoData.SchemaExtensions.ToTable(Unosquare.PocoData.Annotations.TableAttribute, System.String)
+  nameWithType: SchemaExtensions.ToTable(TableAttribute, String)
+- uid: Unosquare.PocoData.SchemaExtensions.ToTable(Unosquare.PocoData.Annotations.TableAttribute,System.String,System.String)
+  name: ToTable(TableAttribute, String, String)
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_ToTable_Unosquare_PocoData_Annotations_TableAttribute_System_String_System_String_
+  commentId: M:Unosquare.PocoData.SchemaExtensions.ToTable(Unosquare.PocoData.Annotations.TableAttribute,System.String,System.String)
+  fullName: Unosquare.PocoData.SchemaExtensions.ToTable(Unosquare.PocoData.Annotations.TableAttribute, System.String, System.String)
+  nameWithType: SchemaExtensions.ToTable(TableAttribute, String, String)
+- uid: Unosquare.PocoData.SchemaExtensions.ToTable*
+  name: ToTable
+  href: api/Unosquare.PocoData.SchemaExtensions.html#Unosquare_PocoData_SchemaExtensions_ToTable_
+  commentId: Overload:Unosquare.PocoData.SchemaExtensions.ToTable
+  isSpec: "True"
+  fullName: Unosquare.PocoData.SchemaExtensions.ToTable
+  nameWithType: SchemaExtensions.ToTable
+- uid: Unosquare.PocoData.Sql
+  name: Unosquare.PocoData.Sql
+  href: api/Unosquare.PocoData.Sql.html
+  commentId: N:Unosquare.PocoData.Sql
+  fullName: Unosquare.PocoData.Sql
+  nameWithType: Unosquare.PocoData.Sql
+- uid: Unosquare.PocoData.Sql.SqlPocoDb
+  name: SqlPocoDb
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html
+  commentId: T:Unosquare.PocoData.Sql.SqlPocoDb
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb
+  nameWithType: SqlPocoDb
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.#ctor(System.String)
+  name: SqlPocoDb(String)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb__ctor_System_String_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.#ctor(System.String)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SqlPocoDb(System.String)
+  nameWithType: SqlPocoDb.SqlPocoDb(String)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.#ctor*
+  name: SqlPocoDb
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb__ctor_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.#ctor
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SqlPocoDb
+  nameWithType: SqlPocoDb.SqlPocoDb
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Commands
+  name: Commands
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Commands
+  commentId: P:Unosquare.PocoData.Sql.SqlPocoDb.Commands
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Commands
+  nameWithType: SqlPocoDb.Commands
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Commands*
+  name: Commands
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Commands_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.Commands
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Commands
+  nameWithType: SqlPocoDb.Commands
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Connection
+  name: Connection
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Connection
+  commentId: P:Unosquare.PocoData.Sql.SqlPocoDb.Connection
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Connection
+  nameWithType: SqlPocoDb.Connection
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Connection*
+  name: Connection
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Connection_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.Connection
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Connection
+  nameWithType: SqlPocoDb.Connection
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.CountAll(System.Type)
+  name: CountAll(Type)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_CountAll_System_Type_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.CountAll(System.Type)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.CountAll(System.Type)
+  nameWithType: SqlPocoDb.CountAll(Type)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.CountAll*
+  name: CountAll
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_CountAll_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.CountAll
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.CountAll
+  nameWithType: SqlPocoDb.CountAll
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.CountAllAsync(System.Type)
+  name: CountAllAsync(Type)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_CountAllAsync_System_Type_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.CountAllAsync(System.Type)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.CountAllAsync(System.Type)
+  nameWithType: SqlPocoDb.CountAllAsync(Type)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.CountAllAsync*
+  name: CountAllAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_CountAllAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.CountAllAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.CountAllAsync
+  nameWithType: SqlPocoDb.CountAllAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Definition
+  name: Definition
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Definition
+  commentId: P:Unosquare.PocoData.Sql.SqlPocoDb.Definition
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Definition
+  nameWithType: SqlPocoDb.Definition
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Definition*
+  name: Definition
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Definition_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.Definition
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Definition
+  nameWithType: SqlPocoDb.Definition
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Delete(System.Object)
+  name: Delete(Object)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Delete_System_Object_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.Delete(System.Object)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Delete(System.Object)
+  nameWithType: SqlPocoDb.Delete(Object)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Delete*
+  name: Delete
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Delete_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.Delete
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Delete
+  nameWithType: SqlPocoDb.Delete
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.DeleteAsync(System.Object)
+  name: DeleteAsync(Object)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_DeleteAsync_System_Object_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.DeleteAsync(System.Object)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.DeleteAsync(System.Object)
+  nameWithType: SqlPocoDb.DeleteAsync(Object)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.DeleteAsync*
+  name: DeleteAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_DeleteAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.DeleteAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.DeleteAsync
+  nameWithType: SqlPocoDb.DeleteAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Dispose
+  name: Dispose()
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Dispose
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.Dispose
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Dispose()
+  nameWithType: SqlPocoDb.Dispose()
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Dispose_System_Boolean_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.Dispose(System.Boolean)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Dispose(System.Boolean)
+  nameWithType: SqlPocoDb.Dispose(Boolean)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Dispose*
+  name: Dispose
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Dispose_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.Dispose
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Dispose
+  nameWithType: SqlPocoDb.Dispose
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Insert(System.Object,System.Boolean)
+  name: Insert(Object, Boolean)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Insert_System_Object_System_Boolean_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.Insert(System.Object,System.Boolean)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Insert(System.Object, System.Boolean)
+  nameWithType: SqlPocoDb.Insert(Object, Boolean)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Insert*
+  name: Insert
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Insert_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.Insert
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Insert
+  nameWithType: SqlPocoDb.Insert
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.InsertAsync(System.Object,System.Boolean)
+  name: InsertAsync(Object, Boolean)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_InsertAsync_System_Object_System_Boolean_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.InsertAsync(System.Object,System.Boolean)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.InsertAsync(System.Object, System.Boolean)
+  nameWithType: SqlPocoDb.InsertAsync(Object, Boolean)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.InsertAsync*
+  name: InsertAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_InsertAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.InsertAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.InsertAsync
+  nameWithType: SqlPocoDb.InsertAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.InsertMany(System.Collections.IEnumerable,System.Boolean)
+  name: InsertMany(IEnumerable, Boolean)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_InsertMany_System_Collections_IEnumerable_System_Boolean_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.InsertMany(System.Collections.IEnumerable,System.Boolean)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.InsertMany(System.Collections.IEnumerable, System.Boolean)
+  nameWithType: SqlPocoDb.InsertMany(IEnumerable, Boolean)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.InsertMany*
+  name: InsertMany
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_InsertMany_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.InsertMany
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.InsertMany
+  nameWithType: SqlPocoDb.InsertMany
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.InsertManyAsync(System.Collections.IEnumerable,System.Boolean)
+  name: InsertManyAsync(IEnumerable, Boolean)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_InsertManyAsync_System_Collections_IEnumerable_System_Boolean_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.InsertManyAsync(System.Collections.IEnumerable,System.Boolean)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.InsertManyAsync(System.Collections.IEnumerable, System.Boolean)
+  nameWithType: SqlPocoDb.InsertManyAsync(IEnumerable, Boolean)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.InsertManyAsync*
+  name: InsertManyAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_InsertManyAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.InsertManyAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.InsertManyAsync
+  nameWithType: SqlPocoDb.InsertManyAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.ObjectReader
+  name: ObjectReader
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_ObjectReader
+  commentId: P:Unosquare.PocoData.Sql.SqlPocoDb.ObjectReader
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.ObjectReader
+  nameWithType: SqlPocoDb.ObjectReader
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.ObjectReader*
+  name: ObjectReader
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_ObjectReader_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.ObjectReader
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.ObjectReader
+  nameWithType: SqlPocoDb.ObjectReader
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Open(System.String)
+  name: Open(String)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Open_System_String_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.Open(System.String)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Open(System.String)
+  nameWithType: SqlPocoDb.Open(String)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Open(System.String,System.String,System.String,System.String)
+  name: Open(String, String, String, String)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Open_System_String_System_String_System_String_System_String_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.Open(System.String,System.String,System.String,System.String)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Open(System.String, System.String, System.String, System.String)
+  nameWithType: SqlPocoDb.Open(String, String, String, String)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Open*
+  name: Open
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Open_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.Open
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Open
+  nameWithType: SqlPocoDb.Open
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.OpenAsync(System.String)
+  name: OpenAsync(String)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_OpenAsync_System_String_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.OpenAsync(System.String)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.OpenAsync(System.String)
+  nameWithType: SqlPocoDb.OpenAsync(String)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.OpenAsync(System.String,System.String,System.String,System.String)
+  name: OpenAsync(String, String, String, String)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_OpenAsync_System_String_System_String_System_String_System_String_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.OpenAsync(System.String,System.String,System.String,System.String)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.OpenAsync(System.String, System.String, System.String, System.String)
+  nameWithType: SqlPocoDb.OpenAsync(String, String, String, String)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.OpenAsync*
+  name: OpenAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_OpenAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.OpenAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.OpenAsync
+  nameWithType: SqlPocoDb.OpenAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.OpenLocal(System.String)
+  name: OpenLocal(String)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_OpenLocal_System_String_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.OpenLocal(System.String)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.OpenLocal(System.String)
+  nameWithType: SqlPocoDb.OpenLocal(String)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.OpenLocal*
+  name: OpenLocal
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_OpenLocal_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.OpenLocal
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.OpenLocal
+  nameWithType: SqlPocoDb.OpenLocal
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.OpenLocalAsync(System.String)
+  name: OpenLocalAsync(String)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_OpenLocalAsync_System_String_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.OpenLocalAsync(System.String)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.OpenLocalAsync(System.String)
+  nameWithType: SqlPocoDb.OpenLocalAsync(String)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.OpenLocalAsync*
+  name: OpenLocalAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_OpenLocalAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.OpenLocalAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.OpenLocalAsync
+  nameWithType: SqlPocoDb.OpenLocalAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Schema
+  name: Schema
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Schema
+  commentId: P:Unosquare.PocoData.Sql.SqlPocoDb.Schema
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Schema
+  nameWithType: SqlPocoDb.Schema
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Schema*
+  name: Schema
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Schema_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.Schema
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Schema
+  nameWithType: SqlPocoDb.Schema
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectAll(System.Type)
+  name: SelectAll(Type)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectAll_System_Type_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectAll(System.Type)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectAll(System.Type)
+  nameWithType: SqlPocoDb.SelectAll(Type)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectAll*
+  name: SelectAll
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectAll_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.SelectAll
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectAll
+  nameWithType: SqlPocoDb.SelectAll
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectAll``1
+  name: SelectAll<T>()
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectAll__1
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectAll``1
+  name.vb: SelectAll(Of T)()
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectAll<T>()
+  fullName.vb: Unosquare.PocoData.Sql.SqlPocoDb.SelectAll(Of T)()
+  nameWithType: SqlPocoDb.SelectAll<T>()
+  nameWithType.vb: SqlPocoDb.SelectAll(Of T)()
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync(System.Type)
+  name: SelectAllAsync(Type)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectAllAsync_System_Type_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync(System.Type)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync(System.Type)
+  nameWithType: SqlPocoDb.SelectAllAsync(Type)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync*
+  name: SelectAllAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectAllAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync
+  nameWithType: SqlPocoDb.SelectAllAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync``1
+  name: SelectAllAsync<T>()
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectAllAsync__1
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync``1
+  name.vb: SelectAllAsync(Of T)()
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync<T>()
+  fullName.vb: Unosquare.PocoData.Sql.SqlPocoDb.SelectAllAsync(Of T)()
+  nameWithType: SqlPocoDb.SelectAllAsync<T>()
+  nameWithType.vb: SqlPocoDb.SelectAllAsync(Of T)()
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectMany(System.Type,IDbCommand)
+  name: SelectMany(Type, IDbCommand)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectMany_System_Type_IDbCommand_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectMany(System.Type,IDbCommand)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectMany(System.Type, IDbCommand)
+  nameWithType: SqlPocoDb.SelectMany(Type, IDbCommand)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectMany*
+  name: SelectMany
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectMany_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.SelectMany
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectMany
+  nameWithType: SqlPocoDb.SelectMany
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectMany``1(IDbCommand)
+  name: SelectMany<T>(IDbCommand)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectMany__1_IDbCommand_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectMany``1(IDbCommand)
+  name.vb: SelectMany(Of T)(IDbCommand)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectMany<T>(IDbCommand)
+  fullName.vb: Unosquare.PocoData.Sql.SqlPocoDb.SelectMany(Of T)(IDbCommand)
+  nameWithType: SqlPocoDb.SelectMany<T>(IDbCommand)
+  nameWithType.vb: SqlPocoDb.SelectMany(Of T)(IDbCommand)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync(System.Type,IDbCommand)
+  name: SelectManyAsync(Type, IDbCommand)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectManyAsync_System_Type_IDbCommand_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync(System.Type,IDbCommand)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync(System.Type, IDbCommand)
+  nameWithType: SqlPocoDb.SelectManyAsync(Type, IDbCommand)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync*
+  name: SelectManyAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectManyAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync
+  nameWithType: SqlPocoDb.SelectManyAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync``1(IDbCommand)
+  name: SelectManyAsync<T>(IDbCommand)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectManyAsync__1_IDbCommand_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync``1(IDbCommand)
+  name.vb: SelectManyAsync(Of T)(IDbCommand)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync<T>(IDbCommand)
+  fullName.vb: Unosquare.PocoData.Sql.SqlPocoDb.SelectManyAsync(Of T)(IDbCommand)
+  nameWithType: SqlPocoDb.SelectManyAsync<T>(IDbCommand)
+  nameWithType.vb: SqlPocoDb.SelectManyAsync(Of T)(IDbCommand)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectSingle(System.Object)
+  name: SelectSingle(Object)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectSingle_System_Object_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectSingle(System.Object)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectSingle(System.Object)
+  nameWithType: SqlPocoDb.SelectSingle(Object)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectSingle*
+  name: SelectSingle
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectSingle_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.SelectSingle
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectSingle
+  nameWithType: SqlPocoDb.SelectSingle
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectSingleAsync(System.Object)
+  name: SelectSingleAsync(Object)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectSingleAsync_System_Object_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.SelectSingleAsync(System.Object)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectSingleAsync(System.Object)
+  nameWithType: SqlPocoDb.SelectSingleAsync(Object)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SelectSingleAsync*
+  name: SelectSingleAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SelectSingleAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.SelectSingleAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SelectSingleAsync
+  nameWithType: SqlPocoDb.SelectSingleAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SqlCommandTimeoutSeconds
+  name: SqlCommandTimeoutSeconds
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SqlCommandTimeoutSeconds
+  commentId: P:Unosquare.PocoData.Sql.SqlPocoDb.SqlCommandTimeoutSeconds
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SqlCommandTimeoutSeconds
+  nameWithType: SqlPocoDb.SqlCommandTimeoutSeconds
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.SqlCommandTimeoutSeconds*
+  name: SqlCommandTimeoutSeconds
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_SqlCommandTimeoutSeconds_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.SqlCommandTimeoutSeconds
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.SqlCommandTimeoutSeconds
+  nameWithType: SqlPocoDb.SqlCommandTimeoutSeconds
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.TableProxy*
+  name: TableProxy
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_TableProxy_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.TableProxy
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.TableProxy
+  nameWithType: SqlPocoDb.TableProxy
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.TableProxy``1
+  name: TableProxy<T>()
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_TableProxy__1
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.TableProxy``1
+  name.vb: TableProxy(Of T)()
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.TableProxy<T>()
+  fullName.vb: Unosquare.PocoData.Sql.SqlPocoDb.TableProxy(Of T)()
+  nameWithType: SqlPocoDb.TableProxy<T>()
+  nameWithType.vb: SqlPocoDb.TableProxy(Of T)()
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Update(System.Object)
+  name: Update(Object)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Update_System_Object_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.Update(System.Object)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Update(System.Object)
+  nameWithType: SqlPocoDb.Update(Object)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.Update*
+  name: Update
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_Update_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.Update
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.Update
+  nameWithType: SqlPocoDb.Update
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.UpdateAsync(System.Object)
+  name: UpdateAsync(Object)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_UpdateAsync_System_Object_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.UpdateAsync(System.Object)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.UpdateAsync(System.Object)
+  nameWithType: SqlPocoDb.UpdateAsync(Object)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.UpdateAsync*
+  name: UpdateAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_UpdateAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.UpdateAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.UpdateAsync
+  nameWithType: SqlPocoDb.UpdateAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.UpdateMany(System.Collections.IEnumerable)
+  name: UpdateMany(IEnumerable)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_UpdateMany_System_Collections_IEnumerable_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.UpdateMany(System.Collections.IEnumerable)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.UpdateMany(System.Collections.IEnumerable)
+  nameWithType: SqlPocoDb.UpdateMany(IEnumerable)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.UpdateMany*
+  name: UpdateMany
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_UpdateMany_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.UpdateMany
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.UpdateMany
+  nameWithType: SqlPocoDb.UpdateMany
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.UpdateManyAsync(System.Collections.IEnumerable)
+  name: UpdateManyAsync(IEnumerable)
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_UpdateManyAsync_System_Collections_IEnumerable_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoDb.UpdateManyAsync(System.Collections.IEnumerable)
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.UpdateManyAsync(System.Collections.IEnumerable)
+  nameWithType: SqlPocoDb.UpdateManyAsync(IEnumerable)
+- uid: Unosquare.PocoData.Sql.SqlPocoDb.UpdateManyAsync*
+  name: UpdateManyAsync
+  href: api/Unosquare.PocoData.Sql.SqlPocoDb.html#Unosquare_PocoData_Sql_SqlPocoDb_UpdateManyAsync_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoDb.UpdateManyAsync
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoDb.UpdateManyAsync
+  nameWithType: SqlPocoDb.UpdateManyAsync
+- uid: Unosquare.PocoData.Sql.SqlPocoUtilities
+  name: SqlPocoUtilities
+  href: api/Unosquare.PocoData.Sql.SqlPocoUtilities.html
+  commentId: T:Unosquare.PocoData.Sql.SqlPocoUtilities
+  fullName: Unosquare.PocoData.Sql.SqlPocoUtilities
+  nameWithType: SqlPocoUtilities
+- uid: Unosquare.PocoData.Sql.SqlPocoUtilities.AddOrUpdateParameters(SqlCommand,System.Collections.Generic.IEnumerable{Unosquare.PocoData.ColumnMetadata},System.Object)
+  name: AddOrUpdateParameters(SqlCommand, IEnumerable<ColumnMetadata>, Object)
+  href: api/Unosquare.PocoData.Sql.SqlPocoUtilities.html#Unosquare_PocoData_Sql_SqlPocoUtilities_AddOrUpdateParameters_SqlCommand_System_Collections_Generic_IEnumerable_Unosquare_PocoData_ColumnMetadata__System_Object_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoUtilities.AddOrUpdateParameters(SqlCommand,System.Collections.Generic.IEnumerable{Unosquare.PocoData.ColumnMetadata},System.Object)
+  name.vb: AddOrUpdateParameters(SqlCommand, IEnumerable(Of ColumnMetadata), Object)
+  fullName: Unosquare.PocoData.Sql.SqlPocoUtilities.AddOrUpdateParameters(SqlCommand, System.Collections.Generic.IEnumerable<Unosquare.PocoData.ColumnMetadata>, System.Object)
+  fullName.vb: Unosquare.PocoData.Sql.SqlPocoUtilities.AddOrUpdateParameters(SqlCommand, System.Collections.Generic.IEnumerable(Of Unosquare.PocoData.ColumnMetadata), System.Object)
+  nameWithType: SqlPocoUtilities.AddOrUpdateParameters(SqlCommand, IEnumerable<ColumnMetadata>, Object)
+  nameWithType.vb: SqlPocoUtilities.AddOrUpdateParameters(SqlCommand, IEnumerable(Of ColumnMetadata), Object)
+- uid: Unosquare.PocoData.Sql.SqlPocoUtilities.AddOrUpdateParameters*
+  name: AddOrUpdateParameters
+  href: api/Unosquare.PocoData.Sql.SqlPocoUtilities.html#Unosquare_PocoData_Sql_SqlPocoUtilities_AddOrUpdateParameters_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoUtilities.AddOrUpdateParameters
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoUtilities.AddOrUpdateParameters
+  nameWithType: SqlPocoUtilities.AddOrUpdateParameters
+- uid: Unosquare.PocoData.Sql.SqlPocoUtilities.AddParameter(SqlCommand,System.String,System.Object,System.Int32)
+  name: AddParameter(SqlCommand, String, Object, Int32)
+  href: api/Unosquare.PocoData.Sql.SqlPocoUtilities.html#Unosquare_PocoData_Sql_SqlPocoUtilities_AddParameter_SqlCommand_System_String_System_Object_System_Int32_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoUtilities.AddParameter(SqlCommand,System.String,System.Object,System.Int32)
+  fullName: Unosquare.PocoData.Sql.SqlPocoUtilities.AddParameter(SqlCommand, System.String, System.Object, System.Int32)
+  nameWithType: SqlPocoUtilities.AddParameter(SqlCommand, String, Object, Int32)
+- uid: Unosquare.PocoData.Sql.SqlPocoUtilities.AddParameter*
+  name: AddParameter
+  href: api/Unosquare.PocoData.Sql.SqlPocoUtilities.html#Unosquare_PocoData_Sql_SqlPocoUtilities_AddParameter_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoUtilities.AddParameter
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoUtilities.AddParameter
+  nameWithType: SqlPocoUtilities.AddParameter
+- uid: Unosquare.PocoData.Sql.SqlPocoUtilities.DebugCommand(IDbCommand,System.Boolean)
+  name: DebugCommand(IDbCommand, Boolean)
+  href: api/Unosquare.PocoData.Sql.SqlPocoUtilities.html#Unosquare_PocoData_Sql_SqlPocoUtilities_DebugCommand_IDbCommand_System_Boolean_
+  commentId: M:Unosquare.PocoData.Sql.SqlPocoUtilities.DebugCommand(IDbCommand,System.Boolean)
+  fullName: Unosquare.PocoData.Sql.SqlPocoUtilities.DebugCommand(IDbCommand, System.Boolean)
+  nameWithType: SqlPocoUtilities.DebugCommand(IDbCommand, Boolean)
+- uid: Unosquare.PocoData.Sql.SqlPocoUtilities.DebugCommand*
+  name: DebugCommand
+  href: api/Unosquare.PocoData.Sql.SqlPocoUtilities.html#Unosquare_PocoData_Sql_SqlPocoUtilities_DebugCommand_
+  commentId: Overload:Unosquare.PocoData.Sql.SqlPocoUtilities.DebugCommand
+  isSpec: "True"
+  fullName: Unosquare.PocoData.Sql.SqlPocoUtilities.DebugCommand
+  nameWithType: SqlPocoUtilities.DebugCommand
