@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "files": [ "**/*.cs" ],
+          "files": [ "Unosquare.PocoData/**/*.cs", "Unosquare.PocoData.Sql/**/*.cs" ],
           "exclude": [ "**/bin/**", "**/obj/**" ]
         }
       ],
