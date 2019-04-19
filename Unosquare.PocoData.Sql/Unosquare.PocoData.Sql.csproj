@@ -31,7 +31,7 @@
     <Title>PocoData: The no-frills micro ORM for SQL Server</Title>
     <Description>PocoData.Sql is a MS SQL implementation of the PocoData micro ORM. Because sometimes you need simpler, lighter data access methods.</Description>
     <Copyright>Mario Di Vece, and Contributors, (C) 2018-2019</Copyright>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/unosquare/pocodata</PackageProjectUrl>
     <PackageIconUrl>https://github.com/unosquare/pocodata/raw/master/pocodata.png</PackageIconUrl>
@@ -41,11 +41,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\LICENSE" Link="LICENSE" />
+    <None Include="$(SolutionDir)\LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.7.0-preview3.19128.7" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
