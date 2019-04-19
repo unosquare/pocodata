@@ -1,7 +1,6 @@
 version: '0.9.{build}'
 image: 
-- Visual Studio 2017
-- Ubuntu
+- Visual Studio 2019 Preview
 build:
   project: Unosquare.PocoData.sln
 configuration:
