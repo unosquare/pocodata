@@ -54,16 +54,16 @@
         /// <summary>
         /// Provides column metadata for the specified table-mapped type.
         /// </summary>
-        /// <param name="T">The table-mapped type.</param>
+        /// <param name="mappedType">The table-mapped type.</param>
         /// <returns>A list with column metadata.</returns>
-        public IReadOnlyList<ColumnMetadata> Columns(Type T)
+        public IReadOnlyList<ColumnMetadata> Columns(Type mappedType)
         {
             lock (SyncLock)
             {
-                if (ColumnMaps.ContainsKey(T))
-                    return ColumnMaps[T];
+                if (ColumnMaps.ContainsKey(mappedType))
+                    return ColumnMaps[mappedType];
 
-                var properties = TypeCache.RetrieveAllProperties(T).ToArray();
+                var properties = TypeCache.RetrieveAllProperties(mappedType).ToArray();
                 var result = new List<ColumnMetadata>(properties.Length);
                 foreach (var property in properties)
                 {
@@ -118,7 +118,7 @@
                     result.Add(new ColumnMetadata(property, columnName, length, isNullable, isKey, isGenerated));
                 }
 
-                ColumnMaps[T] = result;
+                ColumnMaps[mappedType] = result;
                 return result;
             }
         }
@@ -128,24 +128,25 @@
         /// </summary>
         /// <typeparam name="T">The table-mapped type.</typeparam>
         /// <returns>A list with column metadata.</returns>
-        public IReadOnlyList<ColumnMetadata> Columns<T>() where T : class => Columns(typeof(T));
+        public IReadOnlyList<ColumnMetadata> Columns<T>()
+            where T : class => Columns(typeof(T));
 
         /// <summary>
         /// Provides table metadata for the specified table-mapped type.
         /// </summary>
-        /// <param name="T">The table-mapped type.</param>
+        /// <param name="mappedType">The table-mapped type.</param>
         /// <returns>The table attributes applied to the type.</returns>
-        public TableAttribute Table(Type T)
+        public TableAttribute Table(Type mappedType)
         {
             lock (SyncLock)
             {
-                if (TableMaps.ContainsKey(T))
-                    return TableMaps[T];
+                if (TableMaps.ContainsKey(mappedType))
+                    return TableMaps[mappedType];
 
-                var table = T.GetCustomAttributes(typeof(TableAttribute), true).FirstOrDefault() as TableAttribute
-                    ?? new TableAttribute(T.Name);
+                var table = mappedType.GetCustomAttributes(typeof(TableAttribute), true).FirstOrDefault() as TableAttribute
+                    ?? new TableAttribute(mappedType.Name);
 
-                TableMaps[T] = table;
+                TableMaps[mappedType] = table;
                 return table;
             }
         }
@@ -155,15 +156,16 @@
         /// </summary>
         /// <typeparam name="T">The table-mapped type.</typeparam>
         /// <returns>The table attributes applied to the type.</returns>
-        public TableAttribute Table<T>() where T : class => Table(typeof(T));
+        public TableAttribute Table<T>()
+            where T : class => Table(typeof(T));
 
         /// <summary>
         /// Validates that the specified table-mapped type has appropriate attributes applied so it can be stored in its corresponding table.
         /// </summary>
-        /// <param name="T">The table-mapped type.</param>
-        public void Validate(Type T)
+        /// <param name="mappedType">The table-mapped type.</param>
+        public void Validate(Type mappedType)
         {
-            var columns = Columns(T);
+            var columns = Columns(mappedType);
             if (columns.Count(c => c.IsKeyColumn) <= 0)
                 throw new NotSupportedException("At leat a key column must be defined");
 
@@ -183,6 +185,33 @@
         /// Validates that the specified table-mapped type has appropriate attributes applied so it can be stored in its corresponding table.
         /// </summary>
         /// <typeparam name="T">The table-mapped type.</typeparam>
-        public void Validate<T>() where T : class => Validate(typeof(T));
+        public void Validate<T>()
+            where T : class => Validate(typeof(T));
+
+        /// <summary>
+        /// Gets the column metadata.
+        /// </summary>
+        /// <param name="mappedType">The table-mapped type.</param>
+        /// <param name="propertyName">Name of the property.</param>
+        /// <returns>The column metadata.</returns>
+        internal ColumnMetadata GetColumnMetadata(Type mappedType, string propertyName)
+        {
+            lock (SyncLock)
+            {
+                var currentList = Columns(mappedType);
+                var currentItemIndex = -1;
+
+                for (var i = 0; i < currentList.Count; i++)
+                {
+                    if (currentList[i].Property.Name != propertyName)
+                        continue;
+
+                    currentItemIndex = i;
+                    break;
+                }
+
+                return currentItemIndex >= 0 ? currentList[currentItemIndex] : null;
+            }
+        }
     }
 }

@@ -1,11 +1,58 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Assembly Properties -->
+    <RootNamespace>Unosquare.PocoData.Sql</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>Unosquare.PocoData.Sql</AssemblyName>
+    <Product>PocoData for MS SQL Server.</Product>
+    <Company>Unosquare SA de CV</Company>
+    <CodeAnalysisRuleSet>$(SolutionDir)\Analyzers.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <NeutralLanguage>en</NeutralLanguage>
+
+    <!-- Assembly Version Information -->
+    <AssemblyVersion>0.9.100.0</AssemblyVersion>
+    <FileVersion>0.9.100.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- NuGet Package Properties -->
+    <!-- https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets#pack-target -->
+    <PackageId>PocoData.Sql</PackageId>
+    <PackageVersion>0.9.100</PackageVersion>
+    <Version>0.9.100</Version>
+    <Authors>Mario Di Vece, and Contributors to the PocoData project</Authors>
+    <Title>PocoData: The no-frills micro ORM for SQL Server</Title>
+    <Description>PocoData.Sql is a MS SQL implementation of the PocoData micro ORM. Because sometimes you need simpler, lighter data access methods.</Description>
+    <Copyright>Mario Di Vece, and Contributors, (C) 2018-2019</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/unosquare/pocodata</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/unosquare/pocodata/raw/master/pocodata.png</PackageIconUrl>
+    <PackageTags>dal poco sql ado command data access entity</PackageTags>
+    <RepositoryUrl>https://github.com/unosquare/pocodata</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\LICENSE" Link="LICENSE" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.7.0-preview3.19128.7" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.0">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -13,3 +60,4 @@
   </ItemGroup>
 
 </Project>
+

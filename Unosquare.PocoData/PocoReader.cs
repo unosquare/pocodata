@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Globalization;
 
     /// <summary>
     /// Provides helper methods to read row data into POCOs.
@@ -14,7 +15,7 @@
         /// </summary>
         private PocoReader()
         {
-            // placeholder
+            Schema = PocoSchema.Instance;
         }
 
         /// <summary>
@@ -25,19 +26,19 @@
         /// <summary>
         /// Gets object that stores table and column mappings.
         /// </summary>
-        private PocoSchema Schema => PocoSchema.Instance;
+        private PocoSchema Schema { get; }
 
         /// <summary>
         /// Reads data reader data into the corresponding table-mapped object.
         /// </summary>
         /// <param name="reader">The reader.</param>
-        /// <param name="result">The table-mapped object.</param>
-        /// <returns>The table-mapped object.</returns>
+        /// <param name="item">The table-mapped object.</param>
+        /// <returns>The resulting table-mapped object.</returns>
         /// <exception cref="InvalidCastException">Unable to convert '{fieldValue.GetType().Name}' to '{property.NativeType.Name}' for column '{property.ColumnName}</exception>
-        public object ReadObject(IDataReader reader, object result)
+        public object ReadObject(IDataReader reader, object item)
         {
-            var T = result.GetType();
-            var map = Schema.Columns(T);
+            var itemType = item.GetType();
+            var map = Schema.Columns(itemType);
             var fieldNames = new List<string>(reader.FieldCount);
             for (var i = 0; i < reader.FieldCount; i++)
                 fieldNames.Add(reader.GetName(i));
@@ -49,21 +50,21 @@
 
                 if (reader.IsDBNull(ordinal))
                 {
-                    property.SetValue(result, property.GetDefault());
+                    property.SetValue(item, property.GetDefault());
                     continue;
                 }
 
                 var fieldValue = reader.GetValue(ordinal);
                 try
                 {
-                    property.SetValue(result, fieldValue);
+                    property.SetValue(item, fieldValue);
                 }
                 catch
                 {
                     try
                     {
-                        var propertyValue = Convert.ChangeType(fieldValue, property.NativeType);
-                        property.SetValue(result, propertyValue);
+                        var propertyValue = Convert.ChangeType(fieldValue, property.NativeType, CultureInfo.InvariantCulture);
+                        property.SetValue(item, propertyValue);
                     }
                     catch (Exception ex)
                     {
@@ -74,7 +75,7 @@
                 }
             }
 
-            return result;
+            return item;
         }
 
         /// <summary>

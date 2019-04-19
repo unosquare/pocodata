@@ -24,7 +24,7 @@
             public EmployeesTable(IPocoDb db)
                 : base(db, true)
             {
-
+                // placeholder
             }
 
             public async Task<IEnumerable<Employee>> GetYoungEmployeesAsync()

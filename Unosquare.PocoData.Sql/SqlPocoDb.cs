@@ -1,8 +1,6 @@
 ﻿namespace Unosquare.PocoData.Sql
 {
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
     using System.Data;
     using System.Data.SqlClient;
     using System.Threading.Tasks;
@@ -33,6 +31,7 @@
         /// </summary>
         private SqlPocoDb()
         {
+            Schema = PocoSchema.Instance;
             Definition = new SqlPocoDefinition(this);
             Commands = new SqlPocoCommands(this);
         }
@@ -57,8 +56,10 @@
             }
         }
 
-        /// <inheritdoc />
-        public PocoSchema Schema => PocoSchema.Instance;
+        /// <summary>
+        /// Provides access to the global schema store.
+        /// </summary>
+        public PocoSchema Schema { get; }
 
         /// <inheritdoc />
         public PocoReader ObjectReader => PocoReader.Instance;
@@ -69,10 +70,11 @@
         /// <inheritdoc />
         public IPocoCommands Commands { get; }
 
-        /// <inheritdoc />
-        public PocoTableProxy<T> TableProxy<T>() where T : class, new() => new PocoTableProxy<T>(this, false);
-
-        /// <inheritdoc />
+        /// <summary>
+        /// Asynchronously opens the connection in a new database container object.
+        /// </summary>
+        /// <param name="connectionString">The connection string.</param>
+        /// <returns>The database container object.</returns>
         public static async Task<SqlPocoDb> OpenAsync(string connectionString)
         {
             var result = new SqlPocoDb(connectionString)
@@ -80,13 +82,20 @@
                 SqlConnection = new SqlConnection(connectionString)
             };
 
-            await result.SqlConnection.OpenAsync();
+            await result.SqlConnection.OpenAsync().ConfigureAwait(false);
             return result;
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Asynchronously opens the connection in a new database container object.
+        /// </summary>
+        /// <param name="host">The host.</param>
+        /// <param name="username">The username.</param>
+        /// <param name="password">The password.</param>
+        /// <param name="databaseName">Name of the database.</param>
+        /// <returns>The database container object.</returns>
         public static async Task<SqlPocoDb> OpenAsync(string host, string username, string password, string databaseName) =>
-            await OpenAsync($"Data Source={host}; User ID={username}; Password={password}; Initial Catalog={databaseName}; MultipleActiveResultSets=True;");
+            await OpenAsync($"Data Source={host}; User ID={username}; Password={password}; Initial Catalog={databaseName}; MultipleActiveResultSets=True;").ConfigureAwait(false);
 
         /// <summary>
         /// Asynchronously opens a connection to the local server with integrated credentials and using the specified database name.
@@ -94,7 +103,7 @@
         /// <param name="databaseName">Name of the database.</param>
         /// <returns>The database container object.</returns>
         public static async Task<SqlPocoDb> OpenLocalAsync(string databaseName) =>
-            await OpenAsync($"Data Source=.; Integrated Security=True; Initial Catalog={databaseName}; MultipleActiveResultSets=True;");
+            await OpenAsync($"Data Source=.; Integrated Security=True; Initial Catalog={databaseName}; MultipleActiveResultSets=True;").ConfigureAwait(false);
 
         /// <summary>
         /// Opens the database using the specified connection string.
@@ -131,10 +140,18 @@
         public static SqlPocoDb OpenLocal(string databaseName) =>
             Open($"Data Source=.; Integrated Security=True; Initial Catalog={databaseName}; MultipleActiveResultSets=True;");
 
+        /// <inheritdoc />
+        public PocoTableProxy<T> TableProxy<T>()
+            where T : class, new() => new PocoTableProxy<T>(this, false);
+
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
         /// </summary>
-        public void Dispose() => Dispose(true);
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
         /// <summary>
         /// Releases unmanaged and - optionally - managed resources.

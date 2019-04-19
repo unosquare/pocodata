@@ -37,55 +37,62 @@
         /// </summary>
         /// <typeparam name="T">The type mapped to a database table.</typeparam>
         /// <returns>The table proxy.</returns>
-        PocoTableProxy<T> TableProxy<T>() where T : class, new();
+        PocoTableProxy<T> TableProxy<T>()
+            where T : class, new();
 
         /// <summary>
         /// Selects all records of the given table-mapped type.
         /// </summary>
-        /// <param name="T">The table-mapped type.</param>
+        /// <param name="mappedType">The table-mapped type.</param>
         /// <returns>An enumerable collection of the records that were retrieved</returns>
-        IEnumerable SelectAll(Type T);
+        IEnumerable SelectAll(Type mappedType);
 
         /// <summary>
         /// Asynchronously selects all records of the given table-mapped type.
         /// </summary>
-        /// <param name="T">The table-mapped type.</param>
+        /// <param name="mappedType">The table-mapped type.</param>
         /// <returns>An enumerable collection of the records that were retrieved</returns>
-        Task<IEnumerable> SelectAllAsync(Type T);
+        Task<IEnumerable> SelectAllAsync(Type mappedType);
 
         /// <summary>
         /// Selects all records of the given table-mapped type.
         /// </summary>
-        /// <typeparam name="T">The table-mapped type.</param>
-        /// <returns>An enumerable collection of the records that were retrieved</returns>
-        IEnumerable<T> SelectAll<T>() where T : class, new();
+        /// <typeparam name="T">The table-mapped type.</typeparam>
+        /// <returns>
+        /// An enumerable collection of the records that were retrieved
+        /// </returns>
+        IEnumerable<T> SelectAll<T>()
+            where T : class, new();
 
         /// <summary>
         /// Asynchronously selects all records of the given table-mapped type.
         /// </summary>
-        /// <typeparam name="T">The table-mapped type.</param>
-        /// <returns>An enumerable collection of the records that were retrieved</returns>
-        Task<IEnumerable<T>> SelectAllAsync<T>() where T : class, new();
+        /// <typeparam name="T">The table-mapped type.</typeparam>
+        /// <returns>
+        /// An enumerable collection of the records that were retrieved
+        /// </returns>
+        Task<IEnumerable<T>> SelectAllAsync<T>()
+            where T : class, new();
 
         /// <summary>
         /// Executes the specified command and reads the results as records of the given table-mapped type.
         /// </summary>
-        /// <param name="T">The table-mapped type.</param>
+        /// <param name="mappedType">The table-mapped type.</param>
         /// <param name="command">The command.</param>
         /// <returns>
         /// An enumerable collection of the records that were retrieved
         /// </returns>
-        IEnumerable SelectMany(Type T, IDbCommand command);
+        IEnumerable SelectMany(Type mappedType, IDbCommand command);
 
         /// <summary>
         /// Asynchronously executes the specified command and reads the results as records of the given table-mapped type.
         /// </summary>
-        /// <param name="T">The table-mapped type.</param>
+        /// <param name="mappedType">The table-mapped type.</param>
         /// <param name="command">The command.</param>
         /// <returns>
         /// An enumerable collection of the records that were retrieved
         /// </returns>
-        Task<IEnumerable> SelectManyAsync(Type T, IDbCommand command);
+        Task<IEnumerable> SelectManyAsync(Type mappedType, IDbCommand command);
 
         /// <summary>
         /// Executes the specified command and reads the results as records of the given table-mapped type.
@@ -95,7 +102,8 @@
         /// <returns>
         /// An enumerable collection of the records that were retrieved
         /// </returns>
-        IEnumerable<T> SelectMany<T>(IDbCommand command) where T : class, new();
+        IEnumerable<T> SelectMany<T>(IDbCommand command)
+            where T : class, new();
 
         /// <summary>
         /// Asynchronously executes the specified command and reads the results as records of the given table-mapped type.
@@ -105,7 +113,8 @@
         /// <returns>
         /// An enumerable collection of the records that were retrieved
         /// </returns>
-        Task<IEnumerable<T>> SelectManyAsync<T>(IDbCommand command) where T : class, new();
+        Task<IEnumerable<T>> SelectManyAsync<T>(IDbCommand command)
+            where T : class, new();
 
         /// <summary>
         /// Selects a single record with matching keys of the given object and updates it with record data.
@@ -190,29 +199,29 @@
         /// <summary>
         /// Asynchronously deletes the row with matching object key values.
         /// </summary>
-        /// <param name="obj">The object to delete from the table.</param>
+        /// <param name="item">The object to delete from the table.</param>
         /// <returns>The number of affected rows.</returns>
-        Task<int> DeleteAsync(object obj);
+        Task<int> DeleteAsync(object item);
 
         /// <summary>
         /// Deletes the row with matching object key values.
         /// </summary>
-        /// <param name="obj">The object to delete from the table.</param>
+        /// <param name="item">The object to delete from the table.</param>
         /// <returns>The number of affected rows.</returns>
-        int Delete(object obj);
+        int Delete(object item);
 
         /// <summary>
         /// Counts all rows for the given table-mapped type.
         /// </summary>
-        /// <param name="T">The table-mapped type.</param>
+        /// <param name="mappedType">The table-mapped type.</param>
         /// <returns>The number of rows in the table.</returns>
-        int CountAll(Type T);
+        int CountAll(Type mappedType);
 
         /// <summary>
         /// Asynchronously counts all rows for the given table-mapped type.
         /// </summary>
-        /// <param name="T">The table-mapped type.</param>
+        /// <param name="mappedType">The table-mapped type.</param>
         /// <returns>The number of rows in the table.</returns>
-        Task<int> CountAllAsync(Type T);
+        Task<int> CountAllAsync(Type mappedType);
     }
 }

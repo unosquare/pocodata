@@ -25,7 +25,7 @@
         /// </summary>
         /// <param name="name">The name.</param>
         public TableAttribute(string name)
-            : this (name, string.Empty)
+            : this(name, string.Empty)
         {
             // placeholder
         }
@@ -33,12 +33,12 @@
         /// <summary>
         /// Gets the name of the table the class maps to.
         /// </summary>
-        public string Name { get; }
+        public string Name { get; internal set; }
 
         /// <summary>
         /// Gets the schema of the table this class maps to.
         /// </summary>
-        public string Schema { get; }
+        public string Schema { get; internal set; }
 
         /// <summary>
         /// Gets the qualified name of the table including schema.

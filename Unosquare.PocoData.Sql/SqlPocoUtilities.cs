@@ -18,18 +18,18 @@
         /// <param name="parameterName">Name of the parameter.</param>
         /// <param name="value">The value.</param>
         /// <param name="size">The size.</param>
-        /// <returns></returns>
+        /// <returns>The SQL Parameter.</returns>
         public static SqlParameter AddParameter(this SqlCommand command, string parameterName, object value, int size = -1)
         {
-            var T = value.GetType();
+            var valueType = value.GetType();
             var param = command.CreateParameter();
             param.ParameterName = parameterName;
             param.Value = value ?? DBNull.Value;
 
-            if (value != null && DbTypes.CanMap(T))
-                param.SqlDbType = DbTypes.Map(T);
+            if (value != null && DbTypes.CanMap(valueType))
+                param.SqlDbType = DbTypes.Map(valueType);
 
-            if (size > 0 && T == typeof(string))
+            if (size > 0 && valueType == typeof(string))
                 param.Size = size;
 
             command.Parameters.Add(param);
@@ -57,19 +57,19 @@
                     param = command.CreateParameter();
                     command.Parameters.Add(param);
                 }
-                
+
                 var value = col.GetValue(item);
                 param.Value = value ?? DBNull.Value;
 
                 if (!isNew) continue;
-                
+
                 param.ParameterName = col.ParameterName;
-                var T = col.NativeType;
+                var nativeType = col.NativeType;
 
-                if (DbTypes.CanMap(T))
-                    param.SqlDbType = DbTypes.Map(T);
+                if (DbTypes.CanMap(nativeType))
+                    param.SqlDbType = DbTypes.Map(nativeType);
 
-                if (T == typeof(string) && col.StringLength > 0)
+                if (nativeType == typeof(string) && col.StringLength > 0)
                     param.Size = col.StringLength;
             }
         }

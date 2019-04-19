@@ -20,24 +20,25 @@
         /// <param name="parent">The parent database container object.</param>
         internal SqlPocoDefinition(SqlPocoDb parent)
         {
+            Schema = PocoSchema.Instance;
             Parent = parent;
         }
 
         private SqlConnection Connection => Parent.Connection as SqlConnection;
 
-        private PocoSchema Schema => PocoSchema.Instance;
+        private PocoSchema Schema { get; }
 
         /// <inheritdoc />
-        public async Task<int> CreateTableAsync(Type T)
+        public async Task<int> CreateTableAsync(Type mappedType)
         {
-            var table = Schema.Table(T);
-            var columns = Schema.Columns(T).Where(c => !c.IsKeyColumn);
-            var primaryKeyCols = Schema.Columns(T).Where(c => c.IsKeyColumn);
+            var table = Schema.Table(mappedType);
+            var columns = Schema.Columns(mappedType).Where(c => !c.IsKeyColumn);
+            var primaryKeyCols = Schema.Columns(mappedType).Where(c => c.IsKeyColumn);
 
             var columnDefs = new List<string>(64);
             foreach (var c in primaryKeyCols)
             {
-                var sqlType = DbTypes.Map(c.NativeType).ToString().ToLowerInvariant();
+                var sqlType = DbTypes.Map(c.NativeType).ToString().ToUpperInvariant();
                 if (c.NativeType == typeof(string))
                     sqlType = $"{sqlType} ({c.StringLength})";
 
@@ -46,7 +47,7 @@
 
             foreach (var c in columns)
             {
-                var sqlType = DbTypes.Map(c.NativeType).ToString().ToLowerInvariant();
+                var sqlType = DbTypes.Map(c.NativeType).ToString().ToUpperInvariant();
                 if (c.NativeType == typeof(string))
                     sqlType = $"{sqlType} ({c.StringLength})";
 
@@ -60,40 +61,40 @@
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = createTable;
-            return await command.ExecuteNonQueryAsync();
+            return await command.ExecuteNonQueryAsync().ConfigureAwait(false);
         }
 
         /// <inheritdoc />
-        public async Task<int> CreateTableAsync<T>() => await CreateTableAsync(typeof(T));
+        public async Task<int> CreateTableAsync<T>() => await CreateTableAsync(typeof(T)).ConfigureAwait(false);
 
         /// <inheritdoc />
-        public async Task<bool> TableExistsAsync(Type T)
+        public async Task<bool> TableExistsAsync(Type mappedType)
         {
-            var table = Schema.Table(T);
+            var table = Schema.Table(mappedType);
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = "SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = @Schema AND TABLE_NAME = @TableName";
-            command.AddParameter("@Schema", table.Schema);
+            command.AddParameter("@Schema", string.IsNullOrWhiteSpace(table.Schema) ? "dbo" : table.Schema);
             command.AddParameter("@TableName", table.Name);
 
-            var result = await command.ExecuteScalarAsync();
+            var result = await command.ExecuteScalarAsync().ConfigureAwait(false);
             return (int)result > 0;
         }
 
         /// <inheritdoc />
-        public async Task<bool> TableExistsAsync<T>() => await TableExistsAsync(typeof(T));
+        public async Task<bool> TableExistsAsync<T>() => await TableExistsAsync(typeof(T)).ConfigureAwait(false);
 
         /// <inheritdoc />
-        public async Task DropTableAsync(Type T)
+        public async Task DropTableAsync(Type mappedType)
         {
-            var table = Schema.Table(T);
+            var table = Schema.Table(mappedType);
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
             command.CommandText = $"DROP TABLE {table.QualifiedName}";
-            await command.ExecuteNonQueryAsync();
+            await command.ExecuteNonQueryAsync().ConfigureAwait(false);
         }
 
         /// <inheritdoc />
-        public async Task DropTableAsync<T>() => await DropTableAsync(typeof(T));
+        public async Task DropTableAsync<T>() => await DropTableAsync(typeof(T)).ConfigureAwait(false);
     }
 }

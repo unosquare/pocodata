@@ -24,43 +24,44 @@
 
         internal SqlPocoCommands(SqlPocoDb parent)
         {
+            Schema = PocoSchema.Instance;
             Parent = parent;
         }
 
-        private PocoSchema Schema => PocoSchema.Instance;
+        private PocoSchema Schema { get; }
 
         private SqlConnection Connection => Parent.Connection as SqlConnection;
 
         /// <inheritdoc />
-        public string SelectAllCommandText(Type T)
+        public string SelectAllCommandText(Type mappedType)
         {
             lock (SyncLock)
             {
-                if (SelectAllCommandTexts.ContainsKey(T))
-                    return SelectAllCommandTexts[T];
+                if (SelectAllCommandTexts.ContainsKey(mappedType))
+                    return SelectAllCommandTexts[mappedType];
 
-                var table = Schema.Table(T);
-                var columns = Schema.Columns(T);
+                var table = Schema.Table(mappedType);
+                var columns = Schema.Columns(mappedType);
                 var columnNames = columns.Select(c => c.QualifiedName);
 
                 var commandText =
                     $"SELECT {string.Join(", ", columnNames)} FROM {table.QualifiedName}";
 
-                SelectAllCommandTexts[T] = commandText;
+                SelectAllCommandTexts[mappedType] = commandText;
                 return commandText;
             }
         }
 
         /// <inheritdoc />
-        public string SelectSingleCommandText(Type T)
+        public string SelectSingleCommandText(Type mappedType)
         {
             lock (SyncLock)
             {
-                if (SelectSingleCommandTexts.ContainsKey(T))
-                    return SelectSingleCommandTexts[T];
+                if (SelectSingleCommandTexts.ContainsKey(mappedType))
+                    return SelectSingleCommandTexts[mappedType];
 
-                var table = Schema.Table(T);
-                var columns = Schema.Columns(T);
+                var table = Schema.Table(mappedType);
+                var columns = Schema.Columns(mappedType);
 
                 var columnNames = columns.Select(c => c.QualifiedName);
                 var parameterNames = columns.Where(c => c.IsKeyColumn).Select(c => $"{c.QualifiedName} = {c.ParameterName}");
@@ -68,21 +69,21 @@
                 var commandText =
                     $"SELECT {string.Join(", ", columnNames)} FROM {table.QualifiedName} WHERE {string.Join(" AND ", parameterNames)}";
 
-                SelectSingleCommandTexts[T] = commandText;
+                SelectSingleCommandTexts[mappedType] = commandText;
                 return commandText;
             }
         }
 
         /// <inheritdoc />
-        public string InsertCommandText(Type T)
+        public string InsertCommandText(Type mappedType)
         {
             lock (SyncLock)
             {
-                if (InsertCommandTexts.ContainsKey(T))
-                    return InsertCommandTexts[T];
+                if (InsertCommandTexts.ContainsKey(mappedType))
+                    return InsertCommandTexts[mappedType];
 
-                var table = Schema.Table(T);
-                var columns = Schema.Columns(T).Where(c => c.IsKeyGenerated == false);
+                var table = Schema.Table(mappedType);
+                var columns = Schema.Columns(mappedType).Where(c => c.IsKeyGenerated == false);
 
                 var columnNames = columns.Select(c => c.QualifiedName);
                 var parameterNames = columns.Select(c => c.ParameterName);
@@ -90,22 +91,22 @@
                 var commandText =
                     $"INSERT INTO {table.QualifiedName} ({string.Join(", ", columnNames)}) VALUES ({string.Join(", ", parameterNames)}) SELECT SCOPE_IDENTITY()";
 
-                InsertCommandTexts[T] = commandText;
+                InsertCommandTexts[mappedType] = commandText;
                 return commandText;
             }
         }
 
         /// <inheritdoc />
-        public string UpdateCommandText(Type T)
+        public string UpdateCommandText(Type mappedType)
         {
             lock (SyncLock)
             {
-                if (UpdateCommandTexts.ContainsKey(T))
-                    return UpdateCommandTexts[T];
+                if (UpdateCommandTexts.ContainsKey(mappedType))
+                    return UpdateCommandTexts[mappedType];
 
-                var table = Schema.Table(T);
-                var setColumns = Schema.Columns(T).Where(c => c.IsKeyGenerated == false && c.IsKeyColumn == false);
-                var keyColumns = Schema.Columns(T).Where(c => c.IsKeyColumn);
+                var table = Schema.Table(mappedType);
+                var setColumns = Schema.Columns(mappedType).Where(c => c.IsKeyGenerated == false && c.IsKeyColumn == false);
+                var keyColumns = Schema.Columns(mappedType).Where(c => c.IsKeyColumn);
 
                 var setArgument = setColumns.Select(col => $"{col.QualifiedName} = {col.ParameterName}");
                 var keyArgument = keyColumns.Select(col => $"{col.QualifiedName} = {col.ParameterName}");
@@ -113,103 +114,103 @@
                 var commandText =
                     $"UPDATE {table.QualifiedName} SET {string.Join(", ", setArgument)} WHERE {string.Join(" AND ", keyArgument)}";
 
-                UpdateCommandTexts[T] = commandText;
+                UpdateCommandTexts[mappedType] = commandText;
                 return commandText;
             }
         }
 
         /// <inheritdoc />
-        public string DeleteCommandText(Type T)
+        public string DeleteCommandText(Type mappedType)
         {
             lock (SyncLock)
             {
-                if (DeleteCommandTexts.ContainsKey(T))
-                    return DeleteCommandTexts[T];
+                if (DeleteCommandTexts.ContainsKey(mappedType))
+                    return DeleteCommandTexts[mappedType];
 
-                var table = Schema.Table(T);
-                var keyColumns = Schema.Columns(T).Where(c => c.IsKeyColumn);
+                var table = Schema.Table(mappedType);
+                var keyColumns = Schema.Columns(mappedType).Where(c => c.IsKeyColumn);
                 var keyArgument = keyColumns.Select(col => $"{col.QualifiedName} = {col.ParameterName}");
 
                 var commandText =
                     $"DELETE FROM {table.QualifiedName} WHERE {string.Join(" AND ", keyArgument)}";
 
-                DeleteCommandTexts[T] = commandText;
+                DeleteCommandTexts[mappedType] = commandText;
                 return commandText;
             }
         }
 
         /// <inheritdoc />
-        public string CountAllCommandText(Type T) =>
-            $"SELECT COUNT (*) FROM {Schema.Table(T).QualifiedName}";
+        public string CountAllCommandText(Type mappedType) =>
+            $"SELECT COUNT (*) FROM {Schema.Table(mappedType).QualifiedName}";
 
         /// <inheritdoc />
-        public IDbCommand CreateSelectAllCommand(Type T)
+        public IDbCommand CreateSelectAllCommand(Type mappedType)
         {
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
-            command.CommandText = SelectAllCommandText(T);
+            command.CommandText = SelectAllCommandText(mappedType);
             return command;
         }
 
         /// <inheritdoc />
-        public IDbCommand CreateSelectSingleCommand(object obj)
+        public IDbCommand CreateSelectSingleCommand(object item)
         {
-            var T = obj.GetType();
-            var columns = Schema.Columns(T);
+            var mappedTypeT = item.GetType();
+            var columns = Schema.Columns(mappedTypeT);
 
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
-            command.CommandText = SelectSingleCommandText(T);
-            command.AddOrUpdateParameters(columns.Where(c => c.IsKeyColumn), obj);
+            command.CommandText = SelectSingleCommandText(mappedTypeT);
+            command.AddOrUpdateParameters(columns.Where(c => c.IsKeyColumn), item);
             return command;
         }
 
         /// <inheritdoc />
-        public IDbCommand CreateInsertCommand(object obj)
+        public IDbCommand CreateInsertCommand(object item)
         {
-            var T = obj.GetType();
-            var columns = Schema.Columns(T);
+            var mappedType = item.GetType();
+            var columns = Schema.Columns(mappedType);
 
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
-            command.CommandText = InsertCommandText(T);
-            command.AddOrUpdateParameters(columns.Where(c => !c.IsKeyGenerated), obj);
+            command.CommandText = InsertCommandText(mappedType);
+            command.AddOrUpdateParameters(columns.Where(c => !c.IsKeyGenerated), item);
             return command;
         }
 
         /// <inheritdoc />
-        public IDbCommand CreateUpdateCommand(object obj)
+        public IDbCommand CreateUpdateCommand(object item)
         {
-            var T = obj.GetType();
-            var columns = Schema.Columns(T);
+            var mappedType = item.GetType();
+            var columns = Schema.Columns(mappedType);
 
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
-            command.CommandText = UpdateCommandText(T);
-            command.AddOrUpdateParameters(columns, obj);
+            command.CommandText = UpdateCommandText(mappedType);
+            command.AddOrUpdateParameters(columns, item);
             return command;
         }
 
         /// <inheritdoc />
-        public IDbCommand CreateDeleteCommand(object obj)
+        public IDbCommand CreateDeleteCommand(object item)
         {
-            var T = obj.GetType();
-            var keyColumns = Schema.Columns(T).Where(c => c.IsKeyColumn);
+            var mappedType = item.GetType();
+            var keyColumns = Schema.Columns(mappedType).Where(c => c.IsKeyColumn);
 
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
-            command.CommandText = DeleteCommandText(T);
-            command.AddOrUpdateParameters(keyColumns, obj);
+            command.CommandText = DeleteCommandText(mappedType);
+            command.AddOrUpdateParameters(keyColumns, item);
 
             return command;
         }
 
         /// <inheritdoc />
-        public IDbCommand CreateCountAllCommand(Type T)
+        public IDbCommand CreateCountAllCommand(Type mappedType)
         {
             var command = Connection.CreateCommand();
             command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
-            command.CommandText = CountAllCommandText(T);
+            command.CommandText = CountAllCommandText(mappedType);
 
             return command;
         }

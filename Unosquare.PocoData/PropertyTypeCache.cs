@@ -15,16 +15,16 @@
         /// <summary>
         /// Retrieves all properties of the given type.
         /// </summary>
-        /// <param name="T">The type to retrieve properties from.</param>
+        /// <param name="mappedType">The type to retrieve properties from.</param>
         /// <returns>A list of property information objects.</returns>
-        public IReadOnlyList<PropertyInfo> RetrieveAllProperties(Type T)
+        public IReadOnlyList<PropertyInfo> RetrieveAllProperties(Type mappedType)
         {
             lock (SyncLock)
             {
-                if (Properties.ContainsKey(T)) return Properties[T];
+                if (Properties.ContainsKey(mappedType)) return Properties[mappedType];
 
-                var p = T.GetProperties(BindingFlags.Public | BindingFlags.Instance);
-                Properties[T] = p;
+                var p = mappedType.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+                Properties[mappedType] = p;
                 return p;
             }
         }

@@ -1,30 +1,33 @@
 ﻿namespace Unosquare.PocoData.Sql
 {
-    using Annotations;
     using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Data;
     using System.Data.SqlClient;
+    using System.Globalization;
     using System.Linq;
     using System.Threading.Tasks;
 
     public partial class SqlPocoDb
     {
         /// <inheritdoc />
-        public IEnumerable SelectAll(Type T) => SelectMany(T, Commands.CreateSelectAllCommand(T));
+        public IEnumerable SelectAll(Type mappedType) => SelectMany(mappedType, Commands.CreateSelectAllCommand(mappedType));
 
         /// <inheritdoc />
-        public async Task<IEnumerable> SelectAllAsync(Type T) => await SelectManyAsync(T, Commands.CreateSelectAllCommand(T));
+        public async Task<IEnumerable> SelectAllAsync(Type mappedType) =>
+            await SelectManyAsync(mappedType, Commands.CreateSelectAllCommand(mappedType)).ConfigureAwait(false);
 
         /// <inheritdoc />
-        public IEnumerable<T> SelectAll<T>() where T : class, new() => SelectAll(typeof(T)).Cast<T>();
+        public IEnumerable<T> SelectAll<T>()
+            where T : class, new() => SelectAll(typeof(T)).Cast<T>();
 
         /// <inheritdoc />
-        public async Task<IEnumerable<T>> SelectAllAsync<T>() where T : class, new() => (await SelectAllAsync(typeof(T))).Cast<T>();
+        public async Task<IEnumerable<T>> SelectAllAsync<T>()
+            where T : class, new() => (await SelectAllAsync(typeof(T)).ConfigureAwait(false)).Cast<T>();
 
         /// <inheritdoc />
-        public IEnumerable SelectMany(Type T, IDbCommand command)
+        public IEnumerable SelectMany(Type mappedType, IDbCommand command)
         {
             var result = new List<object>(4096);
 
@@ -32,7 +35,7 @@
             {
                 while (reader.Read())
                 {
-                    var item = Activator.CreateInstance(T);
+                    var item = Activator.CreateInstance(mappedType);
                     result.Add(ObjectReader.ReadObject(reader, item));
                 }
             }
@@ -41,16 +44,16 @@
         }
 
         /// <inheritdoc />
-        public async Task<IEnumerable> SelectManyAsync(Type T, IDbCommand command)
+        public async Task<IEnumerable> SelectManyAsync(Type mappedType, IDbCommand command)
         {
             var result = new List<object>(4096);
             var sqlCommand = command as SqlCommand;
 
-            using (var reader = await sqlCommand.ExecuteReaderAsync())
+            using (var reader = await sqlCommand.ExecuteReaderAsync().ConfigureAwait(false))
             {
-                while (await reader.ReadAsync())
+                while (await reader.ReadAsync().ConfigureAwait(false))
                 {
-                    var item = Activator.CreateInstance(T);
+                    var item = Activator.CreateInstance(mappedType);
                     result.Add(ObjectReader.ReadObject(reader, item));
                 }
             }
@@ -59,10 +62,12 @@
         }
 
         /// <inheritdoc />
-        public IEnumerable<T> SelectMany<T>(IDbCommand command) where T : class, new() => SelectMany(typeof(T), command).Cast<T>();
+        public IEnumerable<T> SelectMany<T>(IDbCommand command)
+            where T : class, new() => SelectMany(typeof(T), command).Cast<T>();
 
         /// <inheritdoc />
-        public async Task<IEnumerable<T>> SelectManyAsync<T>(IDbCommand command) where T : class, new() => (await SelectManyAsync(typeof(T), command)).Cast<T>();
+        public async Task<IEnumerable<T>> SelectManyAsync<T>(IDbCommand command)
+            where T : class, new() => (await SelectManyAsync(typeof(T), command).ConfigureAwait(false)).Cast<T>();
 
         /// <inheritdoc />
         public bool SelectSingle(object target)
@@ -86,9 +91,9 @@
         {
             var result = false;
             var command = Commands.CreateSelectSingleCommand(target) as SqlCommand;
-            using (var reader = await command.ExecuteReaderAsync())
+            using (var reader = await command.ExecuteReaderAsync().ConfigureAwait(false))
             {
-                if (await reader.ReadAsync())
+                if (await reader.ReadAsync().ConfigureAwait(false))
                 {
                     ObjectReader.ReadObject(reader, target);
                     result = true;
@@ -101,8 +106,8 @@
         /// <inheritdoc />
         public async Task<int> InsertAsync(object item, bool update)
         {
-            var T = item.GetType();
-            var columns = Schema.Columns(T);
+            var itemType = item.GetType();
+            var columns = Schema.Columns(itemType);
 
             var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
             object insertResult;
@@ -112,17 +117,19 @@
             {
                 insertCommand.Transaction = tran;
                 insertResult = generatedColumn == null
-                    ? await insertCommand.ExecuteNonQueryAsync()
-                    : await insertCommand.ExecuteScalarAsync();
-                generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType));
+                    ? await insertCommand.ExecuteNonQueryAsync().ConfigureAwait(false)
+                    : await insertCommand.ExecuteScalarAsync().ConfigureAwait(false);
+
+                generatedColumn?.SetValue(item,
+                    Convert.ChangeType(insertResult, generatedColumn.NativeType, CultureInfo.InvariantCulture));
 
                 if (update)
                 {
                     var selectCommand = Commands.CreateSelectSingleCommand(item) as SqlCommand;
                     selectCommand.Transaction = tran;
-                    using (var reader = await selectCommand.ExecuteReaderAsync())
+                    using (var reader = await selectCommand.ExecuteReaderAsync().ConfigureAwait(false))
                     {
-                        if (await reader.ReadAsync())
+                        if (await reader.ReadAsync().ConfigureAwait(false))
                             ObjectReader.ReadObject(reader, item);
                     }
                 }
@@ -136,8 +143,8 @@
         /// <inheritdoc />
         public int Insert(object item, bool update)
         {
-            var T = item.GetType();
-            var columns = Schema.Columns(T);
+            var itemType = item.GetType();
+            var columns = Schema.Columns(itemType);
 
             var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
             object insertResult;
@@ -149,7 +156,7 @@
                 insertResult = generatedColumn == null
                     ? insertCommand.ExecuteNonQuery()
                     : insertCommand.ExecuteScalar();
-                generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType));
+                generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType, CultureInfo.InvariantCulture));
 
                 if (update)
                 {
@@ -176,8 +183,8 @@
             var firstItem = items.FirstOrDefault();
             if (firstItem == null) return 0;
 
-            var T = firstItem.GetType();
-            var columns = Schema.Columns(T);
+            var mappedType = firstItem.GetType();
+            var columns = Schema.Columns(mappedType);
             var insertCommandColumns = columns.Where(c => !c.IsKeyGenerated);
             var selectCommandColumns = columns.Where(c => c.IsKeyColumn);
 
@@ -201,17 +208,17 @@
                     insertCommand.AddOrUpdateParameters(insertCommandColumns, item);
 
                     insertResult = generatedColumn == null
-                        ? await insertCommand.ExecuteNonQueryAsync()
-                        : await insertCommand.ExecuteScalarAsync();
+                        ? await insertCommand.ExecuteNonQueryAsync().ConfigureAwait(false)
+                        : await insertCommand.ExecuteScalarAsync().ConfigureAwait(false);
 
-                    generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType));
+                    generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType, CultureInfo.InvariantCulture));
 
                     if (update)
                     {
                         selectCommand.AddOrUpdateParameters(selectCommandColumns, item);
-                        using (var reader = await selectCommand.ExecuteReaderAsync())
+                        using (var reader = await selectCommand.ExecuteReaderAsync().ConfigureAwait(false))
                         {
-                            if (await reader.ReadAsync())
+                            if (await reader.ReadAsync().ConfigureAwait(false))
                                 ObjectReader.ReadObject(reader, item);
                         }
                     }
@@ -233,8 +240,8 @@
             var firstItem = items.FirstOrDefault();
             if (firstItem == null) return 0;
 
-            var T = firstItem.GetType();
-            var columns = Schema.Columns(T);
+            var mappedType = firstItem.GetType();
+            var columns = Schema.Columns(mappedType);
             var insertCommandColumns = columns.Where(c => !c.IsKeyGenerated);
             var selectCommandColumns = columns.Where(c => c.IsKeyColumn);
 
@@ -261,7 +268,7 @@
                         ? insertCommand.ExecuteNonQuery()
                         : insertCommand.ExecuteScalar();
 
-                    generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType));
+                    generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType, CultureInfo.InvariantCulture));
 
                     if (update)
                     {
@@ -284,7 +291,7 @@
 
         /// <inheritdoc />
         public async Task<int> UpdateAsync(object item) =>
-            await (Commands.CreateUpdateCommand(item) as SqlCommand).ExecuteNonQueryAsync();
+            await (Commands.CreateUpdateCommand(item) as SqlCommand).ExecuteNonQueryAsync().ConfigureAwait(false);
 
         /// <inheritdoc />
         public int Update(object item) =>
@@ -298,8 +305,8 @@
             var firstItem = items.FirstOrDefault();
             if (firstItem == null) return 0;
 
-            var T = firstItem.GetType();
-            var columns = Schema.Columns(T);
+            var mappedType = firstItem.GetType();
+            var columns = Schema.Columns(mappedType);
 
             // we will reuse the command
             var updateCommand = Commands.CreateUpdateCommand(firstItem) as SqlCommand;
@@ -312,7 +319,7 @@
                 foreach (var item in items)
                 {
                     updateCommand.AddOrUpdateParameters(columns, item);
-                    updateCount += await updateCommand.ExecuteNonQueryAsync();
+                    updateCount += await updateCommand.ExecuteNonQueryAsync().ConfigureAwait(false);
                 }
 
                 tran.Commit();
@@ -329,8 +336,8 @@
             var firstItem = items.FirstOrDefault();
             if (firstItem == null) return 0;
 
-            var T = firstItem.GetType();
-            var columns = Schema.Columns(T);
+            var mappedType = firstItem.GetType();
+            var columns = Schema.Columns(mappedType);
 
             // we will reuse the command
             var updateCommand = Commands.CreateUpdateCommand(firstItem) as SqlCommand;
@@ -353,17 +360,19 @@
         }
 
         /// <inheritdoc />
-        public async Task<int> DeleteAsync(object obj) =>
-            await (Commands.CreateDeleteCommand(obj) as SqlCommand).ExecuteNonQueryAsync();
+        public async Task<int> DeleteAsync(object item) =>
+            await (Commands.CreateDeleteCommand(item) as SqlCommand).ExecuteNonQueryAsync().ConfigureAwait(false);
 
         /// <inheritdoc />
-        public int Delete(object obj) =>
-            Commands.CreateDeleteCommand(obj).ExecuteNonQuery();
+        public int Delete(object item) =>
+            Commands.CreateDeleteCommand(item).ExecuteNonQuery();
 
         /// <inheritdoc />
-        public async Task<int> CountAllAsync(Type T) => Convert.ToInt32(await (Commands.CreateCountAllCommand(T) as SqlCommand).ExecuteScalarAsync());
+        public async Task<int> CountAllAsync(Type mappedType) =>
+            Convert.ToInt32(await (Commands.CreateCountAllCommand(mappedType) as SqlCommand).ExecuteScalarAsync().ConfigureAwait(false), CultureInfo.InvariantCulture);
 
         /// <inheritdoc />
-        public int CountAll(Type T) => Convert.ToInt32(Commands.CreateCountAllCommand(T).ExecuteScalar());
+        public int CountAll(Type mappedType) =>
+            Convert.ToInt32(Commands.CreateCountAllCommand(mappedType).ExecuteScalar(), CultureInfo.InvariantCulture);
     }
 }

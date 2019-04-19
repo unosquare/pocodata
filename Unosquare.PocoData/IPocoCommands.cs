@@ -11,52 +11,51 @@
         /// <summary>
         /// Gets the command text to select all records.
         /// </summary>
-        /// <param name="T">The type that is mapped to the database.</param>
+        /// <param name="mappedType">The type that is mapped to the database.</param>
         /// <returns>The generated command text.</returns>
-        string SelectAllCommandText(Type T);
+        string SelectAllCommandText(Type mappedType);
 
         /// <summary>
         /// Gets the command text to select a single record by its key column values.
         /// </summary>
-        /// <param name="T">The type that is mapped to the database.</param>
+        /// <param name="mappedType">The type that is mapped to the database.</param>
         /// <returns>The generated command text.</returns>
-        string SelectSingleCommandText(Type T);
+        string SelectSingleCommandText(Type mappedType);
 
         /// <summary>
         /// Gets the command text to inset a single record of the given type.
         /// </summary>
-        /// <param name="T">The type that is mapped to the database.</param>
+        /// <param name="mappedType">The type that is mapped to the database.</param>
         /// <returns>The generated command text.</returns>
-        string InsertCommandText(Type T);
+        string InsertCommandText(Type mappedType);
 
         /// <summary>
         /// Gets the command text to update a single record of the given type.
         /// </summary>
-        /// <param name="T">The type that is mapped to the database.</param>
+        /// <param name="mappedType">The type that is mapped to the database.</param>
         /// <returns>The generated command text.</returns>
-        string UpdateCommandText(Type T);
+        string UpdateCommandText(Type mappedType);
 
         /// <summary>
         /// Gets the command text to delete a single record of the given type.
         /// </summary>
-        /// <param name="T">The type that is mapped to the database.</param>
+        /// <param name="mappedType">The type that is mapped to the database.</param>
         /// <returns>The generated command text.</returns>
-        string DeleteCommandText(Type T);
+        string DeleteCommandText(Type mappedType);
 
         /// <summary>
         /// Gets the command text to count all records of the given type.
         /// </summary>
-        /// <param name="T">The type that is mapped to the database.</param>
+        /// <param name="mappedType">The type that is mapped to the database.</param>
         /// <returns>The generated command text.</returns>
-        string CountAllCommandText(Type T);
+        string CountAllCommandText(Type mappedType);
 
         /// <summary>
         /// Creates a command to select all records of the given type.
         /// </summary>
-        /// <param name="T">The type that is mapped to the database.</param>
+        /// <param name="mappedType">The type that is mapped to the database.</param>
         /// <returns>The generated command.</returns>
-        IDbCommand CreateSelectAllCommand(Type T);
-
+        IDbCommand CreateSelectAllCommand(Type mappedType);
 
         /// <summary>
         /// Creates a command to select a single record matching the key columns of the given object.
@@ -89,8 +88,8 @@
         /// <summary>
         /// Creates a command to count all records of the given type.
         /// </summary>
-        /// <param name="T">The type that is mapped to the database.</param>
+        /// <param name="mappedType">The type that is mapped to the database.</param>
         /// <returns>The generated command text.</returns>
-        IDbCommand CreateCountAllCommand(Type T);
+        IDbCommand CreateCountAllCommand(Type mappedType);
     }
 }

@@ -9,6 +9,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unosquare.PocoData.Sql", "U
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unosquare.PocoData.Sample", "Unosquare.PocoData.Sample\Unosquare.PocoData.Sample.csproj", "{C1C242D7-C0A2-461A-8F1B-5033D2F8D30F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{428CE062-50E3-4167-89DB-4528640DF407}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.travis.yml = .travis.yml
+		Analyzers.ruleset = Analyzers.ruleset
+		LICENSE = LICENSE
+		pocodata.png = pocodata.png
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
