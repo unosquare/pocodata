@@ -101,7 +101,7 @@ Finally, use your database container class.
 ```csharp
 using (var db = new SampleDb())
 {
-	var employees = new List<Employee>(EmployeesToGenerate);
+	var employees = new List<Employee>();
 	employees.AddRange(await db.Employees.SelectAllAsync());
 
 	var youngEmployees = await db.Employees.GetYoungEmployeesAsync();
