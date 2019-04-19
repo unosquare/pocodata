@@ -107,5 +107,15 @@
             column.StringLength = stringLength;
             return column;
         }
+
+        /// <summary>
+        /// Updates column metadata letting the mapper know it should ignroe the property.
+        /// </summary>
+        /// <param name="column">The column.</param>
+        /// <returns>The column metadata.</returns>
+        public static ColumnMetadata NotMapped(this ColumnMetadata column)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
