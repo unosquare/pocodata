@@ -1,7 +1,7 @@
-﻿namespace Unosquare.PocoData.Sample.DataModels
+﻿namespace Unosquare.PocoData.Tests.DataModels
 {
     using System;
-    using Unosquare.PocoData.Annotations;
+    using Annotations;
 
     [Table("Employees")]
     public class Employee
@@ -41,9 +41,6 @@
         [NotMapped]
         public int HashCode { get; set; }
 
-        public override string ToString()
-        {
-            return $"{EmployeeId} {FullName} {EmailAddress} {DateOfBirth} {Children}";
-        }
+        public override string ToString() => $"{EmployeeId} {FullName} {EmailAddress} {DateOfBirth} {Children}";
     }
 }

@@ -1,7 +1,7 @@
 ﻿namespace Unosquare.PocoData.Sample.DataModels
 {
     using System;
-    using Unosquare.PocoData.Annotations;
+    using Annotations;
 
     [Table("Employees")]
     public class Employee
@@ -21,7 +21,7 @@
             Children = children;
             MaritalStatus = status;
             Reserved = reserved;
-            HashCode = this.GetHashCode();
+            HashCode = GetHashCode();
         }
 
         [Key(true)]
@@ -44,9 +44,6 @@
         [NotMapped]
         public int HashCode { get; set; }
 
-        public override string ToString()
-        {
-            return $"{EmployeeId} {FullName} {EmailAddress} {MaritalStatus} {DateOfBirth} {Children}";
-        }
+        public override string ToString() => $"{EmployeeId} {FullName} {EmailAddress} {MaritalStatus} {DateOfBirth} {Children}";
     }
 }
