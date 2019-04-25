@@ -6,7 +6,7 @@
     /// Specifies that that the property this attribute is applied to is a key column
     /// </summary>
     /// <seealso cref="Attribute" />
-    [AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Property)]
     public sealed class KeyAttribute : Attribute
     {
         /// <summary>

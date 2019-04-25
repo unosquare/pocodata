@@ -101,7 +101,7 @@
             where T : class, new()
         {
             var result = new T();
-            return ReadObject<T>(reader, result);
+            return ReadObject(reader, result);
         }
     }
 }

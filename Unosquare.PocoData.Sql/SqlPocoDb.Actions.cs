@@ -91,6 +91,7 @@
         {
             var result = false;
             var command = Commands.CreateSelectSingleCommand(target) as SqlCommand;
+
             using (var reader = await command.ExecuteReaderAsync().ConfigureAwait(false))
             {
                 if (await reader.ReadAsync().ConfigureAwait(false))
@@ -110,13 +111,12 @@
             var columns = Schema.Columns(itemType);
 
             var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
-            object insertResult;
             var insertCommand = Commands.CreateInsertCommand(item) as SqlCommand;
 
             using (var tran = SqlConnection.BeginTransaction())
             {
                 insertCommand.Transaction = tran;
-                insertResult = generatedColumn == null
+                var insertResult = generatedColumn == null
                     ? await insertCommand.ExecuteNonQueryAsync().ConfigureAwait(false)
                     : await insertCommand.ExecuteScalarAsync().ConfigureAwait(false);
 
@@ -147,13 +147,12 @@
             var columns = Schema.Columns(itemType);
 
             var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
-            object insertResult;
             var insertCommand = Commands.CreateInsertCommand(item);
 
             using (var tran = SqlConnection.BeginTransaction())
             {
                 insertCommand.Transaction = tran;
-                insertResult = generatedColumn == null
+                var insertResult = generatedColumn == null
                     ? insertCommand.ExecuteNonQuery()
                     : insertCommand.ExecuteScalar();
                 generatedColumn?.SetValue(item, Convert.ChangeType(insertResult, generatedColumn.NativeType, CultureInfo.InvariantCulture));
@@ -189,7 +188,6 @@
             var selectCommandColumns = columns.Where(c => c.IsKeyColumn);
 
             var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
-            object insertResult;
 
             // we will reuse the commands
             var insertCommand = Commands.CreateInsertCommand(firstItem) as SqlCommand;
@@ -207,7 +205,7 @@
                 {
                     insertCommand.AddOrUpdateParameters(insertCommandColumns, item);
 
-                    insertResult = generatedColumn == null
+                    var insertResult = generatedColumn == null
                         ? await insertCommand.ExecuteNonQueryAsync().ConfigureAwait(false)
                         : await insertCommand.ExecuteScalarAsync().ConfigureAwait(false);
 

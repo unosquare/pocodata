@@ -6,7 +6,7 @@
     /// When applied to a string typed property, it specifies the length of the string to store in the column definition.
     /// </summary>
     /// <seealso cref="Attribute" />
-    [AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Property)]
     public class StringLengthAttribute : Attribute
     {
         /// <summary>
