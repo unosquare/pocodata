@@ -1,3 +1,5 @@
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=unosquare/pocodata)](https://dependabot.com)
+
 # PocoData
 The no-frills micro ORM for SQL Server
 
