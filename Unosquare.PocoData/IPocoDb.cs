@@ -44,7 +44,7 @@
         /// Selects all records of the given table-mapped type.
         /// </summary>
         /// <param name="mappedType">The table-mapped type.</param>
-        /// <returns>An enumerable collection of the records that were retrieved</returns>
+        /// <returns>An enumerable collection of the records that were retrieved.</returns>
         IEnumerable SelectAll(Type mappedType);
 
         /// <summary>

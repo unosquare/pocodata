@@ -49,6 +49,11 @@
             var result = new List<object>(4096);
             var sqlCommand = command as SqlCommand;
 
+            if(sqlCommand == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             using (var reader = await sqlCommand.ExecuteReaderAsync().ConfigureAwait(false))
             {
                 while (await reader.ReadAsync().ConfigureAwait(false))
@@ -143,6 +148,11 @@
         /// <inheritdoc />
         public int Insert(object item, bool update)
         {
+            if(item == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             var itemType = item.GetType();
             var columns = Schema.Columns(itemType);
 

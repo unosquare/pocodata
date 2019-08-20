@@ -3,7 +3,7 @@
     using System;
 
     /// <summary>
-    /// Maps a property to a column name
+    /// Maps a property to a column name.
     /// </summary>
     /// <seealso cref="Attribute" />
     [AttributeUsage(AttributeTargets.Property)]

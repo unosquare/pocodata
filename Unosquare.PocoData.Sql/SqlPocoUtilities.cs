@@ -44,6 +44,11 @@
         /// <param name="item">The table-mapped object containg the values to inject as parameters.</param>
         public static void AddOrUpdateParameters(this SqlCommand command, IEnumerable<ColumnMetadata> columns, object item)
         {
+            if(columns == null || command == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             foreach (var col in columns)
             {
                 var isNew = false;

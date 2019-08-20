@@ -59,6 +59,11 @@
         /// <returns>A list with column metadata.</returns>
         public IReadOnlyList<ColumnMetadata> Columns(Type mappedType)
         {
+            if(mappedType == null)
+            {
+                throw new ArgumentException(string.Empty);
+            }
+
             lock (SyncLock)
             {
                 if (ColumnMaps.ContainsKey(mappedType))
@@ -95,6 +100,11 @@
         /// <returns>The table attributes applied to the type.</returns>
         public TableAttribute Table(Type mappedType)
         {
+            if(mappedType == null)
+            {
+                throw new ArgumentException(string.Empty);
+            }
+
             lock (SyncLock)
             {
                 if (TableMaps.ContainsKey(mappedType))
@@ -123,16 +133,16 @@
         public void Validate(Type mappedType)
         {
             var columns = Columns(mappedType);
-            if (columns.Count(c => c.IsKeyColumn) <= 0)
+            if (!columns.Any(c => c.IsKeyColumn))
                 throw new NotSupportedException("At least a key column must be defined");
 
             if (columns.Count(c => c.IsKeyGenerated) > 1)
                 throw new NotSupportedException("Only a single generated column is supported in the schema");
 
-            if (columns.Count(c => c.IsKeyGenerated && !c.IsKeyColumn) > 0)
+            if (columns.Any(c => c.IsKeyGenerated && !c.IsKeyColumn))
                 throw new NotSupportedException("Only generated columns must participate in the primary key set");
 
-            if (columns.Count(c => c.IsNullable && c.IsKeyColumn) > 0)
+            if (columns.Any(c => c.IsNullable && c.IsKeyColumn))
                 throw new NotSupportedException("Key columns must not be nullable");
 
             // TODO: add more validation rules
