@@ -144,9 +144,7 @@
         public PocoTableProxy<T> TableProxy<T>()
             where T : class, new() => new PocoTableProxy<T>(this, false);
 
-        /// <summary>
-        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-        /// </summary>
+        /// <inheritdoc />
         public void Dispose()
         {
             Dispose(true);
@@ -159,16 +157,15 @@
         /// <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
         protected virtual void Dispose(bool disposing)
         {
-            if (!IsDisposed)
-            {
-                if (disposing)
-                {
-                    SqlConnection?.Dispose();
-                    SqlConnection = null;
-                }
+            if (IsDisposed) return;
 
-                IsDisposed = true;
+            if (disposing)
+            {
+                SqlConnection?.Dispose();
+                SqlConnection = null;
             }
+
+            IsDisposed = true;
         }
     }
 }

@@ -5,6 +5,8 @@ build:
   project: Unosquare.PocoData.sln
 configuration:
 - Release
+services:
+ - mssql2017
 notifications:
 - provider: Slack
   auth_token:
@@ -26,6 +28,7 @@ before_build:
             cinst docfx -y --no-progress
         }
 - dotnet restore -v Minimal
+- ps: sqlcmd -S "(local)\SQL2017" -Q "USE [master]; CREATE DATABASE pocodata;"
 after_build:
 - ps: |
         if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE -And $isWindows)

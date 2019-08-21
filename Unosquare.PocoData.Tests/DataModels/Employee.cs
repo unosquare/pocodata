@@ -1,4 +1,4 @@
-﻿namespace Unosquare.PocoData.Sample.DataModels
+﻿namespace Unosquare.PocoData.Tests.DataModels
 {
     using System;
     using Annotations;
@@ -11,7 +11,7 @@
             // placeholder
         }
 
-        public Employee(int id, string fullName, string emailAddress, DateTime dob, int? children, MaritalStatus status, object reserved)
+        public Employee(int id, string fullName, string emailAddress, DateTime dob, int? children, object reserved)
             : this()
         {
             EmployeeId = id;
@@ -19,9 +19,8 @@
             EmailAddress = emailAddress;
             DateOfBirth = dob;
             Children = children;
-            MaritalStatus = status;
             Reserved = reserved;
-            HashCode = GetHashCode();
+            HashCode = this.GetHashCode();
         }
 
         [Key(true)]
@@ -37,13 +36,11 @@
 
         public int? Children { get; set; }
 
-        public MaritalStatus MaritalStatus { get; set; }
-
         public object Reserved { get; set; }
 
         [NotMapped]
         public int HashCode { get; set; }
 
-        public override string ToString() => $"{EmployeeId} {FullName} {EmailAddress} {MaritalStatus} {DateOfBirth} {Children}";
+        public override string ToString() => $"{EmployeeId} {FullName} {EmailAddress} {DateOfBirth} {Children}";
     }
 }

@@ -27,6 +27,11 @@
         /// <returns>The table attribute.</returns>
         public static TableAttribute ToTable(this TableAttribute table, string tableName, string schemaName)
         {
+            if (table == null)
+            {
+                throw new ArgumentException(string.Empty);
+            }
+
             table.Name = tableName;
             table.Schema = schemaName;
             return table;
@@ -57,6 +62,11 @@
         /// <returns>The column metadata.</returns>
         public static ColumnMetadata HasColumnName(this ColumnMetadata column, string name)
         {
+            if(column == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             column.ColumnName = name;
             return column;
         }
@@ -68,6 +78,11 @@
         /// <returns>The column metadata.</returns>
         public static ColumnMetadata IsKeyColumn(this ColumnMetadata column)
         {
+            if (column == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             column.IsKeyColumn = true;
             column.IsKeyGenerated = false;
             return column;
@@ -80,6 +95,11 @@
         /// <returns>The column metadata.</returns>
         public static ColumnMetadata IsGeneratedKeyColumn(this ColumnMetadata column)
         {
+            if (column == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             column.IsKeyColumn = true;
             column.IsKeyGenerated = true;
             return column;
@@ -92,6 +112,11 @@
         /// <returns>The column metadata.</returns>
         public static ColumnMetadata IsNullable(this ColumnMetadata column)
         {
+            if (column == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             column.IsNullable = true;
             return column;
         }
@@ -104,6 +129,11 @@
         /// <returns>The column metadata.</returns>
         public static ColumnMetadata HasStringLength(this ColumnMetadata column, int stringLength)
         {
+            if (column == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             column.StringLength = stringLength;
             return column;
         }

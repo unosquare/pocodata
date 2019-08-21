@@ -91,7 +91,7 @@
         /// <summary>
         /// Gets the default value of the property type.
         /// </summary>
-        /// <returns>The default value</returns>
+        /// <returns>The default value.</returns>
         public object GetDefault() => GetDefault(Property.PropertyType);
 
         /// <summary>

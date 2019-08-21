@@ -18,7 +18,7 @@
         /// <summary>
         /// Asynchronously creates a table of the corresponding table-mapped type.
         /// </summary>
-        /// <typeparam name="T">The table-mapped type</typeparam>
+        /// <typeparam name="T">The table-mapped type.</typeparam>
         /// <returns>The number of affected rows, typically -1.</returns>
         Task<int> CreateTableAsync<T>();
 

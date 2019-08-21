@@ -4,6 +4,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Reflection;
 
     /// <summary>
     /// Storeas table and column mappings and their corresponding metadata.
@@ -58,6 +59,11 @@
         /// <returns>A list with column metadata.</returns>
         public IReadOnlyList<ColumnMetadata> Columns(Type mappedType)
         {
+            if(mappedType == null)
+            {
+                throw new ArgumentException(string.Empty);
+            }
+
             lock (SyncLock)
             {
                 if (ColumnMaps.ContainsKey(mappedType))
@@ -71,51 +77,7 @@
                     if (!property.CanRead || !property.CanWrite)
                         continue;
 
-                    // we don't want properties that can't be mapped
-                    var propType = property.PropertyType;
-                    var propTypeNullable = Nullable.GetUnderlyingType(propType);
-                    propType = propTypeNullable ?? propType;
-
-                    if (propType != typeof(string) && !propType.IsEnum && !StandardValueTypes.Contains(propType))
-                        continue;
-
-                    var columnName = property.Name;
-                    var isKey = false;
-                    var isNullable = propTypeNullable != null || propType == typeof(string);
-                    var ignore = false;
-                    var isGenerated = false;
-                    var length = 255;
-
-                    // extract column properties from attributes
-                    var attribs = property.GetCustomAttributes(true).ToArray();
-                    foreach (var attrib in attribs)
-                    {
-                        if (attrib is ColumnAttribute columnAttrib)
-                            columnName = columnAttrib.Name;
-
-                        if (attrib is KeyAttribute liteKey)
-                        {
-                            isKey = true;
-                            isGenerated = liteKey.IsGenerated;
-                        }
-
-                        if (attrib is StringLengthAttribute liteLen)
-                            length = liteLen.Length;
-
-                        if (attrib is NotMappedAttribute)
-                            ignore = true;
-
-                        if (attrib is RequiredAttribute lineNotNull)
-                        {
-                            if (propType == typeof(string))
-                                isNullable = false;
-                        }
-                    }
-
-                    if (ignore)
-                        continue;
-
-                    result.Add(new ColumnMetadata(property, columnName, length, isNullable, isKey, isGenerated));
+                    PopulateProperty(property, result);
                 }
 
                 ColumnMaps[mappedType] = result;
@@ -138,6 +100,11 @@
         /// <returns>The table attributes applied to the type.</returns>
         public TableAttribute Table(Type mappedType)
         {
+            if(mappedType == null)
+            {
+                throw new ArgumentException(string.Empty);
+            }
+
             lock (SyncLock)
             {
                 if (TableMaps.ContainsKey(mappedType))
@@ -166,16 +133,16 @@
         public void Validate(Type mappedType)
         {
             var columns = Columns(mappedType);
-            if (columns.Count(c => c.IsKeyColumn) <= 0)
-                throw new NotSupportedException("At leat a key column must be defined");
+            if (!columns.Any(c => c.IsKeyColumn))
+                throw new NotSupportedException("At least a key column must be defined");
 
             if (columns.Count(c => c.IsKeyGenerated) > 1)
-                throw new NotSupportedException("Only a single generated column is suppoted in the schema");
+                throw new NotSupportedException("Only a single generated column is supported in the schema");
 
-            if (columns.Count(c => c.IsKeyGenerated && !c.IsKeyColumn) > 0)
-                throw new NotSupportedException("Only agenerated columns must participate in the primary key set");
+            if (columns.Any(c => c.IsKeyGenerated && !c.IsKeyColumn))
+                throw new NotSupportedException("Only generated columns must participate in the primary key set");
 
-            if (columns.Count(c => c.IsNullable && c.IsKeyColumn) > 0)
+            if (columns.Any(c => c.IsNullable && c.IsKeyColumn))
                 throw new NotSupportedException("Key columns must not be nullable");
 
             // TODO: add more validation rules
@@ -212,6 +179,53 @@
 
                 return currentItemIndex >= 0 ? currentList[currentItemIndex] : null;
             }
+        }
+
+        private static void PopulateProperty(PropertyInfo property, List<ColumnMetadata> result)
+        {
+            // we don't want properties that can't be mapped
+            var propType = property.PropertyType;
+            var propTypeNullable = Nullable.GetUnderlyingType(propType);
+            propType = propTypeNullable ?? propType;
+
+            if (propType != typeof(string) && !propType.IsEnum && !StandardValueTypes.Contains(propType))
+                return;
+
+            var columnName = property.Name;
+            var isKey = false;
+            var isNullable = propTypeNullable != null || propType == typeof(string);
+            var isGenerated = false;
+            var length = 255;
+
+            // extract column properties from attributes
+            var attribs = property.GetCustomAttributes(true).ToArray();
+
+            foreach (var attrib in attribs)
+            {
+                switch (attrib)
+                {
+                    case ColumnAttribute columnAttrib:
+                        columnName = columnAttrib.Name;
+                        break;
+                    case KeyAttribute liteKey:
+                        isKey = true;
+                        isGenerated = liteKey.IsGenerated;
+                        break;
+                    case StringLengthAttribute liteLen:
+                        length = liteLen.Length;
+                        break;
+                    case NotMappedAttribute _:
+                        return;
+                    case RequiredAttribute _:
+                        {
+                            if (propType == typeof(string))
+                                isNullable = false;
+                            break;
+                        }
+                }
+            }
+
+            result.Add(new ColumnMetadata(property, columnName, length, isNullable, isKey, isGenerated));
         }
     }
 }

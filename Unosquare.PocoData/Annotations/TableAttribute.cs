@@ -6,7 +6,7 @@
     /// When applied to a class, it specifies the table it maps to.
     /// </summary>
     /// <seealso cref="Attribute" />
-    [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Class, Inherited = false)]
     public sealed class TableAttribute : Attribute
     {
         /// <summary>

@@ -34,10 +34,15 @@
         /// <param name="reader">The reader.</param>
         /// <param name="item">The table-mapped object.</param>
         /// <returns>The resulting table-mapped object.</returns>
-        /// <exception cref="InvalidCastException">Unable to convert '{fieldValue.GetType().Name}' to '{property.NativeType.Name}' for column '{property.ColumnName}</exception>
+        /// <exception cref="InvalidCastException">Unable to convert '{fieldValue.GetType().Name}' to '{property.NativeType.Name}' for column '{property.ColumnName}.</exception>
         public object ReadObject(IDataReader reader, object item)
         {
-            var itemType = item.GetType();
+            if (reader == null)
+            {
+                throw new ArgumentException(string.Empty);
+            }
+
+            var itemType = item?.GetType();
             var map = Schema.Columns(itemType);
             var fieldNames = new List<string>(reader.FieldCount);
             for (var i = 0; i < reader.FieldCount; i++)
@@ -101,7 +106,7 @@
             where T : class, new()
         {
             var result = new T();
-            return ReadObject<T>(reader, result);
+            return ReadObject(reader, result);
         }
     }
 }
