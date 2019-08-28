@@ -21,6 +21,11 @@
         /// <returns>The SQL Parameter.</returns>
         public static SqlParameter AddParameter(this SqlCommand command, string parameterName, object value, int size = -1)
         {
+            if(value == null || command == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             var valueType = value.GetType();
             var param = command.CreateParameter();
             param.ParameterName = parameterName;
@@ -87,6 +92,11 @@
         /// <returns>The string representation of the command and its parameters.</returns>
         public static string DebugCommand(this IDbCommand command, bool outputToConsole = true)
         {
+            if(command == null)
+            {
+                throw new ArgumentNullException(string.Empty);
+            }
+
             var builder = new StringBuilder();
             builder.AppendLine($"[{command.GetType()}]  {command.CommandText}");
             foreach (var parameter in command.Parameters)

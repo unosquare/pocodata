@@ -32,7 +32,7 @@
         /// <summary>
         /// Determines if the table for the table-mapped type exists.
         /// </summary>
-        /// <typeparam name="T">The table-mapped type</typeparam>
+        /// <typeparam name="T">The table-mapped type.</typeparam>
         /// <returns>Whether or not the table exists.</returns>
         Task<bool> TableExistsAsync<T>();
 

@@ -7,7 +7,7 @@
     /// Provides extension methods to configure schema mappings with a fluent API and without the need for attibutes.
     /// Examples:
     /// typeof(Employee).Table().ToTable(nameof(Employee));
-    /// typeof(Employee).Column(nameof(Employee.Children)).IsNullable();
+    /// typeof(Employee).Column(nameof(Employee.Children)).IsNullable();.
     /// </summary>
     public static class SchemaExtensions
     {
