@@ -5,7 +5,7 @@ using Unosquare.PocoData.Tests.DataModels;
 
 namespace Unosquare.PocoData.Tests
 {
-    class DbTest : IDisposable
+    public abstract class DbTest : IDisposable
     {
         public DbTest(): this(true) { }
 

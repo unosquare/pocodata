@@ -5,7 +5,7 @@
     using Unosquare.PocoData.Tests.DataModels;
     using Xunit;
 
-    public class SimpleTest
+    public class SimpleTest : DbTest
     {
         [Fact]
         public void ValidConnection()
