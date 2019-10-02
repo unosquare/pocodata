@@ -41,7 +41,7 @@
         public void Dispose()
         {
             var query = "DROP TABLE IF EXISTS Thing;" +
-                "DROP TABLE IF EXISTS Employee;";
+                "DROP TABLE IF EXISTS Employees;";
             using (SqlConnection con = new SqlConnection(DbTest.connectionString))
             {
                 con.Open();
