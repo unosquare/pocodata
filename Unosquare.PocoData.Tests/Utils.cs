@@ -1,4 +1,7 @@
-﻿using Unosquare.PocoData.Tests.DataModels;
+﻿using System;
+using System.Data.SqlClient;
+using System.Threading.Tasks;
+using Unosquare.PocoData.Tests.DataModels;
 
 namespace Unosquare.PocoData.Tests
 {
@@ -22,6 +25,19 @@ namespace Unosquare.PocoData.Tests
             }
 
             return result ? employee : null;
+        }
+
+        internal static async Task<bool> ExistsEmployees()
+        {
+            using (SqlConnection con = new SqlConnection(DbTest.connectionString))
+            {
+                con.Open();
+                var command = con.CreateCommand();
+                command.CommandText = "SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'dbo' AND TABLE_NAME = 'Employees'";
+
+                var result = await command.ExecuteScalarAsync().ConfigureAwait(false);
+                return (int)result > 0;
+            }
         }
     }
 }
