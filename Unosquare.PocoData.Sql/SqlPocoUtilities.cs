@@ -21,17 +21,15 @@
         /// <returns>The SQL Parameter.</returns>
         public static SqlParameter AddParameter(this SqlCommand command, string parameterName, object value, int size = -1)
         {
-            if(value == null || command == null)
-            {
+            if (value == null || command == null)
                 throw new ArgumentNullException(string.Empty);
-            }
 
             var valueType = value.GetType();
             var param = command.CreateParameter();
             param.ParameterName = parameterName;
-            param.Value = value ?? DBNull.Value;
+            param.Value = value;
 
-            if (value != null && DbTypes.CanMap(valueType))
+            if (DbTypes.CanMap(valueType))
                 param.SqlDbType = DbTypes.Map(valueType);
 
             if (size > 0 && valueType == typeof(string))
@@ -46,13 +44,11 @@
         /// </summary>
         /// <param name="command">The command to add or change parameters from.</param>
         /// <param name="columns">The column metadata.</param>
-        /// <param name="item">The table-mapped object containg the values to inject as parameters.</param>
+        /// <param name="item">The table-mapped object containing the values to inject as parameters.</param>
         public static void AddOrUpdateParameters(this SqlCommand command, IEnumerable<ColumnMetadata> columns, object item)
         {
-            if(columns == null || command == null)
-            {
+            if (columns == null || command == null)
                 throw new ArgumentNullException(string.Empty);
-            }
 
             foreach (var col in columns)
             {
@@ -92,10 +88,8 @@
         /// <returns>The string representation of the command and its parameters.</returns>
         public static string DebugCommand(this IDbCommand command, bool outputToConsole = true)
         {
-            if(command == null)
-            {
+            if (command == null)
                 throw new ArgumentNullException(string.Empty);
-            }
 
             var builder = new StringBuilder();
             builder.AppendLine($"[{command.GetType()}]  {command.CommandText}");

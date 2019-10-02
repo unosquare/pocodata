@@ -142,11 +142,9 @@
                 {
                     var selectCommand = Commands.CreateSelectSingleCommand(item) as SqlCommand;
                     selectCommand.Transaction = tran;
-                    using (var reader = await selectCommand.ExecuteReaderAsync().ConfigureAwait(false))
-                    {
-                        if (await reader.ReadAsync().ConfigureAwait(false))
-                            ObjectReader.ReadObject(reader, item);
-                    }
+                    using var reader = await selectCommand.ExecuteReaderAsync().ConfigureAwait(false);
+                    if (await reader.ReadAsync().ConfigureAwait(false))
+                        ObjectReader.ReadObject(reader, item);
                 }
 
                 tran.Commit();
@@ -181,11 +179,9 @@
                 {
                     var selectCommand = Commands.CreateSelectSingleCommand(item);
                     selectCommand.Transaction = tran;
-                    using (var reader = selectCommand.ExecuteReader())
-                    {
-                        if (reader.Read())
-                            ObjectReader.ReadObject(reader, item);
-                    }
+                    using var reader = selectCommand.ExecuteReader();
+                    if (reader.Read())
+                        ObjectReader.ReadObject(reader, item);
                 }
 
                 tran.Commit();
@@ -234,11 +230,9 @@
                     if (update)
                     {
                         selectCommand.AddOrUpdateParameters(selectCommandColumns, item);
-                        using (var reader = await selectCommand.ExecuteReaderAsync().ConfigureAwait(false))
-                        {
-                            if (await reader.ReadAsync().ConfigureAwait(false))
-                                ObjectReader.ReadObject(reader, item);
-                        }
+                        using var reader = await selectCommand.ExecuteReaderAsync().ConfigureAwait(false);
+                        if (await reader.ReadAsync().ConfigureAwait(false))
+                            ObjectReader.ReadObject(reader, item);
                     }
 
                     insertCount++;
@@ -264,7 +258,6 @@
             var selectCommandColumns = columns.Where(c => c.IsKeyColumn);
 
             var generatedColumn = columns.FirstOrDefault(c => c.IsKeyColumn && c.IsKeyGenerated);
-            object insertResult;
 
             // we will reuse the commands
             var insertCommand = Commands.CreateInsertCommand(firstItem) as SqlCommand;
@@ -282,7 +275,7 @@
                 {
                     insertCommand.AddOrUpdateParameters(insertCommandColumns, item);
 
-                    insertResult = generatedColumn == null
+                    var insertResult = generatedColumn == null
                         ? insertCommand.ExecuteNonQuery()
                         : insertCommand.ExecuteScalar();
 
@@ -291,11 +284,9 @@
                     if (update)
                     {
                         selectCommand.AddOrUpdateParameters(selectCommandColumns, item);
-                        using (var reader = selectCommand.ExecuteReader())
-                        {
-                            if (reader.Read())
-                                ObjectReader.ReadObject(reader, item);
-                        }
+                        using var reader = selectCommand.ExecuteReader();
+                        if (reader.Read())
+                            ObjectReader.ReadObject(reader, item);
                     }
 
                     insertCount++;

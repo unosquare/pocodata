@@ -12,7 +12,7 @@
     /// <seealso cref="IPocoDefinition" />
     internal sealed class SqlPocoDefinition : IPocoDefinition
     {
-        private readonly SqlPocoDb Parent;
+        private readonly SqlPocoDb _parent;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SqlPocoDefinition"/> class.
@@ -21,10 +21,10 @@
         internal SqlPocoDefinition(SqlPocoDb parent)
         {
             Schema = PocoSchema.Instance;
-            Parent = parent;
+            _parent = parent;
         }
 
-        private SqlConnection Connection => Parent.Connection as SqlConnection;
+        private SqlConnection? Connection => _parent.Connection as SqlConnection;
 
         private PocoSchema Schema { get; }
 
@@ -59,8 +59,9 @@
                 $"PRIMARY KEY ({string.Join(", ", primaryKeyCols.Select(c => c.QualifiedName))}))";
 
             var command = Connection.CreateCommand();
-            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
+            command.CommandTimeout = _parent.SqlCommandTimeoutSeconds;
             command.CommandText = createTable;
+
             return await command.ExecuteNonQueryAsync().ConfigureAwait(false);
         }
 
@@ -72,7 +73,7 @@
         {
             var table = Schema.Table(mappedType);
             var command = Connection.CreateCommand();
-            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
+            command.CommandTimeout = _parent.SqlCommandTimeoutSeconds;
             command.CommandText = "SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = @Schema AND TABLE_NAME = @TableName";
             command.AddParameter("@Schema", string.IsNullOrWhiteSpace(table.Schema) ? "dbo" : table.Schema);
             command.AddParameter("@TableName", table.Name);
@@ -89,7 +90,7 @@
         {
             var table = Schema.Table(mappedType);
             var command = Connection.CreateCommand();
-            command.CommandTimeout = Parent.SqlCommandTimeoutSeconds;
+            command.CommandTimeout = _parent.SqlCommandTimeoutSeconds;
             command.CommandText = $"DROP TABLE {table.QualifiedName}";
             await command.ExecuteNonQueryAsync().ConfigureAwait(false);
         }

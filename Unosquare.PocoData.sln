@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.102
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unosquare.PocoData", "Unosquare.PocoData\Unosquare.PocoData.csproj", "{AA4D3986-4892-436E-B01F-62E5D651F729}"
 EndProject
@@ -12,7 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{428CE062-50E3-4167-89DB-4528640DF407}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		.travis.yml = .travis.yml
 		Analyzers.ruleset = Analyzers.ruleset
 		appveyor.yml = appveyor.yml
 		LICENSE = LICENSE

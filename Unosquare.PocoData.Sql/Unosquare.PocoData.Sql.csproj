@@ -2,13 +2,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
     <!-- Assembly Properties -->
-    <RootNamespace>Unosquare.PocoData.Sql</RootNamespace>
-    <LangVersion>latest</LangVersion>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <AssemblyName>Unosquare.PocoData.Sql</AssemblyName>
     <Product>PocoData for MS SQL Server.</Product>
     <Company>Unosquare SA de CV</Company>
@@ -45,8 +44,8 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.4">
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.5">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
