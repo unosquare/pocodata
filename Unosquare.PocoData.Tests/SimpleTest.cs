@@ -7,14 +7,8 @@
 
     public class SimpleTest : DbTest
     {
-        public static string query = @"
-            INSERT INTO Employees VALUES('Ana Atayde', 'ana.atayde@unosquare.com', '01/01/1990', 0);
-            INSERT INTO Employees VALUES('Ramiro Flores', 'ramiro.flores@unosquare.com', '01/01/1990', 0);
-            INSERT INTO Employees VALUES('Marco Perez', 'marco.perez@unosquare.com', '01/01/1990', 0);
-            INSERT INTO Employees VALUES('Carlos Solorzano', 'carlos.solorzano@unosquare.com', '01/01/1990', 0);
-            INSERT INTO Employees VALUES('Manuel Santos', 'manuel.santos@unosquare.com', '01/01/1990', 0);
-        ";
-        public SimpleTest(): base(query) { }
+        public SimpleTest(): 
+            base(QueryFactory.CreateEmployeeTable + QueryFactory.InsertTeamQuery) { }
 
         [Fact]
         public void ValidConnection()

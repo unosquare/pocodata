@@ -30,7 +30,7 @@ namespace Unosquare.PocoData.Tests
 
         public void Dispose()
         {
-            var query = "DELETE FROM Employees";
+            var query = "DROP TABLE Employees";
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();

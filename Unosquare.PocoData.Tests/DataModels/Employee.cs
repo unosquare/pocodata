@@ -38,6 +38,8 @@
 
         public object Reserved { get; set; }
 
+        public int? Reads { get; set; }
+
         [NotMapped]
         public int HashCode { get; set; }
 
