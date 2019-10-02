@@ -2,7 +2,7 @@ language: csharp
 notifications:
   slack: unolabs:cbusXPH6pBwZ35rVDzi4k4ve
 mono: none
-dotnet: 3.0.100-preview3
+dotnet: 3.0.100
 os: linux
 dist: xenial
 sudo: false
