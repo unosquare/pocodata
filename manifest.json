@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "xc+7Sahgf/kBs5PDVlHnZQ=="
+          "hash": "wv+nER78Jx44Rh17X4w+jQ=="
         }
       },
       "is_incremental": false,
@@ -74,7 +74,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Annotations.ColumnAttribute.html",
-          "hash": "j3Vd+2aWADOkRmuL+2bcWw=="
+          "hash": "dt7GT9WC1OTLaxJ3mECFKg=="
         }
       },
       "is_incremental": false,
@@ -86,7 +86,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Annotations.KeyAttribute.html",
-          "hash": "iTEw/kYD15KQQg6EKC+W2Q=="
+          "hash": "nTlje2KSpxcaAKJqeUoUrQ=="
         }
       },
       "is_incremental": false,
@@ -98,7 +98,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Annotations.NotMappedAttribute.html",
-          "hash": "/i/eAP68CAfIQOkiEBj4nA=="
+          "hash": "En7OUcHwJ9n3v7m4ve7rBA=="
         }
       },
       "is_incremental": false,
@@ -110,7 +110,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Annotations.RequiredAttribute.html",
-          "hash": "RB0xk/2BkJ3sPU/6BvvKDw=="
+          "hash": "tzdaAA4tjqn80q4X050HpA=="
         }
       },
       "is_incremental": false,
@@ -122,7 +122,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Annotations.StringLengthAttribute.html",
-          "hash": "JwOiLFETTcH0SQHNaEWYHw=="
+          "hash": "9KTdhkt/j9NVEcRisHR5QA=="
         }
       },
       "is_incremental": false,
@@ -134,7 +134,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Annotations.TableAttribute.html",
-          "hash": "6pi1twbJ6VoaISFdcBRFsg=="
+          "hash": "s/6v1ZcMy/2/QG+ER+HbsA=="
         }
       },
       "is_incremental": false,
@@ -146,7 +146,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Annotations.html",
-          "hash": "Qi9QBY+1L0v82nR2QDskFA=="
+          "hash": "wJZSBK/z9+ShlLwPFQeMdw=="
         }
       },
       "is_incremental": false,
@@ -158,7 +158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.ColumnMetadata.html",
-          "hash": "r9DoeirqAcClJ+3ZTyO3JQ=="
+          "hash": "JmHy/k/dEm7s0G60vPr4gQ=="
         }
       },
       "is_incremental": false,
@@ -170,7 +170,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.IPocoCommands.html",
-          "hash": "kUke8Z65iKlVJXu+eucZ4A=="
+          "hash": "k7khYQpyAlNuWdIn6lLaXw=="
         }
       },
       "is_incremental": false,
@@ -182,7 +182,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.IPocoDb.html",
-          "hash": "QSWGhsVxfOq7uFRjQXidJQ=="
+          "hash": "clOWo7Fh0yAfbr9LMt6YuQ=="
         }
       },
       "is_incremental": false,
@@ -194,7 +194,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.IPocoDefinition.html",
-          "hash": "au3RJHH4ECJehYTMhZqezw=="
+          "hash": "Fw/8pIPrXGjhc9P9t05tFg=="
         }
       },
       "is_incremental": false,
@@ -206,7 +206,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.PocoReader.html",
-          "hash": "qY5FKz2hfpF2sOtZ/njkvQ=="
+          "hash": "azRe8Q6uh246IU6g7txaNA=="
         }
       },
       "is_incremental": false,
@@ -218,7 +218,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.PocoSchema.html",
-          "hash": "Xwg5E8NxnE7x4jKYFvSV6Q=="
+          "hash": "Pcpn2sgqBDcJjQC1doh4qQ=="
         }
       },
       "is_incremental": false,
@@ -230,7 +230,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.PocoTableProxy-1.html",
-          "hash": "snKCae6uSHRYik1D6Iej3w=="
+          "hash": "M84aM0nVo/mIIruG1DPXgw=="
         }
       },
       "is_incremental": false,
@@ -242,7 +242,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.SchemaExtensions.html",
-          "hash": "XriL33SfIRSEVTvdrgrJqw=="
+          "hash": "Z07Xhx1+rQCgJ2VJPHsRAg=="
         }
       },
       "is_incremental": false,
@@ -254,7 +254,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Sql.SqlPocoDb.html",
-          "hash": "AOKs/6Qi9T0WXf6evZE1Sw=="
+          "hash": "KBJ8HfKxdgN6FgfY/VqlSQ=="
         }
       },
       "is_incremental": false,
@@ -266,7 +266,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Sql.SqlPocoUtilities.html",
-          "hash": "S9pOQM0Js7co6X6dVAVaTw=="
+          "hash": "yfwaBDSVAfNPVHnr8nqrig=="
         }
       },
       "is_incremental": false,
@@ -278,7 +278,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.Sql.html",
-          "hash": "POkZ5tUHo0Iw0vQ+nU2gfw=="
+          "hash": "w+iTNjSx44aDRABRvlK62Q=="
         }
       },
       "is_incremental": false,
@@ -290,7 +290,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.PocoData.html",
-          "hash": "55Q7btfIO0amPLLBVZhFvg=="
+          "hash": "jetQqVKNcfKLc7SiikKFNA=="
         }
       },
       "is_incremental": false,
@@ -341,6 +341,13 @@
         "skipped_file_count": 0
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
@@ -356,13 +363,6 @@
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
