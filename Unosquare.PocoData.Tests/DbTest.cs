@@ -8,7 +8,7 @@ namespace Unosquare.PocoData.Tests
 {
     public abstract class DbTest : IDisposable
     {
-        public static string connectionString = "Data Source=GDLA-LT-181228A\\SQLEXPRESS; Integrated Security=True; Initial Catalog=pocodatatest; MultipleActiveResultSets=True;";
+        public static string connectionString = "Data Source=(local)\SQL2017; Integrated Security=True; Initial Catalog=pocodata; MultipleActiveResultSets=True;";
 
         public DbTest(string query)
         {
