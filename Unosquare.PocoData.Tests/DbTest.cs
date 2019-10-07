@@ -5,7 +5,7 @@ namespace Unosquare.PocoData.Tests
 {
     public abstract class DbTest : IDisposable
     {
-        public static string ConnectionString = "Server=(local)\SQL2017;Database=master;User ID=sa;Password=Password12!;Initial Catalog=pocodata;";
+        public static string ConnectionString = "Server=(local)\\SQL2017;Database=master;User ID=sa;Password=Password12!;Initial Catalog=pocodata;";
 
         protected DbTest(string query)
         {
