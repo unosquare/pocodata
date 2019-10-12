@@ -5,7 +5,7 @@
     using System.Data;
 
     /// <summary>
-    /// Provides type-mapping facilities between CLR and SQL Server types
+    /// Provides type-mapping facilities between CLR and SQL Server types.
     /// </summary>
     internal static class DbTypes
     {
@@ -48,14 +48,14 @@
         /// Maps the specified CLR type to a SqlDbType.
         /// </summary>
         /// <param name="clrType">The CLR type.</param>
-        /// <returns>The SqlDbType</returns>
+        /// <returns>The SqlDbType.</returns>
         public static SqlDbType Map(Type clrType) => SqlTypes[clrType];
 
         /// <summary>
         /// Maps the specified SqlDbType to a CLR type.
         /// </summary>
         /// <param name="sqlType">The SqlDbType.</param>
-        /// <returns>The CLR type</returns>
+        /// <returns>The CLR type.</returns>
         public static Type Map(SqlDbType sqlType) => ClrTypes[sqlType];
 
         /// <summary>

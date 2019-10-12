@@ -51,7 +51,7 @@
         /// Asynchronously selects all records of the given table-mapped type.
         /// </summary>
         /// <param name="mappedType">The table-mapped type.</param>
-        /// <returns>An enumerable collection of the records that were retrieved</returns>
+        /// <returns>An enumerable collection of the records that were retrieved.</returns>
         Task<IEnumerable> SelectAllAsync(Type mappedType);
 
         /// <summary>
@@ -59,7 +59,7 @@
         /// </summary>
         /// <typeparam name="T">The table-mapped type.</typeparam>
         /// <returns>
-        /// An enumerable collection of the records that were retrieved
+        /// An enumerable collection of the records that were retrieved.
         /// </returns>
         IEnumerable<T> SelectAll<T>()
             where T : class, new();
@@ -69,7 +69,7 @@
         /// </summary>
         /// <typeparam name="T">The table-mapped type.</typeparam>
         /// <returns>
-        /// An enumerable collection of the records that were retrieved
+        /// An enumerable collection of the records that were retrieved.
         /// </returns>
         Task<IEnumerable<T>> SelectAllAsync<T>()
             where T : class, new();
@@ -80,7 +80,7 @@
         /// <param name="mappedType">The table-mapped type.</param>
         /// <param name="command">The command.</param>
         /// <returns>
-        /// An enumerable collection of the records that were retrieved
+        /// An enumerable collection of the records that were retrieved.
         /// </returns>
         IEnumerable SelectMany(Type mappedType, IDbCommand command);
 
@@ -90,7 +90,7 @@
         /// <param name="mappedType">The table-mapped type.</param>
         /// <param name="command">The command.</param>
         /// <returns>
-        /// An enumerable collection of the records that were retrieved
+        /// An enumerable collection of the records that were retrieved.
         /// </returns>
         Task<IEnumerable> SelectManyAsync(Type mappedType, IDbCommand command);
 
@@ -100,7 +100,7 @@
         /// <typeparam name="T">The table-mapped type.</typeparam>
         /// <param name="command">The command.</param>
         /// <returns>
-        /// An enumerable collection of the records that were retrieved
+        /// An enumerable collection of the records that were retrieved.
         /// </returns>
         IEnumerable<T> SelectMany<T>(IDbCommand command)
             where T : class, new();
@@ -111,7 +111,7 @@
         /// <typeparam name="T">The table-mapped type.</typeparam>
         /// <param name="command">The command.</param>
         /// <returns>
-        /// An enumerable collection of the records that were retrieved
+        /// An enumerable collection of the records that were retrieved.
         /// </returns>
         Task<IEnumerable<T>> SelectManyAsync<T>(IDbCommand command)
             where T : class, new();
@@ -154,7 +154,7 @@
         /// </summary>
         /// <param name="items">The items to insert.</param>
         /// <param name="update">if set to <c>true</c> it will update data from inserted rows in addition to generated key values.</param>
-        /// <returns>The number of affected rows</returns>
+        /// <returns>The number of affected rows.</returns>
         Task<int> InsertManyAsync(IEnumerable items, bool update);
 
         /// <summary>
@@ -163,7 +163,7 @@
         /// </summary>
         /// <param name="items">The items to insert.</param>
         /// <param name="update">if set to <c>true</c> it will update data from inserted rows in addition to generated key values.</param>
-        /// <returns>The number of affected rows</returns>
+        /// <returns>The number of affected rows.</returns>
         int InsertMany(IEnumerable items, bool update);
 
         /// <summary>
@@ -185,7 +185,7 @@
         /// The collection must exclusively be of objects of the same type.
         /// </summary>
         /// <param name="items">The items to update.</param>
-        /// <returns>The number of affected rows</returns>
+        /// <returns>The number of affected rows.</returns>
         Task<int> UpdateManyAsync(IEnumerable items);
 
         /// <summary>
@@ -193,7 +193,7 @@
         /// The collection must exclusively be of objects of the same type.
         /// </summary>
         /// <param name="items">The items to update.</param>
-        /// <returns>The number of affected rows</returns>
+        /// <returns>The number of affected rows.</returns>
         int UpdateMany(IEnumerable items);
 
         /// <summary>

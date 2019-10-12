@@ -99,7 +99,7 @@
         /// <summary>
         /// Reads data reader data into the corresponding table-mapped object.
         /// </summary>
-        /// <typeparam name="T">The table-mapped type</typeparam>
+        /// <typeparam name="T">The table-mapped type.</typeparam>
         /// <param name="reader">The reader.</param>
         /// <returns>The object that was read.</returns>
         public T ReadObject<T>(IDataReader reader)

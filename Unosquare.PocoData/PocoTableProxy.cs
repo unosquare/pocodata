@@ -8,7 +8,7 @@
     /// <summary>
     /// Provides stronly-typed data access operations for the specified table-mapped type.
     /// </summary>
-    /// <typeparam name="T">The table-mapped type</typeparam>
+    /// <typeparam name="T">The table-mapped type.</typeparam>
     public class PocoTableProxy<T>
         where T : class, new()
     {

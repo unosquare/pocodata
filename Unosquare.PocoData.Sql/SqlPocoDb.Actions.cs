@@ -29,6 +29,8 @@
         /// <inheritdoc />
         public IEnumerable SelectMany(Type mappedType, IDbCommand command)
         {
+            if (command == null) throw new ArgumentNullException(nameof(command));
+
             var result = new List<object>(4096);
 
             using (var reader = command.ExecuteReader())
@@ -112,6 +114,8 @@
         /// <inheritdoc />
         public async Task<int> InsertAsync(object item, bool update)
         {
+            if (item == null) throw new ArgumentNullException(nameof(item));
+
             var itemType = item.GetType();
             var columns = Schema.Columns(itemType);
 

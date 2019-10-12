@@ -8,6 +8,7 @@
     <!-- Assembly Properties -->
     <RootNamespace>Unosquare.PocoData</RootNamespace>
     <LangVersion>latest</LangVersion>
+    <NullableContextOptions>enable</NullableContextOptions>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <AssemblyName>Unosquare.PocoData</AssemblyName>
     <Product>PocoData types providing data store agnostic constructs.</Product>

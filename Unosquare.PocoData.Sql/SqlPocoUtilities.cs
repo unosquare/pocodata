@@ -21,15 +21,17 @@
         /// <returns>The SQL Parameter.</returns>
         public static SqlParameter AddParameter(this SqlCommand command, string parameterName, object value, int size = -1)
         {
-            var valueType = value.GetType();
+            if (command == null) throw new ArgumentNullException(nameof(command));
+
+            var valueType = value?.GetType();
             var param = command.CreateParameter();
             param.ParameterName = parameterName;
             param.Value = value ?? DBNull.Value;
 
-            if (value != null && DbTypes.CanMap(valueType))
+            if (value != null && valueType != null && DbTypes.CanMap(valueType))
                 param.SqlDbType = DbTypes.Map(valueType);
 
-            if (size > 0 && valueType == typeof(string))
+            if (size > 0 && valueType != null && valueType == typeof(string))
                 param.Size = size;
 
             command.Parameters.Add(param);
@@ -87,6 +89,8 @@
         /// <returns>The string representation of the command and its parameters.</returns>
         public static string DebugCommand(this IDbCommand command, bool outputToConsole = true)
         {
+            if (command == null) throw new ArgumentNullException(nameof(command));
+
             var builder = new StringBuilder();
             builder.AppendLine($"[{command.GetType()}]  {command.CommandText}");
             foreach (var parameter in command.Parameters)
