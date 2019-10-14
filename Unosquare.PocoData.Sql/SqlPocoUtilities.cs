@@ -25,6 +25,7 @@
                 throw new ArgumentNullException(string.Empty);
 
             var valueType = value.GetType();
+          
             var param = command.CreateParameter();
             param.ParameterName = parameterName;
             param.Value = value;
@@ -32,7 +33,7 @@
             if (DbTypes.CanMap(valueType))
                 param.SqlDbType = DbTypes.Map(valueType);
 
-            if (size > 0 && valueType == typeof(string))
+            if (size > 0 && valueType != null && valueType == typeof(string))
                 param.Size = size;
 
             command.Parameters.Add(param);
