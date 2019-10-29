@@ -7,19 +7,15 @@
   <PropertyGroup>
     <!-- Assembly Properties -->
     <RootNamespace>Unosquare.PocoData</RootNamespace>
-    <LangVersion>latest</LangVersion>
-    <NullableContextOptions>enable</NullableContextOptions>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <AssemblyName>Unosquare.PocoData</AssemblyName>
     <Product>PocoData types providing data store agnostic constructs.</Product>
     <Company>Unosquare SA de CV</Company>
     <CodeAnalysisRuleSet>$(SolutionDir)\Analyzers.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <NeutralLanguage>en</NeutralLanguage>
-
-    <!-- Assembly Version Information -->
     <AssemblyVersion>0.9.100.0</AssemblyVersion>
-    <FileVersion>0.9.100.0</FileVersion>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
