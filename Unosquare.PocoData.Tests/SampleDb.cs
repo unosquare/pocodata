@@ -9,7 +9,7 @@
     public class SampleDb : SqlPocoDb
     {
         public SampleDb()
-            : base("Data Source=GDLA-LT-181228A\\SQLEXPRESS; Integrated Security=True; Initial Catalog=pocodatatest; MultipleActiveResultSets=True;")
+            : base("Data Source=.; Integrated Security=True; Initial Catalog=pocodatatest; MultipleActiveResultSets=True;")
         {
             Employees = new EmployeesTable(this);
         }
